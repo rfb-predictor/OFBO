@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF 
+<rdf:RDF xmlns="https://w3id.org/ofbo#"
+     xml:base="https://w3id.org/ofbo"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,9 +10,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
-
-    <owl:Ontology rdf:about="https://w3id.org/ofbo">
-    </owl:Ontology>
+    <owl:Ontology rdf:about="https://w3id.org/ofbo"/>
+    
 
 
     <!-- 
@@ -407,8 +407,8 @@ hexane ≈ 0
 acetonitrile ≈ 19
 water ≈ 54</rdfs:comment>
         <rdfs:isDefinedBy>The acceptor number (AN) is an empirical measure of the Lewis acidity of a solvent. It is defined from the shift in the 31P NMR chemical shift of a standard probe molecule, typically triethylphosphine oxide (TEPO), when dissolved in the solvent.</rdfs:isDefinedBy>
-        <ofbo:relevance>The acceptor number describes how strongly a solvent can interact with electron-rich species. In organic redox flow batteries, this property influences the stabilization of reduced redox-active molecules, anions, and intermediate species formed during electrochemical reactions. As a result, the acceptor number can affect electrolyte stability, reaction mechanisms, and the electrochemical behavior of organic redox couples.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1016/j.joule.2018.05.014</ofbo:rfbLiterature>
+        <relevance>The acceptor number describes how strongly a solvent can interact with electron-rich species. In organic redox flow batteries, this property influences the stabilization of reduced redox-active molecules, anions, and intermediate species formed during electrochemical reactions. As a result, the acceptor number can affect electrolyte stability, reaction mechanisms, and the electrochemical behavior of organic redox couples.</relevance>
+        <rfbLiterature>https://doi.org/10.1016/j.joule.2018.05.014</rfbLiterature>
     </owl:Class>
     
 
@@ -418,7 +418,7 @@ water ≈ 54</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#AcidBaseProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Property"/>
         <rdfs:isDefinedBy>Acid–Base Properties describe the ability of a molecule or solvent to donate or accept protons or electron density, characterizing its behavior as a Brønsted or Lewis acid or base.</rdfs:isDefinedBy>
-        <ofbo:relevance>Acid–base properties govern proton transfer, ion coordination, and solvation behavior in electrolytes. They influence salt dissociation, ion pairing, interfacial reactions, and chemical stability of electrolyte components.</ofbo:relevance>
+        <relevance>Acid–base properties govern proton transfer, ion coordination, and solvation behavior in electrolytes. They influence salt dissociation, ion pairing, interfacial reactions, and chemical stability of electrolyte components.</relevance>
     </owl:Class>
     
 
@@ -428,7 +428,7 @@ water ≈ 54</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#AnthroneFormation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#DegradationReaction"/>
         <rdfs:isDefinedBy>A chemical reaction in which anthraquinone or related quinone structures are reduced and subsequently rearrange to form anthrone derivatives, typically involving protonation and keto–enol type transformations.</rdfs:isDefinedBy>
-        <ofbo:relevance>Anthrone formation represents an irreversible degradation pathway for quinone-based redox-active electrolytes, leading to loss of redox reversibility, decreased capacity, and reduced cycling stability.</ofbo:relevance>
+        <relevance>Anthrone formation represents an irreversible degradation pathway for quinone-based redox-active electrolytes, leading to loss of redox reversibility, decreased capacity, and reduced cycling stability.</relevance>
     </owl:Class>
     
 
@@ -438,7 +438,7 @@ water ≈ 54</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#AproticSolvent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Solvent"/>
         <rdfs:isDefinedBy>An aprotic solvent is a solvent that does not contain acidic hydrogen atoms capable of donating protons. Aprotic solvents can accept electron density (via lone pairs) but cannot participate in hydrogen bonding as donors.</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow batteries, aprotic solvents are used to:
+        <relevance>In organic redox flow batteries, aprotic solvents are used to:
 
 Enable clean one-electron redox reactions by stabilizing radical species
 
@@ -446,7 +446,7 @@ Avoid proton-coupled side reactions
 
 Provide high electrochemical stability and wide electrochemical windows
 
-This makes them critical for studying organic redox-active molecules and designing high-voltage non-aqueous ORFB electrolytes.</ofbo:relevance>
+This makes them critical for studying organic redox-active molecules and designing high-voltage non-aqueous ORFB electrolytes.</relevance>
     </owl:Class>
     
 
@@ -474,7 +474,7 @@ For example, water has a gas-phase basicity of about 660 kJ mol⁻¹, while amin
 B (g) + H⁺ (g) → BH⁺ (g)
 
 It quantifies the intrinsic tendency of a molecule to accept a proton in the absence of solvent effects.</rdfs:isDefinedBy>
-        <ofbo:relevance>Gas-phase basicity provides an intrinsic measure of proton affinity that is independent of solvent effects. In organic redox flow batteries, lower gas-phase basicity can correlate with reduced susceptibility to protonation reactions that may trigger decomposition or alter redox activity in electrolyte environments.</ofbo:relevance>
+        <relevance>Gas-phase basicity provides an intrinsic measure of proton affinity that is independent of solvent effects. In organic redox flow batteries, lower gas-phase basicity can correlate with reduced susceptibility to protonation reactions that may trigger decomposition or alter redox activity in electrolyte environments.</relevance>
     </owl:Class>
     
 
@@ -510,7 +510,7 @@ Higher values indicate greater delocalization of charge, which can stabilize cha
 
 Delocalization indices can be reported globally (whole molecule) or locally (specific functional group or redox-active site).</rdfs:comment>
         <rdfs:isDefinedBy>The charge delocalization index is a quantitative measure of the extent to which electronic charge is spread over a molecule or a part of a molecule, rather than localized on a single atom or bond. It reflects the distribution of electron density in the oxidized or reduced state of a molecule.</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow batteries, charge delocalization strongly influences the stability of oxidized and reduced species. Molecules with high charge delocalization are less prone to decomposition and side reactions because the charge is spread over multiple atoms, reducing local reactivity. This also typically leads to lower reorganization energies and faster electron-transfer kinetics, improving battery efficiency and cycle life.</ofbo:relevance>
+        <relevance>In organic redox flow batteries, charge delocalization strongly influences the stability of oxidized and reduced species. Molecules with high charge delocalization are less prone to decomposition and side reactions because the charge is spread over multiple atoms, reducing local reactivity. This also typically leads to lower reorganization energies and faster electron-transfer kinetics, improving battery efficiency and cycle life.</relevance>
     </owl:Class>
     
 
@@ -520,7 +520,7 @@ Delocalization indices can be reported globally (whole molecule) or locally (spe
     <owl:Class rdf:about="https://w3id.org/ofbo#ChargeProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ElectronicStructure"/>
         <rdfs:isDefinedBy>Charge Properties describe the magnitude, distribution, and transfer of electronic charge within and between molecular or ionic species.</rdfs:isDefinedBy>
-        <ofbo:relevance>Charge properties control electrostatic interactions, ion pairing, solvation strength, and charge transport in electrolyte systems. They are critical for understanding ion mobility, dielectric response, interfacial behavior, and the stability of charged species in solution and under applied electric fields.</ofbo:relevance>
+        <relevance>Charge properties control electrostatic interactions, ion pairing, solvation strength, and charge transport in electrolyte systems. They are critical for understanding ion mobility, dielectric response, interfacial behavior, and the stability of charged species in solution and under applied electric fields.</relevance>
     </owl:Class>
     
 
@@ -530,7 +530,7 @@ Delocalization indices can be reported globally (whole molecule) or locally (spe
     <owl:Class rdf:about="https://w3id.org/ofbo#ChargeTransfer">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ReactionType"/>
         <rdfs:isDefinedBy>A chemical or electrochemical process involving the partial or complete transfer of electronic charge between donor and acceptor species without necessarily forming or breaking covalent bonds.</rdfs:isDefinedBy>
-        <ofbo:relevance>Charge transfer underlies redox activity, parasitic reactions, and intermolecular interactions between electrolyte components, electrodes, and additives, directly influencing conductivity, redox kinetics, and stability.</ofbo:relevance>
+        <relevance>Charge transfer underlies redox activity, parasitic reactions, and intermolecular interactions between electrolyte components, electrodes, and additives, directly influencing conductivity, redox kinetics, and stability.</relevance>
     </owl:Class>
     
 
@@ -551,7 +551,7 @@ Delocalization indices can be reported globally (whole molecule) or locally (spe
 Typical range for small organic electrolyte molecules: 2 to 6 eV
 Examples: ethylene carbonate ~4 eV, dimethoxyethane ~3 eV</rdfs:comment>
         <rdfs:isDefinedBy>Chemical Hardness measures the resistance of a molecule to change its electron density, reflecting its stability against deformation of the electron cloud or transfer of electrons.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates molecular stability and resistance to electron transfer; harder molecules are less reactive, while softer molecules are more prone to chemical reactions in electrolytes.</ofbo:relevance>
+        <relevance>Indicates molecular stability and resistance to electron transfer; harder molecules are less reactive, while softer molecules are more prone to chemical reactions in electrolytes.</relevance>
     </owl:Class>
     
 
@@ -564,7 +564,7 @@ Examples: ethylene carbonate ~4 eV, dimethoxyethane ~3 eV</rdfs:comment>
 Typical range for ^1H NMR in organic molecules: 0–12 ppm; for ^13C NMR: 0–220 ppm
 Examples: ^1H in water ~4.8 ppm, ^1H in ethylene carbonate ~4.3 ppm; ^13C in carbonyl carbon of ethylene carbonate ~155 ppm</rdfs:comment>
         <rdfs:isDefinedBy>Chemical Shift is the resonant frequency of a nucleus relative to a reference in nuclear magnetic resonance (NMR) spectroscopy. It reflects the local electronic environment around the nucleus and how it shields or deshields the applied magnetic field.</rdfs:isDefinedBy>
-        <ofbo:relevance>Provides information on the electronic environment and bonding of nuclei, helping elucidate molecular structure, functional groups, and interactions in electrolytes and other chemical systems.</ofbo:relevance>
+        <relevance>Provides information on the electronic environment and bonding of nuclei, helping elucidate molecular structure, functional groups, and interactions in electrolytes and other chemical systems.</relevance>
     </owl:Class>
     
 
@@ -588,7 +588,7 @@ For ab initio quantum chemical methods, standardized terminology from the MDO ca
 Typical range: −1 to 1 per site, where negative values indicate electrophilic susceptibility and positive values indicate nucleophilic susceptibility
 Examples: in H2O, oxygen has a negative dual descriptor (more electrophilic), while hydrogens have positive values (more nucleophilic); in carbonyls, the carbonyl carbon is negative and the oxygen is positive</rdfs:comment>
         <rdfs:isDefinedBy>The Condensed Dual Descriptor combines the electrophilic and nucleophilic Fukui functions to indicate whether a specific atom in a molecule is more prone to electrophilic or nucleophilic attack. Positive values suggest preference for nucleophilic attack, while negative values indicate preference for electrophilic attack.</rdfs:isDefinedBy>
-        <ofbo:relevance>Directly identifies which atoms in a molecule are more likely to undergo electrophilic or nucleophilic attack. In electrolytes, this helps predict reactive sites for degradation, coordination with cations or anions, and other chemical transformations.</ofbo:relevance>
+        <relevance>Directly identifies which atoms in a molecule are more likely to undergo electrophilic or nucleophilic attack. In electrolytes, this helps predict reactive sites for degradation, coordination with cations or anions, and other chemical transformations.</relevance>
     </owl:Class>
     
 
@@ -598,7 +598,7 @@ Examples: in H2O, oxygen has a negative dual descriptor (more electrophilic), wh
     <owl:Class rdf:about="https://w3id.org/ofbo#DegradationReaction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ReactionType"/>
         <rdfs:isDefinedBy>A chemical or electrochemical reaction that alters the molecular structure or composition of a chemical species, leading to loss of its intended function, activity, or stability. Degradation reactions often involve bond cleavage, rearrangement, dimerization, hydrolysis, or other transformations that reduce the reversibility or performance of the species under operational conditions.</rdfs:isDefinedBy>
-        <ofbo:relevance>Degradation reactions are critical for understanding the chemical and electrochemical stability of organic electrolytes. They determine the lifetime, efficiency, and safety of battery or capacitor systems.</ofbo:relevance>
+        <relevance>Degradation reactions are critical for understanding the chemical and electrochemical stability of organic electrolytes. They determine the lifetime, efficiency, and safety of battery or capacitor systems.</relevance>
     </owl:Class>
     
 
@@ -611,7 +611,7 @@ Examples: in H2O, oxygen has a negative dual descriptor (more electrophilic), wh
 Typical range for small organic electrolyte solvents: 0.8 to 1.5 g/cm³
 Examples: ethylene carbonate ~1.32 g/cm³; dimethoxyethane ~0.87 g/cm³</rdfs:comment>
         <rdfs:isDefinedBy>Density is the mass of a substance per unit volume. In molecular systems and liquids, it reflects how closely molecules are packed and is influenced by molecular size, interactions, and temperature.</rdfs:isDefinedBy>
-        <ofbo:relevance>Provides insight into packing efficiency, solvent-solute interactions, and overall bulk properties of electrolytes, influencing viscosity, transport, and electrochemical performance.</ofbo:relevance>
+        <relevance>Provides insight into packing efficiency, solvent-solute interactions, and overall bulk properties of electrolytes, influencing viscosity, transport, and electrochemical performance.</relevance>
     </owl:Class>
     
 
@@ -625,7 +625,7 @@ Typical range for small organic electrolyte molecules: 0.5 to 3 × 10⁻⁹ m²/
 Examples: Li⁺ in ethylene carbonate ~1 × 10⁻⁹ m²/s; dimethoxyethane ~2 × 10⁻⁹ m²/s</rdfs:comment>
         <rdfs:comment>Determines ion and solvent mobility, affecting transport properties, conductivity, and overall performance of electrolyte systems.</rdfs:comment>
         <rdfs:isDefinedBy>The Diffusion Coefficient quantifies the rate at which particles (molecules, ions) move through a medium due to random thermal motion. It reflects how quickly species can migrate in a solvent or electrolyte.</rdfs:isDefinedBy>
-        <ofbo:rfbLiterature>https://doi.org/10.1039/D1TA03655F</ofbo:rfbLiterature>
+        <rfbLiterature>https://doi.org/10.1039/D1TA03655F</rfbLiterature>
     </owl:Class>
     
 
@@ -635,7 +635,7 @@ Examples: Li⁺ in ethylene carbonate ~1 × 10⁻⁹ m²/s; dimethoxyethane ~2 �
     <owl:Class rdf:about="https://w3id.org/ofbo#Dimerization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#DegradationReaction"/>
         <rdfs:isDefinedBy>A chemical reaction in which two identical or closely related molecular entities combine to form a dimer through covalent or noncovalent interactions.</rdfs:isDefinedBy>
-        <ofbo:relevance>Dimerization is a common chemical degradation mechanism for radical or reduced species in organic electrolytes, often resulting in loss of active material, increased molecular weight, and reduced solubility.</ofbo:relevance>
+        <relevance>Dimerization is a common chemical degradation mechanism for radical or reduced species in organic electrolytes, often resulting in loss of active material, increased molecular weight, and reduced solubility.</relevance>
     </owl:Class>
     
 
@@ -648,8 +648,8 @@ Examples: Li⁺ in ethylene carbonate ~1 × 10⁻⁹ m²/s; dimethoxyethane ~2 �
 Typical range for small organic molecules: 0–10 Debye
 Examples: water ~1.85 D, acetonitrile ~3.9 D</rdfs:comment>
         <rdfs:isDefinedBy>The dipole moment of a molecule is a vector quantity that measures the separation of positive and negative charge centers within the molecule. It reflects the overall polarity of the molecule and its tendency to interact with electric fields or polar solvents.</rdfs:isDefinedBy>
-        <ofbo:relevance>Determines polarity and solvation behavior in electrolytes, affecting solubility, ion interactions, and dielectric properties.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1038/s41597-022-01814-4</ofbo:rfbLiterature>
+        <relevance>Determines polarity and solvation behavior in electrolytes, affecting solubility, ion interactions, and dielectric properties.</relevance>
+        <rfbLiterature>https://doi.org/10.1038/s41597-022-01814-4</rfbLiterature>
     </owl:Class>
     
 
@@ -659,7 +659,7 @@ Examples: water ~1.85 D, acetonitrile ~3.9 D</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#Disproportionation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#DegradationReaction"/>
         <rdfs:isDefinedBy>A redox reaction in which a single chemical species is simultaneously oxidized and reduced, forming two products with different oxidation states.</rdfs:isDefinedBy>
-        <ofbo:relevance>Disproportionation can limit the stability of intermediate redox states in organic electrolytes, reducing coulombic efficiency and impairing long-term electrochemical reversibility.</ofbo:relevance>
+        <relevance>Disproportionation can limit the stability of intermediate redox states in organic electrolytes, reducing coulombic efficiency and impairing long-term electrochemical reversibility.</relevance>
     </owl:Class>
     
 
@@ -682,8 +682,8 @@ acetonitrile ≈ 14
 tetrahydrofuran (THF) ≈ 20
 dimethyl sulfoxide (DMSO) ≈ 30</rdfs:comment>
         <rdfs:isDefinedBy>The donor number (DN) is a quantitative measure of the Lewis basicity of a solvent. It is defined as the negative enthalpy of formation of the adduct between the solvent and a standard Lewis acid, typically antimony pentachloride (SbCl5), measured in a non-coordinating solvent.</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow battery electrolytes, the donor number influences the ability of solvent molecules to coordinate to cations such as supporting electrolyte ions or charged redox-active species. Solvents with higher donor numbers tend to stabilize cations more strongly, affecting ion pairing, solvation structure, and the redox potentials of dissolved organic molecules.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1016/j.joule.2018.05.014</ofbo:rfbLiterature>
+        <relevance>In organic redox flow battery electrolytes, the donor number influences the ability of solvent molecules to coordinate to cations such as supporting electrolyte ions or charged redox-active species. Solvents with higher donor numbers tend to stabilize cations more strongly, affecting ion pairing, solvation structure, and the redox potentials of dissolved organic molecules.</relevance>
+        <rfbLiterature>https://doi.org/10.1016/j.joule.2018.05.014</rfbLiterature>
     </owl:Class>
     
 
@@ -692,8 +692,8 @@ dimethyl sulfoxide (DMSO) ≈ 30</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/ofbo#EPR">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#MagneticResonance"/>
-        <ofbo:relevance>EPR Properties describe the interaction of unpaired electron spins with an external magnetic field, providing information about electronic structure, spin distribution, and local magnetic environments in paramagnetic species.</ofbo:relevance>
-        <ofbo:relevance>EPR properties help characterize radicals, transition-metal complexes, and other paramagnetic molecules. They are critical for understanding electron localization, magnetic interactions, and reactivity in electrolyte systems containing unpaired electrons.</ofbo:relevance>
+        <relevance>EPR Properties describe the interaction of unpaired electron spins with an external magnetic field, providing information about electronic structure, spin distribution, and local magnetic environments in paramagnetic species.</relevance>
+        <relevance>EPR properties help characterize radicals, transition-metal complexes, and other paramagnetic molecules. They are critical for understanding electron localization, magnetic interactions, and reactivity in electrolyte systems containing unpaired electrons.</relevance>
     </owl:Class>
     
 
@@ -703,7 +703,7 @@ dimethyl sulfoxide (DMSO) ≈ 30</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#ElectricResponse">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ElectronicStructure"/>
         <rdfs:isDefinedBy>Electric Response Properties describe how a molecule, ion, or material responds to external electric fields, including polarization, induced dipoles, and overall dielectric behavior.</rdfs:isDefinedBy>
-        <ofbo:relevance>These properties determine the ability of electrolytes to screen electric fields, stabilize ions, and support charge transport.</ofbo:relevance>
+        <relevance>These properties determine the ability of electrolytes to screen electric fields, stabilize ions, and support charge transport.</relevance>
     </owl:Class>
     
 
@@ -713,7 +713,7 @@ dimethyl sulfoxide (DMSO) ≈ 30</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#ElectrochemicalProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Property"/>
         <rdfs:isDefinedBy>Electrochemical Properties describe how a molecule, ion, or material behaves in an electrochemical environment, including its tendency to undergo oxidation or reduction and its response to applied electrical potentials.</rdfs:isDefinedBy>
-        <ofbo:relevance>Electrochemical properties determine the operational stability, voltage window, and redox activity of electrolyte components. They are essential for predicting electrolyte compatibility with electrodes, resistance to oxidative or reductive degradation, and overall electrochemical performance.</ofbo:relevance>
+        <relevance>Electrochemical properties determine the operational stability, voltage window, and redox activity of electrolyte components. They are essential for predicting electrolyte compatibility with electrodes, resistance to oxidative or reductive degradation, and overall electrochemical performance.</relevance>
     </owl:Class>
     
 
@@ -723,7 +723,7 @@ dimethyl sulfoxide (DMSO) ≈ 30</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#ElectrochemicalReaction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ReactionType"/>
         <rdfs:isDefinedBy>A reaction involving the transfer of electrons between chemical species and an electrode, driven by an applied electrochemical potential.</rdfs:isDefinedBy>
-        <ofbo:relevance>Electrochemical reactions define the intended redox processes of organic electrolytes as well as unintended side reactions occurring at electrode–electrolyte interfaces.</ofbo:relevance>
+        <relevance>Electrochemical reactions define the intended redox processes of organic electrolytes as well as unintended side reactions occurring at electrode–electrolyte interfaces.</relevance>
     </owl:Class>
     
 
@@ -744,8 +744,8 @@ dimethyl sulfoxide (DMSO): ~4.5 V
 
 A wider electrochemical window allows higher cell voltages and more energetic storage without solvent degradation.</rdfs:comment>
         <rdfs:isDefinedBy>The electrochemical window of a solvent or electrolyte is the potential range over which it is electrochemically stable, meaning no significant oxidation or reduction of the solvent occurs. It defines the limits within which redox-active species can operate without solvent decomposition.</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow batteries, the electrochemical window determines the maximum and minimum voltages that can be safely applied. It constrains the choice of redox-active molecules and solvents and affects energy density, stability, and cycle life. Molecules with redox potentials outside the electrochemical window of the solvent may undergo unwanted side reactions, leading to electrolyte decomposition and reduced battery performance.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1039/D5RA00296F</ofbo:rfbLiterature>
+        <relevance>In organic redox flow batteries, the electrochemical window determines the maximum and minimum voltages that can be safely applied. It constrains the choice of redox-active molecules and solvents and affects energy density, stability, and cycle life. Molecules with redox potentials outside the electrochemical window of the solvent may undergo unwanted side reactions, leading to electrolyte decomposition and reduced battery performance.</relevance>
+        <rfbLiterature>https://doi.org/10.1039/D5RA00296F</rfbLiterature>
     </owl:Class>
     
 
@@ -758,7 +758,7 @@ A wider electrochemical window allows higher cell voltages and more energetic st
 Typical range for small organic electrolyte molecules: 0 to 3 eV
 Examples: ethylene carbonate ~1.2 eV, dimethoxyethane ~0.5 eV</rdfs:comment>
         <rdfs:isDefinedBy>Electron Affinity is the energy change associated with adding an electron to a neutral molecule, representing the molecule’s tendency to accept electrons.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates the molecule’s ability to accept electrons, helping predict reduction behavior and stability of electrolyte components under electrochemical conditions.</ofbo:relevance>
+        <relevance>Indicates the molecule’s ability to accept electrons, helping predict reduction behavior and stability of electrolyte components under electrochemical conditions.</relevance>
     </owl:Class>
     
 
@@ -770,7 +770,7 @@ Examples: ethylene carbonate ~1.2 eV, dimethoxyethane ~0.5 eV</rdfs:comment>
         <rdfs:comment>E = ⟨Ψ|Ĥ_electronic|Ψ⟩, where Ψ is the electronic wavefunction and Ĥ_electronic is the electronic Hamiltonian
 Example: for ethylene carbonate, E ~ −382.5 Hartree; for dimethoxyethane, E ~ −154.3 Hartree</rdfs:comment>
         <rdfs:isDefinedBy>Electronic Energy is the sum of the energies of all electrons in a molecule obtained from a quantum chemical calculation. It reflects the overall electronic stability of the molecule.</rdfs:isDefinedBy>
-        <ofbo:relevance>Serves as a fundamental quantity in computational chemistry. It serves as a foundation for relative energies for stability or calculating the redox potential.</ofbo:relevance>
+        <relevance>Serves as a fundamental quantity in computational chemistry. It serves as a foundation for relative energies for stability or calculating the redox potential.</relevance>
     </owl:Class>
     
 
@@ -780,7 +780,7 @@ Example: for ethylene carbonate, E ~ −382.5 Hartree; for dimethoxyethane, E ~ 
     <owl:Class rdf:about="https://w3id.org/ofbo#ElectronicStructure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Property"/>
         <rdfs:isDefinedBy>Electronic Structure Properties describe the distribution, energies, and interactions of electrons in a molecule, ion, or solid as determined by its quantum-mechanical electronic structure.</rdfs:isDefinedBy>
-        <ofbo:relevance>Electronic structure properties govern chemical reactivity, redox behavior, stability, and intermolecular interactions of electrolyte components. They provide the fundamental link between molecular structure and observable electrochemical, spectroscopic, and thermodynamic properties, making them central to the rational design and screening of electrolyte materials.</ofbo:relevance>
+        <relevance>Electronic structure properties govern chemical reactivity, redox behavior, stability, and intermolecular interactions of electrolyte components. They provide the fundamental link between molecular structure and observable electrochemical, spectroscopic, and thermodynamic properties, making them central to the rational design and screening of electrolyte materials.</relevance>
     </owl:Class>
     
 
@@ -803,7 +803,7 @@ Examples: in H2O, oxygen has a higher electrophilic Fukui function than hydrogen
     <owl:Class rdf:about="https://w3id.org/ofbo#Electrophilicity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ElectronicStructure"/>
         <rdfs:isDefinedBy>Electrophilicity describes the tendency of a molecule or a specific site within a molecule to accept electrons. They quantify how susceptible the system is to nucleophilic attack.</rdfs:isDefinedBy>
-        <ofbo:relevance>Electrophilicity determines which molecules or atomic sites are more likely to undergo electron-accepting reactions. This helps predict chemical reactivity, degradation pathways, and interactions of electrolyte components with nucleophiles.</ofbo:relevance>
+        <relevance>Electrophilicity determines which molecules or atomic sites are more likely to undergo electron-accepting reactions. This helps predict chemical reactivity, degradation pathways, and interactions of electrolyte components with nucleophiles.</relevance>
     </owl:Class>
     
 
@@ -820,7 +820,7 @@ Examples:
 Water: negative region near O, positive near H
 Benzene: relatively uniform ESP over π-system</rdfs:comment>
         <rdfs:isDefinedBy>The electric potential generated by the molecular charge distribution at a point in space. Calculated from electron density or atomic partial charges.</rdfs:isDefinedBy>
-        <ofbo:relevance>Identifies reactive sites for electrophilic and nucleophilic attack; predicts ion interactions, solvation patterns, and hydrogen bonding; used in electrostatic potential mapping to visualize polar regions of molecules or ions.</ofbo:relevance>
+        <relevance>Identifies reactive sites for electrophilic and nucleophilic attack; predicts ion interactions, solvation patterns, and hydrogen bonding; used in electrostatic potential mapping to visualize polar regions of molecules or ions.</relevance>
     </owl:Class>
     
 
@@ -833,7 +833,7 @@ Benzene: relatively uniform ESP over π-system</rdfs:comment>
 Typical range for small organic molecules: varies widely depending on size and composition; relative changes (ΔH) for reactions are typically −200 to +200 kJ/mol
 Examples: ΔH of ethylene carbonate ring-opening ~−50 kJ/mol; ΔH of dimethoxyethane oxidation ~+30 kJ/mol</rdfs:comment>
         <rdfs:isDefinedBy>Enthalpy (H) is the total heat content of a system at constant pressure, representing the sum of its internal energy and the energy associated with pressure–volume work. In molecular systems, it is often used to evaluate reaction energetics and thermodynamic stability.</rdfs:isDefinedBy>
-        <ofbo:relevance>Helps evaluate thermodynamic favorability of reactions, stability of molecules, and heat changes during degradation or interaction processes in electrolyte systems.</ofbo:relevance>
+        <relevance>Helps evaluate thermodynamic favorability of reactions, stability of molecules, and heat changes during degradation or interaction processes in electrolyte systems.</relevance>
     </owl:Class>
     
 
@@ -847,7 +847,7 @@ Relevance: Measures the effective size of molecules, ions, or radicals; affects 
 Typical range for small organic molecules: ~25–100 Å³
 Examples: methane ~28 Å³, ethanol ~48 Å³, benzene ~88 Å³, quinone derivative ~95 Å³</rdfs:comment>
         <rdfs:isDefinedBy>The three-dimensional space occupied by a chemical entity, such as a molecule, ion, or radical, derived from its atomic coordinates. Entity volume depends on the van der Waals radii of atoms and the overall geometry of the species. It is a calculated structural property, not a fixed molecular constant, and can change with conformation or solvation environment.</rdfs:isDefinedBy>
-        <ofbo:relevance>Measures the effective size of molecules or ions, influencing solubility, ion transport, packing, and stability in organic electrolytes.</ofbo:relevance>
+        <relevance>Measures the effective size of molecules or ions, influencing solubility, ion transport, packing, and stability in organic electrolytes.</relevance>
     </owl:Class>
     
 
@@ -860,7 +860,7 @@ Examples: methane ~28 Å³, ethanol ~48 Å³, benzene ~88 Å³, quinone derivati
 Typical range for small organic molecules: 100 to 400 J/mol·K
 Examples: ethylene carbonate ~200 J/mol·K; dimethoxyethane ~250 J/mol·K</rdfs:comment>
         <rdfs:isDefinedBy>Entropy (S) is a measure of the disorder or randomness in a system. In molecular systems, it reflects the number of accessible microstates and the flexibility or freedom of motion of the molecules.</rdfs:isDefinedBy>
-        <ofbo:relevance>Helps evaluate thermodynamic contributions to reactions and stability, including the balance between enthalpic and entropic effects in degradation, solvation, and other processes in electrolytes.</ofbo:relevance>
+        <relevance>Helps evaluate thermodynamic contributions to reactions and stability, including the balance between enthalpic and entropic effects in degradation, solvation, and other processes in electrolytes.</relevance>
     </owl:Class>
     
 
@@ -873,7 +873,7 @@ Examples: ethylene carbonate ~200 J/mol·K; dimethoxyethane ~250 J/mol·K</rdfs:
 Typical range for small organic molecules: 2 to 8 eV
 Examples: ethylene carbonate first singlet excitation ~6 eV, dimethoxyethane first singlet excitation ~5 eV</rdfs:comment>
         <rdfs:isDefinedBy>Excitation Energy is the energy required to promote a molecule from its electronic ground state to an excited electronic state. It reflects the energy difference between the occupied and unoccupied molecular orbitals involved in the transition.</rdfs:isDefinedBy>
-        <ofbo:relevance>Determines the wavelengths of light a molecule can absorb, influencing optical properties, photostability, and potential photo-induced reactions in electrolytes or other molecular systems.</ofbo:relevance>
+        <relevance>Determines the wavelengths of light a molecule can absorb, influencing optical properties, photostability, and potential photo-induced reactions in electrolytes or other molecular systems.</relevance>
     </owl:Class>
     
 
@@ -894,7 +894,7 @@ Standardized terminology from the CHMO (Chemical Methods Ontology) is used to de
     <owl:Class rdf:about="https://w3id.org/ofbo#FrontierOrbitals">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ElectronicStructure"/>
         <rdfs:isDefinedBy>Frontier Orbital Properties describe the energies and characteristics of the highest occupied molecular orbitals (HOMO) and lowest unoccupied molecular orbitals (LUMO). They reflect the frontier electronic states that govern a molecule’s chemical reactivity.</rdfs:isDefinedBy>
-        <ofbo:relevance>Frontier orbitals determine the propensity for electron donation or acceptance in chemical reactions, influence redox behavior, and help predict sites of reactivity in electrolyte molecules.</ofbo:relevance>
+        <relevance>Frontier orbitals determine the propensity for electron donation or acceptance in chemical reactions, influence redox behavior, and help predict sites of reactivity in electrolyte molecules.</relevance>
     </owl:Class>
     
 
@@ -904,8 +904,8 @@ Standardized terminology from the CHMO (Chemical Methods Ontology) is used to de
     <owl:Class rdf:about="https://w3id.org/ofbo#FukuiFunction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ElectronicStructure"/>
         <rdfs:isDefinedBy>Fukui Function Properties describe the change in electron density at a specific site or overall in a molecule upon addition or removal of electrons. They indicate which atoms or regions are most likely to participate in nucleophilic or electrophilic reactions.</rdfs:isDefinedBy>
-        <ofbo:relevance>Fukui functions help identify reactive sites in molecules, predict chemical reactivity patterns, and assess degradation or reaction pathways in electrolyte systems.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1038/s41467-025-59962-1</ofbo:rfbLiterature>
+        <relevance>Fukui functions help identify reactive sites in molecules, predict chemical reactivity patterns, and assess degradation or reaction pathways in electrolyte systems.</relevance>
+        <rfbLiterature>https://doi.org/10.1038/s41467-025-59962-1</rfbLiterature>
     </owl:Class>
     
 
@@ -915,8 +915,8 @@ Standardized terminology from the CHMO (Chemical Methods Ontology) is used to de
     <owl:Class rdf:about="https://w3id.org/ofbo#GemDiolFormation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#DegradationReaction"/>
         <rdfs:isDefinedBy>A chemical reaction in which a carbonyl group reacts with water to form a geminal diol, containing two hydroxyl groups bonded to the same carbon atom.</rdfs:isDefinedBy>
-        <ofbo:relevance>Gem-diol formation is relevant for carbonyl-containing electrolytes in the presence of trace water, potentially altering redox potentials, solubility, and chemical stability.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1039/C9TA03219C</ofbo:rfbLiterature>
+        <relevance>Gem-diol formation is relevant for carbonyl-containing electrolytes in the presence of trace water, potentially altering redox potentials, solubility, and chemical stability.</relevance>
+        <rfbLiterature>https://doi.org/10.1039/C9TA03219C</rfbLiterature>
     </owl:Class>
     
 
@@ -929,7 +929,7 @@ Standardized terminology from the CHMO (Chemical Methods Ontology) is used to de
 Typical range for small organic molecules: −200 to +200 kJ/mol for reaction free energies
 Examples: ΔG of ethylene carbonate ring-opening ~−20 kJ/mol; ΔG of dimethoxyethane oxidation ~+10 kJ/mol</rdfs:comment>
         <rdfs:isDefinedBy>Gibbs Free Energy (G) is a thermodynamic quantity that combines enthalpy and entropy to determine the spontaneity of a process at constant temperature and pressure. It reflects the maximum reversible work a system can perform.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates thermodynamic favorability of reactions and processes, helping predict stability, degradation, and reaction pathways of electrolyte components.</ofbo:relevance>
+        <relevance>Indicates thermodynamic favorability of reactions and processes, helping predict stability, degradation, and reaction pathways of electrolyte components.</relevance>
     </owl:Class>
     
 
@@ -942,7 +942,7 @@ Examples: ΔG of ethylene carbonate ring-opening ~−20 kJ/mol; ΔG of dimethoxy
 Typical range for small organic electrolyte molecules: 50 to 200 kJ/mol, depending on the reaction pathway
 Examples: ethylene carbonate decomposition via ring-opening ~120 kJ/mol; dimethoxyethane oxidative degradation ~90 kJ/mol</rdfs:comment>
         <rdfs:isDefinedBy>The Activation Barrier is the minimum energy required for a molecule to undergo a chemical degradation reaction. It represents the kinetic stability of the molecule under given conditions.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates the kinetic stability of reactant components, helping predict degradation rates, shelf-life, and performance under electrochemical conditions.</ofbo:relevance>
+        <relevance>Indicates the kinetic stability of reactant components, helping predict degradation rates, shelf-life, and performance under electrochemical conditions.</relevance>
     </owl:Class>
     
 
@@ -955,7 +955,7 @@ Examples: ethylene carbonate decomposition via ring-opening ~120 kJ/mol; dimetho
 Typical range for small organic electrolyte molecules: −100 to +50 kJ/mol, depending on the reaction
 Examples: ethylene carbonate ring-opening degradation ~−20 kJ/mol; dimethoxyethane oxidative degradation ~−10 kJ/mol</rdfs:comment>
         <rdfs:isDefinedBy>The Reaction Gibbs Free Energy is the change in Gibbs free energy associated with the chemical reaction of a molecule. It reflects the thermodynamic favorability of the reaction process.</rdfs:isDefinedBy>
-        <ofbo:relevance>Provides insight into whether chemical reactions are thermodynamically favorable.</ofbo:relevance>
+        <relevance>Provides insight into whether chemical reactions are thermodynamically favorable.</relevance>
     </owl:Class>
     
 
@@ -970,7 +970,7 @@ Typical range for small organic molecules: ~0.1–5 eV (depends on system)
 Examples: water (strong electrophile) has high ω; alkanes (weak electrophiles) have low ω</rdfs:comment>
         <rdfs:isDefinedBy>The Global Electrophilicity Index (ω) quantifies the ability of a molecule to accept electrons, based on its ionization potential (IP) and electron affinity (EA).
 It reflects the overall electrophilic character of a molecule, with higher values indicating stronger electron-acceptor behavior.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates how strongly a molecule will accept electrons, affecting reactivity and stability in redox-active electrolytes.</ofbo:relevance>
+        <relevance>Indicates how strongly a molecule will accept electrons, affecting reactivity and stability in redox-active electrolytes.</relevance>
     </owl:Class>
     
 
@@ -985,7 +985,7 @@ Typical range for small organic electrolyte molecules: −10 to −5 eV
 Examples: ethylene carbonate ~−9 eV, dimethoxyethane ~−6 eV</rdfs:comment>
         <rdfs:isDefinedBy>HOMO Energy is the energy of the Highest Occupied Molecular Orbital of a molecule.
 It represents the energetic level of the most weakly bound electrons and characterizes the molecule’s ability to donate electrons. Has been observed to correlate with redox potential.</rdfs:isDefinedBy>
-        <ofbo:rfbLiterature>https://doi.org/10.1002/anie.202515639</ofbo:rfbLiterature>
+        <rfbLiterature>https://doi.org/10.1002/anie.202515639</rfbLiterature>
     </owl:Class>
     
 
@@ -998,8 +998,8 @@ It represents the energetic level of the most weakly bound electrons and charact
 Typical range for small organic electrolyte molecules: 5 to 10 eV
 Examples: ethylene carbonate ~8 eV, dimethoxyethane ~7 eV</rdfs:comment>
         <rdfs:isDefinedBy>The HOMO–LUMO Gap is the energy difference between the Lowest Unoccupied Molecular Orbital (LUMO) and the Highest Occupied Molecular Orbital (HOMO) of a molecule. It reflects the electronic stability of a molecule and the energy required to promote an electron from the HOMO to the LUMO.</rdfs:isDefinedBy>
-        <ofbo:relevance>Provides a measure of chemical stability and reactivity; a larger gap indicates lower reactivity and higher oxidative/reductive stability, while a smaller gap suggests higher reactivity and easier electron transfer. Can also approximate the redox potential.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1002/anie.202515639</ofbo:rfbLiterature>
+        <relevance>Provides a measure of chemical stability and reactivity; a larger gap indicates lower reactivity and higher oxidative/reductive stability, while a smaller gap suggests higher reactivity and easier electron transfer. Can also approximate the redox potential.</relevance>
+        <rfbLiterature>https://doi.org/10.1002/anie.202515639</rfbLiterature>
     </owl:Class>
     
 
@@ -1012,7 +1012,7 @@ Examples: ethylene carbonate ~8 eV, dimethoxyethane ~7 eV</rdfs:comment>
 Typical range for small organic molecules: −500 to 0 kJ/mol
 Examples: ethylene carbonate ΔH_f ~−350 kJ/mol; dimethoxyethane ΔH_f ~−250 kJ/mol</rdfs:comment>
         <rdfs:isDefinedBy>Heat of Formation (ΔH_f) is the change in enthalpy when one mole of a compound is formed from its constituent elements in their standard states. It reflects the thermodynamic stability of the compound relative to its elements.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates the inherent thermodynamic stability of molecules, helping predict reactivity, decomposition tendencies, and suitability of compounds as electrolyte components.</ofbo:relevance>
+        <relevance>Indicates the inherent thermodynamic stability of molecules, helping predict reactivity, decomposition tendencies, and suitability of compounds as electrolyte components.</relevance>
     </owl:Class>
     
 
@@ -1029,8 +1029,8 @@ The heterogeneous rate constant, k₀, is defined at standard conditions and can
 
 The magnitude of k₀ reflects the speed of electron transfer between the redox species and the electrode surface. Larger k₀ values indicate faster electron transfer and more reversible behavior.</rdfs:comment>
         <rdfs:isDefinedBy>The heterogeneous rate constant is the rate constant for an electron transfer reaction occurring at an electrode interface. It quantifies the intrinsic electron-transfer kinetics of a redox couple under reversible or quasi-reversible conditions.</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow batteries, the heterogeneous rate constant is critical for determining charge/discharge kinetics at the electrodes. High k₀ values ensure efficient electron transfer, minimize overpotentials, and reduce energy losses. Low k₀ can lead to quasi-reversible or irreversible electrochemistry, reducing battery power density and efficiency.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1002/adfm.202312608</ofbo:rfbLiterature>
+        <relevance>In organic redox flow batteries, the heterogeneous rate constant is critical for determining charge/discharge kinetics at the electrodes. High k₀ values ensure efficient electron transfer, minimize overpotentials, and reduce energy losses. Low k₀ can lead to quasi-reversible or irreversible electrochemistry, reducing battery power density and efficiency.</relevance>
+        <rfbLiterature>https://doi.org/10.1002/adfm.202312608</rfbLiterature>
     </owl:Class>
     
 
@@ -1040,7 +1040,7 @@ The magnitude of k₀ reflects the speed of electron transfer between the redox 
     <owl:Class rdf:about="https://w3id.org/ofbo#Hydration">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Solvation"/>
         <rdfs:isDefinedBy>The specific solvation of a solute by water molecules, forming a structured hydration shell around ions or polar molecules.</rdfs:isDefinedBy>
-        <ofbo:relevance>Hydration is particularly important in aqueous or partially aqueous electrolytes, affecting ion mobility, redox behavior, and chemical stability. Hydration can also influence degradation pathways for water-sensitive organic molecules</ofbo:relevance>
+        <relevance>Hydration is particularly important in aqueous or partially aqueous electrolytes, affecting ion mobility, redox behavior, and chemical stability. Hydration can also influence degradation pathways for water-sensitive organic molecules</relevance>
     </owl:Class>
     
 
@@ -1050,7 +1050,7 @@ The magnitude of k₀ reflects the speed of electron transfer between the redox 
     <owl:Class rdf:about="https://w3id.org/ofbo#HydrogenBonding">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Interaction"/>
         <rdfs:isDefinedBy>A directional, non-covalent interaction between a hydrogen atom covalently bound to an electronegative donor atom (such as O or N) and an electronegative acceptor atom with a lone pair of electrons.</rdfs:isDefinedBy>
-        <ofbo:relevance>Hydrogen bonding stabilizes molecular structures, influences solubility, affects redox stability of organic electrolytes, and can modulate the mobility of ions within the electrolyte.</ofbo:relevance>
+        <relevance>Hydrogen bonding stabilizes molecular structures, influences solubility, affects redox stability of organic electrolytes, and can modulate the mobility of ions within the electrolyte.</relevance>
     </owl:Class>
     
 
@@ -1060,7 +1060,7 @@ The magnitude of k₀ reflects the speed of electron transfer between the redox 
     <owl:Class rdf:about="https://w3id.org/ofbo#Hydrolysis">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#DegradationReaction"/>
         <rdfs:isDefinedBy>A chemical reaction in which a molecule reacts with water, resulting in the cleavage of a covalent bond and formation of two or more products. Hydrolysis often involves nucleophilic attack by water on electrophilic centers such as esters, amides, carbonyls, or sulfonates.</rdfs:isDefinedBy>
-        <ofbo:relevance>Hydrolysis is a common degradation pathway for water-sensitive organic electrolyte molecules. It can reduce solubility or redox activity of active species or generate by-products that impair conductivity or stability.</ofbo:relevance>
+        <relevance>Hydrolysis is a common degradation pathway for water-sensitive organic electrolyte molecules. It can reduce solubility or redox activity of active species or generate by-products that impair conductivity or stability.</relevance>
     </owl:Class>
     
 
@@ -1084,7 +1084,7 @@ Examples: methyl radical ^1H A ~2 mT; oxygen-centered radical in carbonate solve
         <rdfs:comment>Absorbance or transmittance is plotted versus wavenumber (cm⁻¹). Typical vibrational frequencies for organic molecules range from 400 to 4000 cm⁻¹.
 Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching in dimethoxyethane ~2900 cm⁻¹</rdfs:comment>
         <rdfs:isDefinedBy>The IR Spectrum represents the absorption of infrared light by a molecule as a function of frequency or wavenumber. It reflects vibrational transitions within the molecule, providing information about bond strengths, functional groups, and molecular structure.</rdfs:isDefinedBy>
-        <ofbo:relevance>Helps experimentally identify functional groups, bonding patterns, and molecular interactions, supporting structural characterization and analysis of electrolytes and organic molecules.</ofbo:relevance>
+        <relevance>Helps experimentally identify functional groups, bonding patterns, and molecular interactions, supporting structural characterization and analysis of electrolytes and organic molecules.</relevance>
     </owl:Class>
     
 
@@ -1113,7 +1113,7 @@ Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching i
     <owl:Class rdf:about="https://w3id.org/ofbo#IonIonInteraction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Interaction"/>
         <rdfs:isDefinedBy>Electrostatic interactions between cations and anions in solution, which may result in ion pairs or clusters.</rdfs:isDefinedBy>
-        <ofbo:relevance>Ion–ion interactions influence ionic conductivity, viscosity, aggregation of salts, and electrochemical potential shifts in organic electrolytes. Strong ion pairing can reduce free ion availability for charge transport.</ofbo:relevance>
+        <relevance>Ion–ion interactions influence ionic conductivity, viscosity, aggregation of salts, and electrochemical potential shifts in organic electrolytes. Strong ion pairing can reduce free ion availability for charge transport.</relevance>
     </owl:Class>
     
 
@@ -1123,7 +1123,7 @@ Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching i
     <owl:Class rdf:about="https://w3id.org/ofbo#IonSolventInteraction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Interaction"/>
         <rdfs:isDefinedBy>Ion–solvent interactions stabilize dissolved ions, modulate redox potentials, affect ion mobility, and are critical for achieving desired solubility and electrochemical performance.</rdfs:isDefinedBy>
-        <ofbo:relevance>Non-covalent interactions between ions and surrounding solvent molecules, typically involving coordination, dipole interactions, or hydrogen bonding.</ofbo:relevance>
+        <relevance>Non-covalent interactions between ions and surrounding solvent molecules, typically involving coordination, dipole interactions, or hydrogen bonding.</relevance>
     </owl:Class>
     
 
@@ -1136,7 +1136,7 @@ Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching i
 Typical range for liquid organic electrolytes: 1 × 10⁻³ to 1 × 10⁻¹ S/cm
 Examples: 1 M LiPF6 in ethylene carbonate/dimethyl carbonate mixture ~1 × 10⁻² S/cm; NaCl in dimethoxyethane ~5 × 10⁻³ S/cm</rdfs:comment>
         <rdfs:isDefinedBy>Ionic Conductivity is a measure of an electrolyte’s ability to conduct electric current via the movement of ions. It reflects the mobility and concentration of charge carriers in the solution.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates the efficiency of ion transport in electrolytes, directly affecting battery performance, charge/discharge rates, and electrochemical device efficiency.</ofbo:relevance>
+        <relevance>Indicates the efficiency of ion transport in electrolytes, directly affecting battery performance, charge/discharge rates, and electrochemical device efficiency.</relevance>
     </owl:Class>
     
 
@@ -1149,7 +1149,7 @@ Examples: 1 M LiPF6 in ethylene carbonate/dimethyl carbonate mixture ~1 × 10⁻
 Typical range for small organic electrolyte molecules: 7 to 12 eV
 Examples: ethylene carbonate ~10 eV, dimethoxyethane ~8 eV</rdfs:comment>
         <rdfs:isDefinedBy>Ionization Potential is the energy required to remove an electron from a neutral molecule, representing the molecule’s tendency to lose electrons.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates the molecule’s susceptibility to oxidation, helping predict oxidative stability of electrolyte components in electrochemical systems.</ofbo:relevance>
+        <relevance>Indicates the molecule’s susceptibility to oxidation, helping predict oxidative stability of electrolyte components in electrochemical systems.</relevance>
     </owl:Class>
     
 
@@ -1159,7 +1159,7 @@ Examples: ethylene carbonate ~10 eV, dimethoxyethane ~8 eV</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#IonizationProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ElectronicStructure"/>
         <rdfs:isDefinedBy>Ionization Properties describe the tendency of a molecule or atom to lose or gain electrons, reflecting its reactivity and stability in redox or electrochemical processes.</rdfs:isDefinedBy>
-        <ofbo:relevance>These properties determine how easily a molecule can be oxidized or reduced, influencing electrochemical stability, redox behavior, and degradation pathways of electrolyte components.</ofbo:relevance>
+        <relevance>These properties determine how easily a molecule can be oxidized or reduced, influencing electrochemical stability, redox behavior, and degradation pathways of electrolyte components.</relevance>
     </owl:Class>
     
 
@@ -1172,8 +1172,8 @@ Examples: ethylene carbonate ~10 eV, dimethoxyethane ~8 eV</rdfs:comment>
 Typical range for small organic electrolyte molecules: −1 to 5 eV
 Examples: ethylene carbonate ~1 eV, dimethoxyethane ~3 eV</rdfs:comment>
         <rdfs:isDefinedBy>LUMO Energy is the energy of the Lowest Unoccupied Molecular Orbital of a molecule, representing the lowest-energy orbital available to accept electrons during chemical reactions.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates electron-accepting ability and reduction susceptibility of electrolyte components, helping predict which species are more likely to undergo reduction in electrochemical systems.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1002/anie.202515639</ofbo:rfbLiterature>
+        <relevance>Indicates electron-accepting ability and reduction susceptibility of electrolyte components, helping predict which species are more likely to undergo reduction in electrochemical systems.</relevance>
+        <rfbLiterature>https://doi.org/10.1002/anie.202515639</rfbLiterature>
     </owl:Class>
     
 
@@ -1187,7 +1187,7 @@ Typical range: 0 (low reactivity) to ~1 (high reactivity) per site (normalized f
 Examples: in H2O, oxygen has higher local electrophilicity than hydrogens; in carbonyls, the carbonyl carbon is the most electrophilic site</rdfs:comment>
         <rdfs:isDefinedBy>Local Electrophilicity quantifies the site-specific electron-accepting ability of a molecule.
 It is derived by weighting the global electrophilicity index (ω) with the electrophilic Fukui function, indicating which atoms are more likely to undergo nucleophilic attack.</rdfs:isDefinedBy>
-        <ofbo:relevance>Identifies reactive sites within a molecule, helping predict degradation or reactivity in electrolytes.</ofbo:relevance>
+        <relevance>Identifies reactive sites within a molecule, helping predict degradation or reactivity in electrolytes.</relevance>
     </owl:Class>
     
 
@@ -1196,7 +1196,7 @@ It is derived by weighting the global electrophilicity index (ω) with the elect
 
     <owl:Class rdf:about="https://w3id.org/ofbo#MachineLearningMethod">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ComputationalMethod"/>
-        <ofbo:relevance>A machine learning method is a computational approach that uses statistical models and algorithms to learn patterns from data and make predictions or decisions without being explicitly programmed. In chemistry and materials science, machine learning methods can model molecular properties, potential energy surfaces, and reaction outcomes, often providing efficient approximations of quantum chemical or experimental results.</ofbo:relevance>
+        <relevance>A machine learning method is a computational approach that uses statistical models and algorithms to learn patterns from data and make predictions or decisions without being explicitly programmed. In chemistry and materials science, machine learning methods can model molecular properties, potential energy surfaces, and reaction outcomes, often providing efficient approximations of quantum chemical or experimental results.</relevance>
     </owl:Class>
     
 
@@ -1223,9 +1223,9 @@ It is derived by weighting the global electrophilicity index (ω) with the elect
 
     <owl:Class rdf:about="https://w3id.org/ofbo#MichaelAddition">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#DegradationReaction"/>
-        <ofbo:relevance>A nucleophilic addition reaction in which a nucleophile adds to an α,β-unsaturated carbonyl or related electron-deficient system.</ofbo:relevance>
-        <ofbo:relevance>Michael addition represents a chemical degradation pathway for conjugated organic electrolytes, especially in the presence of nucleophilic impurities or additives.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1039/C9TA03219C</ofbo:rfbLiterature>
+        <relevance>A nucleophilic addition reaction in which a nucleophile adds to an α,β-unsaturated carbonyl or related electron-deficient system.</relevance>
+        <relevance>Michael addition represents a chemical degradation pathway for conjugated organic electrolytes, especially in the presence of nucleophilic impurities or additives.</relevance>
+        <rfbLiterature>https://doi.org/10.1039/C9TA03219C</rfbLiterature>
     </owl:Class>
     
 
@@ -1252,7 +1252,7 @@ It is derived by weighting the global electrophilicity index (ω) with the elect
     <owl:Class rdf:about="https://w3id.org/ofbo#NMR">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#MagneticResonance"/>
         <rdfs:isDefinedBy>NMR Properties describe how atomic nuclei interact with external magnetic fields, providing information about the local electronic environment and molecular structure.</rdfs:isDefinedBy>
-        <ofbo:relevance>These properties are essential for determining chemical structure, bonding, and electron distribution in electrolyte molecules. NMR data can validate computational models, probe molecular dynamics, and assess solvent or ion effects on nuclei.</ofbo:relevance>
+        <relevance>These properties are essential for determining chemical structure, bonding, and electron distribution in electrolyte molecules. NMR data can validate computational models, probe molecular dynamics, and assess solvent or ion effects on nuclei.</relevance>
     </owl:Class>
     
 
@@ -1275,7 +1275,7 @@ Examples: in H2O, hydrogens have higher nucleophilic Fukui function than oxygen;
     <owl:Class rdf:about="https://w3id.org/ofbo#Oxidation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ElectrochemicalReaction"/>
         <rdfs:isDefinedBy>An electrochemical or chemical reaction in which a chemical entity loses one or more electrons, resulting in an increase in its oxidation state.</rdfs:isDefinedBy>
-        <ofbo:relevance>Oxidation determines the upper voltage limit and oxidative stability of organic electrolytes, and can lead to structural degradation, bond cleavage, or polymerization.</ofbo:relevance>
+        <relevance>Oxidation determines the upper voltage limit and oxidative stability of organic electrolytes, and can lead to structural degradation, bond cleavage, or polymerization.</relevance>
     </owl:Class>
     
 
@@ -1296,7 +1296,7 @@ Electrostatic potential fitting (RESP, CHELPG)
 
 These charges can be positive or negative, depending on whether the atom is electron-deficient or electron-rich. Partial atomic charges are not physical observables, but they are widely used to rationalize reactivity, intermolecular interactions, solvation, and electrostatic effects.</rdfs:comment>
         <rdfs:isDefinedBy>Partial atomic charges describe the distribution of electronic charge over individual atoms in a molecule, representing deviations from the neutral atom’s nominal charge due to bonding and polarization. They are a measure of how electron density is partitioned within the molecule.</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow batteries, partial atomic charges are important for understanding:
+        <relevance>In organic redox flow batteries, partial atomic charges are important for understanding:
 
 Solvent and ion interactions (coordination and solvation)
 
@@ -1304,7 +1304,7 @@ Redox behavior (which atoms are more likely to undergo oxidation or reduction)
 
 Electrostatic stabilization of charged intermediates
 
-Accurate partial charges help predict ion mobility, protonation states, and reactivity patterns of redox-active molecules in electrolyte solutions, and are often used as descriptors in computational screening of ORFB candidates.</ofbo:relevance>
+Accurate partial charges help predict ion mobility, protonation states, and reactivity patterns of redox-active molecules in electrolyte solutions, and are often used as descriptors in computational screening of ORFB candidates.</relevance>
     </owl:Class>
     
 
@@ -1322,8 +1322,8 @@ Ip,c = cathodic peak current (reduction)
 
 For a reversible, one-electron redox reaction, the peak current ratio is ideally close to 1. Deviations from 1 indicate quasi-reversible or irreversible behavior, adsorption effects, or kinetic limitations.</rdfs:comment>
         <rdfs:isDefinedBy>The peak current ratio is the ratio of the anodic peak current (Ip,a) to the cathodic peak current (Ip,c) observed in a voltammetric experiment, typically cyclic voltammetry. It is a measure of the symmetry of oxidation and reduction processes for a redox-active species.</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow batteries, the peak current ratio is used to assess the reversibility of redox-active molecules. Molecules with peak current ratios near unity indicate fast electron transfer and reversible redox cycling, which are desirable for high-efficiency battery operation. Deviations may signal slow kinetics, chemical instability, or side reactions in the electrolyte.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1038/srep39101</ofbo:rfbLiterature>
+        <relevance>In organic redox flow batteries, the peak current ratio is used to assess the reversibility of redox-active molecules. Molecules with peak current ratios near unity indicate fast electron transfer and reversible redox cycling, which are desirable for high-efficiency battery operation. Deviations may signal slow kinetics, chemical instability, or side reactions in the electrolyte.</relevance>
+        <rfbLiterature>https://doi.org/10.1038/srep39101</rfbLiterature>
     </owl:Class>
     
 
@@ -1340,8 +1340,8 @@ Ep,c = cathodic peak potential (reduction)
 
 For a reversible, one-electron redox process, ΔEp is ideally 59 mV at 25°C. Larger ΔEp values indicate quasi-reversible or irreversible behavior, slow electron transfer kinetics, or coupled chemical reactions.</rdfs:comment>
         <rdfs:isDefinedBy>The peak potential gap, ΔEp, is the difference between the anodic peak potential (Ep,a) and the cathodic peak potential (Ep,c) in a voltammetric experiment, typically cyclic voltammetry. It reflects the separation between oxidation and reduction peaks of a redox-active species.</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow batteries, the peak potential gap provides insight into the kinetic reversibility of redox-active molecules. Small ΔEp values indicate fast, reversible electron transfer, which is desirable for efficient cycling. Large ΔEp may suggest slow electron transfer or chemical instability, which can reduce battery efficiency and cycle life.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1002/adfm.202312608</ofbo:rfbLiterature>
+        <relevance>In organic redox flow batteries, the peak potential gap provides insight into the kinetic reversibility of redox-active molecules. Small ΔEp values indicate fast, reversible electron transfer, which is desirable for efficient cycling. Large ΔEp may suggest slow electron transfer or chemical instability, which can reduce battery efficiency and cycle life.</relevance>
+        <rfbLiterature>https://doi.org/10.1002/adfm.202312608</rfbLiterature>
     </owl:Class>
     
 
@@ -1374,7 +1374,7 @@ It reflects the molecule’s ability to respond to electric fields and participa
     <owl:Class rdf:about="https://w3id.org/ofbo#ProticSolvent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Solvent"/>
         <rdfs:isDefinedBy>A protic solvent is a solvent that contains hydrogen atoms bound to electronegative atoms (typically O–H or N–H) and is capable of donating protons (H⁺). Protic solvents can participate in hydrogen bonding and proton transfer reactions.</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow batteries, protic solvents affect redox potentials, protonation equilibria, and reaction mechanisms. They are important when designing aqueous electrolytes or systems where proton-coupled electron transfer is relevant. Protic solvents can also influence chemical stability and side reactions of redox-active molecules.</ofbo:relevance>
+        <relevance>In organic redox flow batteries, protic solvents affect redox potentials, protonation equilibria, and reaction mechanisms. They are important when designing aqueous electrolytes or systems where proton-coupled electron transfer is relevant. Protic solvents can also influence chemical stability and side reactions of redox-active molecules.</relevance>
     </owl:Class>
     
 
@@ -1384,7 +1384,7 @@ It reflects the molecule’s ability to respond to electric fields and participa
     <owl:Class rdf:about="https://w3id.org/ofbo#Protodesulfonation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#DegradationReaction"/>
         <rdfs:isDefinedBy>A chemical reaction in which a sulfonyl or sulfonate substituent is removed from an aromatic or aliphatic system through proton-mediated cleavage.</rdfs:isDefinedBy>
-        <ofbo:relevance>Protodesulfonation can lead to loss of solubilizing or ionic groups, decreasing electrolyte solubility and causing irreversible performance degradation.</ofbo:relevance>
+        <relevance>Protodesulfonation can lead to loss of solubilizing or ionic groups, decreasing electrolyte solubility and causing irreversible performance degradation.</relevance>
     </owl:Class>
     
 
@@ -1418,7 +1418,7 @@ many amines ≈ 900–1000 kJ mol⁻¹</rdfs:comment>
 B (g) + H⁺ (g) → BH⁺ (g)
 
 It quantifies the intrinsic tendency of a molecule to bind a proton in the absence of solvent effects.</rdfs:isDefinedBy>
-        <ofbo:relevance>Proton affinity provides an intrinsic measure of a molecule’s ability to bind protons without solvent effects. For organic redox flow battery molecules, this property is useful for understanding protonation tendencies and the stability of protonated intermediates. Proton affinity can therefore help rationalize proton-coupled electron transfer reactions and complement solution-phase descriptors such as pKa when evaluating redox-active molecules.</ofbo:relevance>
+        <relevance>Proton affinity provides an intrinsic measure of a molecule’s ability to bind protons without solvent effects. For organic redox flow battery molecules, this property is useful for understanding protonation tendencies and the stability of protonated intermediates. Proton affinity can therefore help rationalize proton-coupled electron transfer reactions and complement solution-phase descriptors such as pKa when evaluating redox-active molecules.</relevance>
     </owl:Class>
     
 
@@ -1430,7 +1430,7 @@ It quantifies the intrinsic tendency of a molecule to bind a proton in the absen
         <rdfs:comment>Raman intensity is plotted versus wavenumber shift (cm⁻¹). Typical vibrational frequencies for small organic molecules range from 100 to 3500 cm⁻¹.
 Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching in dimethoxyethane ~2950 cm⁻¹</rdfs:comment>
         <rdfs:isDefinedBy>The Raman Spectrum represents inelastic scattering of light by a molecule, where incident photons exchange energy with molecular vibrations. It provides complementary vibrational information to IR spectroscopy, particularly for vibrations involving changes in polarizability.</rdfs:isDefinedBy>
-        <ofbo:relevance>Provides information on vibrational modes, molecular structure, and interactions. In electrolytes, Raman spectra help probe solvation structures, ion–solvent interactions, and conformational changes.</ofbo:relevance>
+        <relevance>Provides information on vibrational modes, molecular structure, and interactions. In electrolytes, Raman spectra help probe solvation structures, ion–solvent interactions, and conformational changes.</relevance>
     </owl:Class>
     
 
@@ -1440,7 +1440,7 @@ Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching i
     <owl:Class rdf:about="https://w3id.org/ofbo#RateConstant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Thermochemistry"/>
         <rdfs:isDefinedBy>The rate constant is a kinetic parameter that quantifies the speed of a chemical reaction under given conditions. It appears in the rate law, which relates the reaction rate to the concentrations of reactants.</rdfs:isDefinedBy>
-        <ofbo:relevance>For a general reaction:
+        <relevance>For a general reaction:
 
 A + B → Products
 
@@ -1454,8 +1454,8 @@ k = rate constant
 
 m, n = reaction orders with respect to A and B
 
-The rate constant depends on temperature, solvent, and the presence of catalysts. It is typically reported in units that depend on the overall order of the reaction (s⁻¹ for first order, M⁻¹ s⁻¹ for second order, etc.).</ofbo:relevance>
-        <ofbo:relevance>In organic redox flow batteries, the rate constant determines how quickly a redox-active species undergoes a chemical reaction, including electron-transfer reactions, protonation/deprotonation, or decomposition. Faster reaction rates are essential for achieving high current densities and efficient charge/discharge cycles.</ofbo:relevance>
+The rate constant depends on temperature, solvent, and the presence of catalysts. It is typically reported in units that depend on the overall order of the reaction (s⁻¹ for first order, M⁻¹ s⁻¹ for second order, etc.).</relevance>
+        <relevance>In organic redox flow batteries, the rate constant determines how quickly a redox-active species undergoes a chemical reaction, including electron-transfer reactions, protonation/deprotonation, or decomposition. Faster reaction rates are essential for achieving high current densities and efficient charge/discharge cycles.</relevance>
     </owl:Class>
     
 
@@ -1508,8 +1508,8 @@ Redox potentials are influenced by solvent, pH, supporting electrolytes, and mol
 Oxidized ⇌ Reduced + e⁻
 
 It quantifies the intrinsic tendency of a molecule to gain or lose electrons under standard conditions (typically 25°C, 1 M concentrations, pH 0 or reference pH).</rdfs:isDefinedBy>
-        <ofbo:relevance>In organic redox flow batteries, the redox potential determines the voltage at which a molecule can be oxidized or reduced. Proper alignment of redox potentials for the oxidized/reduced species ensures high energy density, electrochemical reversibility, and stable cycling. Accurate redox potentials are essential for selecting compatible redox-active molecules and predicting their performance under varying pH and electrolyte conditions.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1038/srep39101</ofbo:rfbLiterature>
+        <relevance>In organic redox flow batteries, the redox potential determines the voltage at which a molecule can be oxidized or reduced. Proper alignment of redox potentials for the oxidized/reduced species ensures high energy density, electrochemical reversibility, and stable cycling. Accurate redox potentials are essential for selecting compatible redox-active molecules and predicting their performance under varying pH and electrolyte conditions.</relevance>
+        <rfbLiterature>https://doi.org/10.1038/srep39101</rfbLiterature>
     </owl:Class>
     
 
@@ -1519,7 +1519,7 @@ It quantifies the intrinsic tendency of a molecule to gain or lose electrons und
     <owl:Class rdf:about="https://w3id.org/ofbo#Reduction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ElectrochemicalReaction"/>
         <rdfs:isDefinedBy>An electrochemical or chemical reaction in which a chemical entity gains one or more electrons, resulting in a decrease in its oxidation state.</rdfs:isDefinedBy>
-        <ofbo:relevance>Reduction governs the lower voltage limit and reductive stability of organic electrolytes, and may initiate radical formation, dimerization, or irreversible decomposition.</ofbo:relevance>
+        <relevance>Reduction governs the lower voltage limit and reductive stability of organic electrolytes, and may initiate radical formation, dimerization, or irreversible decomposition.</relevance>
     </owl:Class>
     
 
@@ -1542,8 +1542,8 @@ It quantifies the intrinsic tendency of a molecule to gain or lose electrons und
 Typical range for small organic molecules in common solvents: −2 to 2 (log₁₀ mol/L)
 Examples: LiPF6 in ethylene carbonate ~0.5; NaCl in dimethoxyethane ~−1</rdfs:comment>
         <rdfs:isDefinedBy>Solubility is the maximum concentration of a solute that can dissolve in a solvent at a given temperature and pressure. It reflects the thermodynamic favorability of solute–solvent interactions.</rdfs:isDefinedBy>
-        <ofbo:relevance>Determines how much electrolyte or salt can dissolve in a solvent, influencing ionic strength, conductivity, and overall electrolyte performance.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1021/acs.chemrev.5c00332</ofbo:rfbLiterature>
+        <relevance>Determines how much electrolyte or salt can dissolve in a solvent, influencing ionic strength, conductivity, and overall electrolyte performance.</relevance>
+        <rfbLiterature>https://doi.org/10.1021/acs.chemrev.5c00332</rfbLiterature>
     </owl:Class>
     
 
@@ -1553,7 +1553,7 @@ Examples: LiPF6 in ethylene carbonate ~0.5; NaCl in dimethoxyethane ~−1</rdfs:
     <owl:Class rdf:about="https://w3id.org/ofbo#Solvation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Interaction"/>
         <rdfs:isDefinedBy>The process by which solvent molecules surround and interact with a solute, forming a solvation shell through non-covalent interactions.</rdfs:isDefinedBy>
-        <ofbo:relevance>Solvation governs ion stabilization, redox potential shifts, solubility, and transport properties in electrolytes. Effective solvation enhances electrolyte performance and prevents precipitation or aggregation of active species.</ofbo:relevance>
+        <relevance>Solvation governs ion stabilization, redox potential shifts, solubility, and transport properties in electrolytes. Effective solvation enhances electrolyte performance and prevents precipitation or aggregation of active species.</relevance>
     </owl:Class>
     
 
@@ -1576,7 +1576,7 @@ Water, Dimethyl sulfoxide (DMSO)</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#SolventAcidityBasicity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#AcidBaseProperty"/>
         <rdfs:isDefinedBy>Solvent Acidity/Basicity Properties describe the ability of a solvent to donate or accept electrons or protons. They capture how the solvent interacts with solutes, influencing solvation, hydrogen bonding, and reaction energetics.</rdfs:isDefinedBy>
-        <ofbo:relevance>These properties determine how solvents stabilize ions and molecules in electrolyte solutions. They influence solubility, charge distribution, and reactivity, and are critical for predicting solvent effects on chemical and electrochemical behavior.</ofbo:relevance>
+        <relevance>These properties determine how solvents stabilize ions and molecules in electrolyte solutions. They influence solubility, charge distribution, and reactivity, and are critical for predicting solvent effects on chemical and electrochemical behavior.</relevance>
     </owl:Class>
     
 
@@ -1586,7 +1586,7 @@ Water, Dimethyl sulfoxide (DMSO)</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#SpectroscopicProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Property"/>
         <rdfs:isDefinedBy>Spectroscopic Properties describe how a molecule interacts with electromagnetic radiation or magnetic fields, revealing information about its electronic structure, vibrational modes, and magnetic environment.</rdfs:isDefinedBy>
-        <ofbo:relevance>These properties enable experimental and computational characterization of molecular structure, bonding, and electronic states. In electrolytes, they help validate molecular models, monitor degradation, and understand interactions at the atomic and molecular level.</ofbo:relevance>
+        <relevance>These properties enable experimental and computational characterization of molecular structure, bonding, and electronic states. In electrolytes, they help validate molecular models, monitor degradation, and understand interactions at the atomic and molecular level.</relevance>
     </owl:Class>
     
 
@@ -1595,8 +1595,8 @@ Water, Dimethyl sulfoxide (DMSO)</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/ofbo#StructuralProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Property"/>
-        <ofbo:relevance>A property of a chemical entity that is derived from its three-dimensional geometry or spatial arrangement and requires computation or measurement to obtain. This includes characteristics such as molecular volume, surface area, polar surface area, or other geometry-dependent descriptors.</ofbo:relevance>
-        <ofbo:relevance>Structural properties influence how molecules or ions interact with solvents, other ions, and electrodes, affecting solubility or diffusion and transport properties</ofbo:relevance>
+        <relevance>A property of a chemical entity that is derived from its three-dimensional geometry or spatial arrangement and requires computation or measurement to obtain. This includes characteristics such as molecular volume, surface area, polar surface area, or other geometry-dependent descriptors.</relevance>
+        <relevance>Structural properties influence how molecules or ions interact with solvents, other ions, and electrodes, affecting solubility or diffusion and transport properties</relevance>
     </owl:Class>
     
 
@@ -1605,7 +1605,7 @@ Water, Dimethyl sulfoxide (DMSO)</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/ofbo#Substance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#ChemicalEntity"/>
-        <rdfs:isDefinedBy>A Substance is a chemically distinct material that can exist as a molecule, salt, or other defined chemical species. It represents a real chemical sample or entity for which properties, states, and roles in a system can be assigned.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>A substance is a chemically distinct material that can exist as a molecule, salt, or other defined chemical species. It represents a real chemical sample or entity for which properties, states, and roles in a system can be assigned.</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -1618,8 +1618,8 @@ Water, Dimethyl sulfoxide (DMSO)</rdfs:comment>
 Typical range for small organic molecules:~50–150 Å²
 Examples: Methane: S ~50 Å², Quinone derivative: S ~100 Å²</rdfs:comment>
         <rdfs:isDefinedBy>The total area of a chemical entity’s surface calculated from its three-dimensional geometry. This is a calculated structural property, not a fixed molecular constant.</rdfs:isDefinedBy>
-        <ofbo:relevance>Determines solvent interactions and molecular packing; influences diffusion, solubility, and electrochemical accessibility in organic electrolytes.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1038/s41597-022-01814-4</ofbo:rfbLiterature>
+        <relevance>Determines solvent interactions and molecular packing; influences diffusion, solubility, and electrochemical accessibility in organic electrolytes.</relevance>
+        <rfbLiterature>https://doi.org/10.1038/s41597-022-01814-4</rfbLiterature>
     </owl:Class>
     
 
@@ -1639,7 +1639,7 @@ Examples: Methane: S ~50 Å², Quinone derivative: S ~100 Å²</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/ofbo#Thermochemistry">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Property"/>
         <rdfs:isDefinedBy>Thermodynamic Properties describe the energetic and entropic state of a molecule or system, capturing how energy, heat, and entropy influence chemical processes and stability.</rdfs:isDefinedBy>
-        <ofbo:relevance>These properties determine reaction spontaneity, stability, solvation, and degradation tendencies of electrolyte components. They are essential for predicting thermodynamic favorability, reaction equilibria, and molecular behavior under different temperature and pressure conditions.</ofbo:relevance>
+        <relevance>These properties determine reaction spontaneity, stability, solvation, and degradation tendencies of electrolyte components. They are essential for predicting thermodynamic favorability, reaction equilibria, and molecular behavior under different temperature and pressure conditions.</relevance>
     </owl:Class>
     
 
@@ -1652,7 +1652,7 @@ Examples: Methane: S ~50 Å², Quinone derivative: S ~100 Å²</rdfs:comment>
 Typical range for liquid organic electrolytes: 0.2 to 0.6 for cations
 Examples: Li⁺ in 1 M LiPF6 ethylene carbonate/dimethyl carbonate mixture ~0.35; Na⁺ in dimethoxyethane ~0.4</rdfs:comment>
         <rdfs:isDefinedBy>The Transference Number (t⁺ or t⁻) is the fraction of the total ionic current carried by a specific ion (cation or anion) in an electrolyte. It reflects the relative mobility of ions under an applied electric field.</rdfs:isDefinedBy>
-        <ofbo:relevance>Indicates which ion dominates charge transport in an electrolyte, affecting polarization, battery efficiency, and performance in electrochemical systems.</ofbo:relevance>
+        <relevance>Indicates which ion dominates charge transport in an electrolyte, affecting polarization, battery efficiency, and performance in electrochemical systems.</relevance>
     </owl:Class>
     
 
@@ -1662,7 +1662,7 @@ Examples: Li⁺ in 1 M LiPF6 ethylene carbonate/dimethyl carbonate mixture ~0.35
     <owl:Class rdf:about="https://w3id.org/ofbo#TransportAndBulkProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#Property"/>
         <rdfs:isDefinedBy>Bulk and Transport Properties describe the collective physical behavior of molecules and ions in condensed phases, including their motion, flow, and packing. They reflect how microscopic interactions translate into macroscopic observable properties.</rdfs:isDefinedBy>
-        <ofbo:relevance>These properties determine ionic mobility, conductivity, viscosity, density, solubility, and overall performance of electrolytes in electrochemical devices. They are critical for understanding diffusion, charge transport, and fluid behavior under operating conditions.</ofbo:relevance>
+        <relevance>These properties determine ionic mobility, conductivity, viscosity, density, solubility, and overall performance of electrolytes in electrochemical devices. They are critical for understanding diffusion, charge transport, and fluid behavior under operating conditions.</relevance>
     </owl:Class>
     
 
@@ -1675,7 +1675,7 @@ Examples: Li⁺ in 1 M LiPF6 ethylene carbonate/dimethyl carbonate mixture ~0.35
 Typical range for small organic molecules: 150–400 nm (UV) and 400–700 nm (visible), depending on the chromophores present
 Examples: ethylene carbonate absorbs mainly in the UV around 180–200 nm; conjugated molecules like stilbene show visible absorption ~300–350 nm</rdfs:comment>
         <rdfs:isDefinedBy>The UV–Vis Spectrum represents the absorption of ultraviolet and visible light by a molecule as a function of wavelength or energy. It reflects electronic transitions from occupied to unoccupied molecular orbitals, primarily π→π* and n→π* transitions in organic molecules.</rdfs:isDefinedBy>
-        <ofbo:relevance>Provides information on electronic structure and conjugation, helping predict optical properties, photostability, and potential photo-induced reactions of molecules in electrolytes and other systems.</ofbo:relevance>
+        <relevance>Provides information on electronic structure and conjugation, helping predict optical properties, photostability, and potential photo-induced reactions of molecules in electrolytes and other systems.</relevance>
     </owl:Class>
     
 
@@ -1688,7 +1688,7 @@ Examples: ethylene carbonate absorbs mainly in the UV around 180–200 nm; conju
 Typical range for small organic molecules: 400 to 4000 cm⁻¹
 Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching in dimethoxyethane ~2900 cm⁻¹</rdfs:comment>
         <rdfs:isDefinedBy>Vibrational Frequencies are the characteristic frequencies at which atoms in a molecule oscillate around their equilibrium positions. They correspond to quantized vibrational energy levels and provide insight into bond strengths and molecular structure.</rdfs:isDefinedBy>
-        <ofbo:relevance>Helps characterize molecular bonds, identify functional groups, and predict IR and Raman active modes, supporting structural analysis and understanding of molecular interactions in electrolyte systems.</ofbo:relevance>
+        <relevance>Helps characterize molecular bonds, identify functional groups, and predict IR and Raman active modes, supporting structural analysis and understanding of molecular interactions in electrolyte systems.</relevance>
     </owl:Class>
     
 
@@ -1698,7 +1698,7 @@ Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching i
     <owl:Class rdf:about="https://w3id.org/ofbo#VibrationalSpectrum">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ofbo#SpectroscopicProperty"/>
         <rdfs:isDefinedBy>Vibrational Spectra describe the quantized vibrational motions of atoms within a molecule, which interact with electromagnetic radiation. They provide information about bond strengths, molecular geometry, and functional groups.</rdfs:isDefinedBy>
-        <ofbo:relevance>These properties are critical for identifying molecular structure, detecting functional groups, and monitoring interactions such as hydrogen bonding. In electrolytes, vibrational spectra can reveal solvation effects, molecular dynamics, and degradation pathways.</ofbo:relevance>
+        <relevance>These properties are critical for identifying molecular structure, detecting functional groups, and monitoring interactions such as hydrogen bonding. In electrolytes, vibrational spectra can reveal solvation effects, molecular dynamics, and degradation pathways.</relevance>
     </owl:Class>
     
 
@@ -1711,7 +1711,7 @@ Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching i
 Typical range for small organic electrolyte solvents: 0.3 to 5 mPa·s
 Examples: ethylene carbonate ~2.5 mPa·s; dimethoxyethane ~0.45 mPa·s</rdfs:comment>
         <rdfs:isDefinedBy>Viscosity is a measure of a fluid’s resistance to flow. In electrolyte solutions, it reflects the internal friction between molecules and ions, influencing ion mobility and transport properties.</rdfs:isDefinedBy>
-        <ofbo:relevance>Determines the ease of ion transport in electrolytes, affecting diffusion, conductivity, and overall performance of electrochemical devices.</ofbo:relevance>
+        <relevance>Determines the ease of ion transport in electrolytes, affecting diffusion, conductivity, and overall performance of electrochemical devices.</relevance>
     </owl:Class>
     
 
@@ -1724,7 +1724,7 @@ Examples: ethylene carbonate ~2.5 mPa·s; dimethoxyethane ~0.45 mPa·s</rdfs:com
 Typical range for small organic molecules: 50 to 500 kJ/mol, depending on molecular size and bonding
 Examples: ethylene carbonate ~200 kJ/mol; dimethoxyethane ~150 kJ/mol</rdfs:comment>
         <rdfs:isDefinedBy>Zero-Point Energy (ZPE) is the lowest possible vibrational energy that a molecule possesses, even at absolute zero temperature. It reflects the quantum mechanical motion of atoms in their equilibrium positions.</rdfs:isDefinedBy>
-        <ofbo:relevance>Contributes to the total electronic and thermodynamic energy of molecules, affecting reaction energies, stability, and accurate modeling of degradation or solvation processes in electrolytes.</ofbo:relevance>
+        <relevance>Contributes to the total electronic and thermodynamic energy of molecules, affecting reaction energies, stability, and accurate modeling of degradation or solvation processes in electrolytes.</relevance>
     </owl:Class>
     
 
@@ -1769,8 +1769,8 @@ The pKa value depends on the solvent environment, temperature, and molecular str
 HA ⇌ A⁻ + H⁺
 
 It quantifies the tendency of a molecule to donate a proton in a given solvent, typically water.</rdfs:isDefinedBy>
-        <ofbo:relevance>pKa values determine the protonation state of redox-active molecules in electrolyte solutions and therefore influence their redox chemistry. In systems where electron transfer is coupled to proton transfer (proton-coupled electron transfer, PCET), pKa values of the oxidized and reduced species control the pH dependence of the redox potential. This relationship allows estimation of redox potentials at different pH values using thermodynamic cycles and the Nernst equation. Consequently, pKa is an important descriptor for predicting electrochemical stability, redox potential shifts, and reaction pathways in organic redox flow battery electrolytes.</ofbo:relevance>
-        <ofbo:rfbLiterature>https://doi.org/10.1038/srep39101</ofbo:rfbLiterature>
+        <relevance>pKa values determine the protonation state of redox-active molecules in electrolyte solutions and therefore influence their redox chemistry. In systems where electron transfer is coupled to proton transfer (proton-coupled electron transfer, PCET), pKa values of the oxidized and reduced species control the pH dependence of the redox potential. This relationship allows estimation of redox potentials at different pH values using thermodynamic cycles and the Nernst equation. Consequently, pKa is an important descriptor for predicting electrochemical stability, redox potential shifts, and reaction pathways in organic redox flow battery electrolytes.</relevance>
+        <rfbLiterature>https://doi.org/10.1038/srep39101</rfbLiterature>
     </owl:Class>
 </rdf:RDF>
 
