@@ -1,0 +1,16 @@
+ID,IUPACName,SMILES,CoreSMILES,State,InChIKey,1e-E0(Vvs.NHE),2e-/2H+E(VvsNHE),Expt_pKa,Calc_pKa
+1,"cyclohexa-2,5-diene-1,4-dione",O=C1C=CC(=O)C=C1,O=C1C=CC(=O)C=C1,Oxidized,AZQWKYJCGOJGHM-UHFFFAOYSA-N,-0.482,0.643,9.85,9.85
+2,"2-phenylcyclohexa-2,5-diene-1,4-dione",O=C1C=CC(=O)C(c2ccccc2)=C1,O=C1C=CC(=O)C=C1,Oxidized,RLQZIECDMISZHS-UHFFFAOYSA-N,-0.466,0.634,,
+3,"2-methylcyclohexa-2,5-diene-1,4-dione",CC1=CC(=O)C=CC1=O,O=C1C=CC(=O)C=C1,Oxidized,VTWDKFNVVLAELH-UHFFFAOYSA-N,-0.563,0.599,10.0,10.52
+4,"2-tert-butylcyclohexa-2,5-diene-1,4-dione",CC(C)(C)C1=CC(=O)C=CC1=O,O=C1C=CC(=O)C=C1,Oxidized,NCCTVAJNFXYWTM-UHFFFAOYSA-N,-0.582,0.579,10.6,10.4
+5,"2-methoxycyclohexa-2,5-diene-1,4-dione",COC1=CC(=O)C=CC1=O,O=C1C=CC(=O)C=C1,Oxidized,ZJKWJHONFFKJHG-UHFFFAOYSA-N,-0.58,0.57,9.91,9.53
+6,"2,6-dimethylcyclohexa-2,5-diene-1,4-dione",CC1=CC(=O)C=C(C)C1=O,O=C1C=CC(=O)C=C1,Oxidized,SENUUPBBLQWHMF-UHFFFAOYSA-N,-0.635,0.547,10.35,9.98
+7,"2,3-dimethylcyclohexa-2,5-diene-1,4-dione",CC1=C(C)C(=O)C=CC1=O,O=C1C=CC(=O)C=C1,Oxidized,AIACLXROWHONEE-UHFFFAOYSA-N,-0.646,0.553,10.43,10.21
+8,"2,3,5-trimethylcyclohexa-2,5-diene-1,4-dione",CC1=CC(=O)C(C)=C(C)C1=O,O=C1C=CC(=O)C=C1,Oxidized,QIXDHVDGPXBRRD-UHFFFAOYSA-N,-0.731,0.487,10.8,11.04
+9,"2,6-dimethoxycyclohexa-2,5-diene-1,4-dione",COC1=CC(=O)C=C(OC)C1=O,O=C1C=CC(=O)C=C1,Oxidized,OLBNOBQOQZRLMP-UHFFFAOYSA-N,-0.692,0.473,,
+10,"2,3,5,6-tetramethylcyclohexa-2,5-diene-1,4-dione",CC1=C(C)C(=O)C(C)=C(C)C1=O,O=C1C=CC(=O)C=C1,Oxidized,WAMKWBHYPYBEJY-UHFFFAOYSA-N,-0.813,0.416,11.18,11.21
+11,"4,5-dichloro-3,6-dioxocyclohexa-1,4-diene-1,2-dicarbonitrile",N#CC1=C(C#N)C(=O)C(Cl)=C(Cl)C1=O,O=C1C=CC(=O)C=C1,Oxidized,HZNVUJQVZSTENZ-UHFFFAOYSA-N,0.537,0.887,,
+12,"2,3,5,6-tetrafluorocyclohexa-2,5-diene-1,4-dione",O=C1C(F)=C(F)C(=O)C(F)=C1F,O=C1C=CC(=O)C=C1,Oxidized,JKLYZOGJWVAIQS-UHFFFAOYSA-N,0.023,0.706,,
+13,"2,5-dichlorocyclohexa-2,5-diene-1,4-dione",O=C1C=C(Cl)C(=O)C=C1Cl,O=C1C=CC(=O)C=C1,Oxidized,LNXVNZRYYHFMEY-UHFFFAOYSA-N,-0.161,0.699,7.9,5.78
+14,"2,3,5,6-tetrachlorocyclohexa-2,5-diene-1,4-dione",O=C1C(Cl)=C(Cl)C(=O)C(Cl)=C1Cl,O=C1C=CC(=O)C=C1,Oxidized,UGNWTBMOAKPKBL-UHFFFAOYSA-N,0.043,0.699,,
+15,"2-chlorocyclohexa-2,5-diene-1,4-dione",O=C1C=CC(=O)C(Cl)=C1,O=C1C=CC(=O)C=C1,Oxidized,WOGWYSWDBYCVDY-UHFFFAOYSA-N,-0.323,0.676,8.9,7.28

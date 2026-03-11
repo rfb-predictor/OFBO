@@ -1,0 +1,13 @@
+ID,IUPACName,SMILES,CoreSMILES,State,InChIKey,Diffusion_coefficient_CV,Diffusion_coefficient_RDE,k0_CV,k0_RDE,alpha_RDE,Redox_potential_pH14,Peak_separation_mV,Solubility_pH0,Solubility_pH7,Solubility_pH12
+1,"3-[9,10-dioxo-6-(3-sulfopropyl)anthracen-2-yl]propane-1-sulfonic acid",O=C1c2ccc(CCCS(=O)(=O)O)cc2C(=O)c2ccc(CCCS(=O)(=O)O)cc21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,WTGYNCSMJWAGIA-UHFFFAOYSA-N,5.6e-07,9.8e-07,0.0045,0.003,0.74,-0.469,50,,0.3,
+2,,O=C1c2ccc(CCS(=O)(=O)O)cc2C(=O)c2ccc(CCS(=O)(=O)O)cc21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,MXOOPFVHVVYXOS-UHFFFAOYSA-N,4.3e-07,1.3e-07,0.0015,0.004,0.5,-0.436,53,1.1,0.3,
+3,,O=C1c2ccc(CCP(=O)(O)O)cc2C(=O)c2ccc(CCP(=O)(O)O)cc21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,TZIVKLNJLWXKAX-UHFFFAOYSA-N,2.5e-07,8.6e-07,0.0015,0.0014,0.72,-0.468,80,,,1.1
+4,,O=C1c2ccc(C=CP(=O)(O)O)cc2C(=O)c2ccc(C=CP(=O)(O)O)cc21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,URKLBLGHGULKHY-UHFFFAOYSA-N,6.5e-07,1.1e-06,0.0065,0.0022,0.65,-0.398,56,,,0.85
+5,"3-[6-(2-carboxyethyl)-9,10-dioxoanthracen-2-yl]propanoic acid",O=C(O)CCc1ccc2c(c1)C(=O)c1ccc(CCC(=O)O)cc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,XHSWRQLVAHKGPY-UHFFFAOYSA-N,1.8e-07,9.5e-07,0.0016,0.0034,0.72,-0.456,83,,,1.0
+6,,O=C(O)C=Cc1ccc2c(c1)C(=O)c1ccc(C=CC(=O)O)cc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,KVBODKPCFGEVTJ-UHFFFAOYSA-N,6.2e-07,1.1e-06,0.0053,0.0033,0.61,-0.389,42,,,0.7
+7,,O=C1c2ccc(/C=C/CS(=O)(=O)O)cc2C(=O)c2ccc(/C=C/CS(=O)(=O)O)cc21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,IRACKUNVZDKSIE-ZPUQHVIOSA-N,,,,,,-0.474,138,,0.35,
+8,,O=C1c2ccc(C=CS(=O)(=O)O)cc2C(=O)c2ccc(C=CS(=O)(=O)O)cc21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,LCLVRAYSFGVFQY-UHFFFAOYSA-N,,,,,,-0.362,63,0.1,,
+9,,CC(CC(=O)O)c1ccc2c(c1)C(=O)c1ccc(C(C)CC(=O)O)cc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,WAHXVTDIEGXARD-UHFFFAOYSA-N,,,,,,-0.48,98,,,0.77
+10,,C/C(=C\C(=O)O)c1ccc2c(c1)C(=O)c1ccc(/C(C)=C/C(=O)O)cc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,XFWONPSFPGCEDI-MKICQXMISA-N,,,,,,-0.43,86,,,0.65
+11,"4-[1-(3-carboxypropyl)-9,10-dioxoanthracen-2-yl]butanoic acid",O=C(O)CCCc1ccc2c(c1CCCC(=O)O)C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,GYRCSXHHYDIESI-UHFFFAOYSA-N,,,,,,-0.456,83,,,1.0
+12,"3-[1-(1-carboxy-2-methylpropan-2-yl)-9,10-dioxoanthracen-2-yl]-3-methylbutanoic acid",CC(C)(CC(=O)O)c1ccc2c(c1C(C)(C)CC(=O)O)C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,QTSVSXJSCMJJMK-UHFFFAOYSA-N,,,,,,-0.499,52,,,0.75

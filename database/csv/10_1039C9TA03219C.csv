@@ -1,0 +1,28 @@
+ID,IUPACName,SMILES,CoreSMILES,State,InChIKey,E0expvs.SHE(V)pH=0
+1,,O=C1c2c(O)ccc(O)c2C(=O)c2c(O)c(CS(=O)(=O)O)c(CS(=O)(=O)O)c(O)c21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,XOILIMXGOXLVJN-UHFFFAOYSA-N,0.02
+2,"2-[1,4,9,10-tetrahydroxy-3-(2-sulfoethylsulfanyl)anthracen-2-yl]sulfanylethanesulfonic acid",O=S(=O)(O)CCSc1c(SCCS(=O)(=O)O)c(O)c2c(O)c3ccccc3c(O)c2c1O,Oc1c2ccccc2c(O)c2ccccc12,Reduced,JBGLWPSRQLZCGW-UHFFFAOYSA-N,0.113
+3,"1,4,9,10-tetrahydroxyanthracene-2-sulfonic acid",O=S(=O)(O)c1cc(O)c2c(O)c3ccccc3c(O)c2c1O,Oc1c2ccccc2c(O)c2ccccc12,Reduced,USMQGVBVJDEZQS-UHFFFAOYSA-N,0.09
+4,"3,4,9,10-tetrahydroxyanthracene-2-sulfonic acid",O=S(=O)(O)c1cc2c(O)c3ccccc3c(O)c2c(O)c1O,Oc1c2ccccc2c(O)c2ccccc12,Reduced,DHBCYVQFCOFCDY-UHFFFAOYSA-N,0.06
+5,"anthracene-9,10-diol",Oc1c2ccccc2c(O)c2ccccc12,Oc1c2ccccc2c(O)c2ccccc12,Reduced,PCFMUWBCZZUMRX-UHFFFAOYSA-N,0.09
+6,"9,10-dihydroxyanthracene-1-sulfonic acid",O=S(=O)(O)c1cccc2c(O)c3ccccc3c(O)c12,Oc1c2ccccc2c(O)c2ccccc12,Reduced,XBPBWWZIWUAGIT-UHFFFAOYSA-N,0.195
+7,,O=C1c2c(O)cc(S(=O)(=O)O)c(O)c2C(=O)c2c(O)c(S(=O)(=O)O)cc(O)c21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,QRXCXDANJSIYIA-UHFFFAOYSA-N,0.118
+8,"1,5-dihydroxy-9,10-dioxoanthracene-2,6-disulfonic acid",O=C1c2ccc(S(=O)(=O)O)c(O)c2C(=O)c2ccc(S(=O)(=O)O)c(O)c21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,AWVNGKBCZDBCJB-UHFFFAOYSA-N,0.206
+9,,O=C1c2c(O)cc(S(=O)(=O)O)c(O)c2C(=O)c2c(O)cc(S(=O)(=O)O)c(O)c21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,IWDMKBVESNUBMU-UHFFFAOYSA-N,0.116
+10,,O=C1c2c(O)c(S(=O)(=O)O)cc(O)c2C(=O)c2c(O)c(S(=O)(=O)O)c(O)c(O)c21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,AXLKNUJHPAYNBN-UHFFFAOYSA-N,0.133
+11,"9,10-dihydroxyanthracene-1,5-disulfonic acid",O=S(=O)(O)c1cccc2c(O)c3c(S(=O)(=O)O)cccc3c(O)c12,Oc1c2ccccc2c(O)c2ccccc12,Reduced,DERMOXMEGYVRDR-UHFFFAOYSA-N,0.239
+12,"9,10-dihydroxyanthracene-2-sulfonic acid",O=S(=O)(O)c1ccc2c(O)c3ccccc3c(O)c2c1,Oc1c2ccccc2c(O)c2ccccc12,Reduced,GKAPSGVCEYRJGR-UHFFFAOYSA-N,0.187
+13,"9,10-dihydroxyanthracene-2,7-disulfonic acid",O=S(=O)(O)c1ccc2c(O)c3ccc(S(=O)(=O)O)cc3c(O)c2c1,Oc1c2ccccc2c(O)c2ccccc12,Reduced,GQQVITQURHTUJP-UHFFFAOYSA-N,0.213
+14,"9,10-dihydroxyanthracene-2,6-disulfonic acid",O=S(=O)(O)c1ccc2c(O)c3cc(S(=O)(=O)O)ccc3c(O)c2c1,Oc1c2ccccc2c(O)c2ccccc12,Reduced,MOFSCZIEJAOKGJ-UHFFFAOYSA-N,0.228
+15,"phenanthrene-9,10-diol",Oc1c(O)c2ccccc2c2ccccc12,Oc1c(O)c2ccccc2c2ccccc12,Reduced,ODUSUXJNDWKJKH-UHFFFAOYSA-N,0.442
+16,"naphthalene-1,4-diol",Oc1ccc(O)c2ccccc12,Oc1ccc(O)c2ccccc12,Reduced,PCILLCXFKWDRMK-UHFFFAOYSA-N,0.47
+17,,O=S(=O)(O)c1cccc2c(O)ccc(O)c12,Oc1ccc(O)c2ccccc12,Reduced,YBROGMPTIWEKHV-UHFFFAOYSA-N,0.532
+18,"5,8-dihydroxynaphthalene-2-sulfonic acid",O=S(=O)(O)c1ccc2c(O)ccc(O)c2c1,Oc1ccc(O)c2ccccc12,Reduced,PSZMMZWHJCFZRE-UHFFFAOYSA-N,0.534
+19,"naphthalene-1,2-diol",Oc1ccc2ccccc2c1O,Oc1ccc2ccccc2c1O,Reduced,NXPPAOGUKPJVDI-UHFFFAOYSA-N,0.547
+20,"benzene-1,2,4-triol",Oc1ccc(O)c(O)c1,Oc1ccc(O)cc1,Reduced,GGNQRNBDZQJCCN-UHFFFAOYSA-N,0.594
+21,"2-methylbenzene-1,4-diol",Cc1cc(O)ccc1O,Oc1ccc(O)cc1,Reduced,CNHDIAIOKMXOLK-UHFFFAOYSA-N,0.641
+22,"benzene-1,4-diol",Oc1ccc(O)cc1,Oc1ccc(O)cc1,Reduced,QIGBRXMKCJKVMJ-UHFFFAOYSA-N,0.699
+23,"2-chlorobenzene-1,4-diol",Oc1ccc(O)c(Cl)c1,Oc1ccc(O)cc1,Reduced,AJPXTSMULZANCB-UHFFFAOYSA-N,0.71
+24,"benzene-1,2-diol",Oc1ccccc1O,Oc1ccccc1O,Reduced,YCIMNLLNPGFGHC-UHFFFAOYSA-N,0.831
+25,"2-[1,4-dihydroxy-9,10-dioxo-3-(2-sulfoethylsulfanyl)anthracen-2-yl]sulfanylethanesulfonic acid",O=C1c2ccccc2C(=O)c2c(O)c(SCCS(=O)(=O)O)c(SCCS(=O)(=O)O)c(O)c21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,HERGNXDYWYTYAH-UHFFFAOYSA-N,1.08
+26,"3,4-dihydroxy-9,10-dioxoanthracene-2-sulfonic acid",O=C1c2ccccc2C(=O)c2c1cc(S(=O)(=O)O)c(O)c2O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,JKYKXTRKURYNGW-UHFFFAOYSA-N,1.21
+27,"1,4-dihydroxy-9,10-dioxoanthracene-2-sulfonic acid",O=C1c2ccccc2C(=O)c2c(O)c(S(=O)(=O)O)cc(O)c21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,CCQSBGJULPBARL-UHFFFAOYSA-N,1.05

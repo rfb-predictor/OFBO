@@ -1,0 +1,6 @@
+ID,IUPACName,SMILES,CoreSMILES,State,InChIKey,Computed
+1,phenazine,c1ccc2nc3ccccc3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,PCNDJXKNXGMECE-UHFFFAOYSA-N,-0.36
+2,phenazin-2-ol,Oc1ccc2nc3ccccc3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,RETSEGNZNUBJRB-UHFFFAOYSA-N,-0.57
+3,"phenazine-2,3-diol",Oc1cc2nc3ccccc3nc2cc1O,c1ccc2nc3ccccc3nc2c1,Oxidized,UVPLITJCYDVORW-UHFFFAOYSA-N,-0.89
+4,"7,8-dihydroxyphenazine-2-sulfonic acid",O=S(=O)(O)c1ccc2nc3cc(O)c(O)cc3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,QSKVWFKDPMSUJV-UHFFFAOYSA-N,-0.86
+5,"7,8-dihydroxyphenazine-2-carboxylic acid",O=C(O)c1ccc2nc3cc(O)c(O)cc3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,VYLGQWWQIQADRF-UHFFFAOYSA-N,-0.88

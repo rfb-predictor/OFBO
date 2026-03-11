@@ -1,0 +1,8 @@
+ID,IUPACName,SMILES,CoreSMILES,State,InChIKey,D[cm2s–1],k0[cms–1],E1/2vsSHE[V]
+1,"benzene-1,4-diol",Oc1ccc(O)cc1,Oc1ccc(O)cc1,Reduced,QIGBRXMKCJKVMJ-UHFFFAOYSA-N,7.1e-06,0.00067,0.683
+2,"benzene-1,2-diol",Oc1ccccc1O,Oc1ccccc1O,Reduced,YCIMNLLNPGFGHC-UHFFFAOYSA-N,7.8e-06,0.00042,0.782
+3,,[O]c1cc(S(=O)(=O)O)cc(S(=O)(=O)O)c1[O],Oc1ccccc1O,Reduced,NNLMVXHPQKGZOR-UHFFFAOYSA-N,5.2e-06,0.00022,0.895
+4,"3,6-dihydroxy-2,4-dimethylbenzenesulfonic acid",Cc1cc(O)c(S(=O)(=O)O)c(C)c1O,Oc1ccc(O)cc1,Reduced,XVSAPGXNKFTLMG-UHFFFAOYSA-N,4.1e-06,0.00013,0.522
+5,"2,3-dihydrophthalazine-1,4-dione",O=c1[nH][nH]c(=O)c2ccccc12,O=c1[nH][nH]c(=O)c2ccccc12,Oxidized,KGLPWQKSKUVKMJ-UHFFFAOYSA-N,5.4e-06,0.0016,0.796
+6,"6,7-dimethylphthalazine-5,8-diol",Cc1c(C)c(O)c2cnncc2c1O,c1ccc2cnncc2c1,Oxidized,VAAZHBVWWCLKEN-UHFFFAOYSA-N,3.3e-06,0.0018,0.691
+7,"6-methoxyphthalazine-5,8-diol",COc1cc(O)c2cnncc2c1O,c1ccc2cnncc2c1,Oxidized,MVIPFJNQRWBBRW-UHFFFAOYSA-N,2.1e-06,0.0012,0.722

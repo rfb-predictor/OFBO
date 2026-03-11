@@ -1,0 +1,7 @@
+ID,IUPACName,SMILES,CoreSMILES,State,InChIKey,Redox_Potential(VvsSHE),ΔEp[mV],Ipa/Ipc,D(10−6cm2s−1),k0(10−3cms−1),Solubility[molL−1]
+1,"N,N-dimethyl-10H-phenothiazin-3-amine",CN(C)c1ccc2c(c1)Sc1ccccc1N2,c1ccc2c(c1)Nc1ccccc1S2,Reduced,LWFJMDYDVIWCIE-UHFFFAOYSA-N,0.62,66.0,0.95,,,<0.001
+2,"10H-phenothiazine-3,7-diamine",Nc1ccc2c(c1)Sc1cc(N)ccc1N2,c1ccc2c(c1)Nc1ccccc1S2,Reduced,LZILOGCFZJDPTG-UHFFFAOYSA-N,0.58,43.0,1.02,8.4e-08,0.00104,0.025
+3,(7-aminophenothiazin-3-ylidene)-dimethylazanium,C[N+](C)=c1ccc2nc3ccc(N)cc3sc-2c1,,,HMYISFASHDWPMO-UHFFFAOYSA-O,0.55,44.0,0.91,1.1e-07,0.00038,0.34
+4,[7-(dimethylamino)-4-nitrophenothiazin-3-ylidene]-dimethylazanium,CN(C)c1ccc2nc3ccc(=[N+](C)C)c([N+](=O)[O-])c-3sc2c1,,,JICGHBSILZBPAI-UHFFFAOYSA-N,0.66,189.8,0.63,1.6e-07,0.00035,0.14
+5,(7-amino-8-methylphenothiazin-3-ylidene)-dimethylazanium,Cc1cc2nc3ccc(=[N+](C)C)cc-3sc2cc1N,,,KZEUBCUXBNEMSQ-UHFFFAOYSA-O,0.53,31.0,0.95,1.12e-06,0.0045,0.11
+6,2-hydroxyethyl-[7-[2-hydroxyethyl(methyl)amino]phenothiazin-3-ylidene]-methylazanium,CN(CCO)c1ccc2nc3ccc(=[N+](C)CCO)cc-3sc2c1,,,DPQOVZIXEQUJIS-UHFFFAOYSA-N,0.54,32.0,0.92,2.25e-06,0.00318,1.3

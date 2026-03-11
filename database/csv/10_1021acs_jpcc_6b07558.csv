@@ -1,0 +1,20 @@
+ID,IUPACName,SMILES,CoreSMILES,State,InChIKey,DFT(PCM),DFT(SM8),QM/MM,Expt
+1,"9,10-dioxoanthracene-1-sulfonic acid",O=C1c2ccccc2C(=O)c2c1cccc2S(=O)(=O)O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,JAJIPIAHCFBEPI-UHFFFAOYSA-N,0.138,0.104,,0.195
+2,"9,10-dioxoanthracene-2-sulfonic acid",O=C1c2ccccc2C(=O)c2cc(S(=O)(=O)O)ccc21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,MMNWSHJJPDXKCH-UHFFFAOYSA-N,0.189,0.138,,0.187
+3,"9,10-dioxoanthracene-1,5-disulfonic acid",O=C1c2cccc(S(=O)(=O)O)c2C(=O)c2cccc(S(=O)(=O)O)c21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,OZTBHAGJSKTDGM-UHFFFAOYSA-N,0.22,0.229,,0.239
+4,"9,10-dioxoanthracene-1,8-disulfonic acid",O=C1c2cccc(S(=O)(=O)O)c2C(=O)c2c1cccc2S(=O)(=O)O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,IJNPIHLZSZCGOC-UHFFFAOYSA-N,0.226,0.218,,0.206
+5,"9,10-dioxoanthracene-2,6-disulfonic acid",O=C1c2ccc(S(=O)(=O)O)cc2C(=O)c2ccc(S(=O)(=O)O)cc21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,MSSUFHMGCXOVBZ-UHFFFAOYSA-N,0.24,0.222,,0.228
+6,"9,10-dioxoanthracene-2,7-disulfonic acid",O=C1c2ccc(S(=O)(=O)O)cc2C(=O)c2cc(S(=O)(=O)O)ccc21,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,OKONMFPEKSWGEU-UHFFFAOYSA-N,0.278,0.339,,0.229
+7,"9,10-dioxoanthracene-2-carboxylic acid",O=C(O)c1ccc2c(c1)C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,ASDLSKCKYGVMAI-UHFFFAOYSA-N,0.143,0.067,,0.213
+8,"methyl 9,10-dioxoanthracene-2-carboxylate",COC(=O)c1ccc2c(c1)C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,JJFLSBOGTGPZMM-UHFFFAOYSA-N,0.166,0.094,,0.221
+9,"1,2-dihydroxyanthracene-9,10-dione",O=C1c2ccccc2C(=O)c2c1ccc(O)c2O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,RGCKGOZRHPZPFP-UHFFFAOYSA-N,-0.017,-0.087,,0.013
+10,"1-hydroxy-4-prop-2-enoxyanthracene-9,10-dione",C=CCOc1ccc(O)c2c1C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,QWGWZLKJBIRBRF-UHFFFAOYSA-N,0.131,0.057,,0.152
+11,"1-methoxy-4-prop-2-enoxyanthracene-9,10-dione",C=CCOc1ccc(OC)c2c1C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,ZSNDVESXULLHQO-UHFFFAOYSA-N,0.318,0.325,0.164,0.155
+12,"1,4-dimethoxyanthracene-9,10-dione",COc1ccc(OC)c2c1C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,HWHFKYJAAJPFQF-UHFFFAOYSA-N,0.395,0.418,0.164,0.15
+13,"1,4-bis(prop-2-enoxy)anthracene-9,10-dione",C=CCOc1ccc(OCC=C)c2c1C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,YNNIDWUSAOFGLS-UHFFFAOYSA-N,0.321,0.327,0.15,0.148
+14,"1-aminoanthracene-9,10-dione",Nc1cccc2c1C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,KHUFHLFHOQVFGB-UHFFFAOYSA-N,-0.014,-0.03,,0.038
+15,"2-aminoanthracene-9,10-dione",Nc1ccc2c(c1)C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,XOGPDSATLSAZEK-UHFFFAOYSA-N,0.023,-0.046,,0.08
+16,"1-amino-2-ethylanthracene-9,10-dione",CCc1ccc2c(c1N)C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,FXXOWMASCSSPPJ-UHFFFAOYSA-N,0.036,0.055,,-0.036
+17,"1-amino-2,3-dimethylanthracene-9,10-dione",Cc1cc2c(c(N)c1C)C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,QNLBFFTVWDTZNQ-UHFFFAOYSA-N,0.004,0.042,,-0.025
+18,"1-amino-2,4-dimethylanthracene-9,10-dione",Cc1cc(C)c2c(c1N)C(=O)c1ccccc1C2=O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,CXSYMURTVSLOLU-UHFFFAOYSA-N,-0.064,-0.072,,-0.077
+19,"1,8-dihydroxy-9,10-dioxoanthracene-2,7-disulfonic acid",O=C1c2ccc(S(=O)(=O)O)c(O)c2C(=O)c2c1ccc(S(=O)(=O)O)c2O,O=C1c2ccccc2C(=O)c2ccccc21,Oxidized,YHIUFLAYHWBDLL-UHFFFAOYSA-N,0.152,0.259,,0.118

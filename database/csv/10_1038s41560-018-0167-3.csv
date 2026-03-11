@@ -1,0 +1,9 @@
+ID,IUPACName,SMILES,CoreSMILES,State,InChIKey,CalculatedRedoxPotential(vsSHE),MeasuredRedoxPotential(vsSHE),CalculatedSolvationEnergy(kj/mol)
+1,phenazine,c1ccc2nc3ccccc3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,PCNDJXKNXGMECE-UHFFFAOYSA-N,-0.63652,-0.36,11.1633145
+2,"phenazine-2,3-dione",O=C1C=c2nc3ccccc3nc2=CC1=O,c1ccc2nc3ccccc3nc2c1,Oxidized,NSEDHNPVOKTARI-UHFFFAOYSA-N,-1.18857,-0.82,-480.746161
+3,,O=C1C=c2nc3cc(S(=O)(=O)O)ccc3nc2=CC1,c1ccc2nc3ccccc3nc2c1,Oxidized,RLPQSLZZEAZXOR-UHFFFAOYSA-N,-1.0227,,-431.67389
+4,,O=C1C=c2nc3ccc(S(=O)(=O)O)cc3nc2=CC1=O,c1ccc2nc3ccccc3nc2c1,Oxidized,DXEXHZLEQUEOGG-UHFFFAOYSA-N,-1.04752,-0.86,-957.015418
+5,"phenazine-2,8-disulfonic acid",O=S(=O)(O)c1ccc2nc3ccc(S(=O)(=O)O)cc3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,DGZQHSLLLRRIFW-UHFFFAOYSA-N,-0.83634,,-431.67389
+6,"7,8-dioxophenazine-2-carboxylic acid",O=C1C=c2nc3ccc(C(=O)O)cc3nc2=CC1=O,c1ccc2nc3ccccc3nc2c1,Oxidized,QEBXRTLXNOZESM-UHFFFAOYSA-N,-1.14153,-0.88,-975.2800285
+7,,COc1cc2nc3c(nc2cc1OC)=CC(=O)C(=O)C=3,c1ccc2nc3ccccc3nc2c1,Oxidized,BBPVPXOYBXZWBX-UHFFFAOYSA-N,-1.28923,,-475.8157775
+8,,C[N+](C)(C)Cc1ccc2nc3ccc(C[N+](C)(C)C)cc3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,VWVFYUACZNZUGT-UHFFFAOYSA-N,-0.71473,,-370.965528

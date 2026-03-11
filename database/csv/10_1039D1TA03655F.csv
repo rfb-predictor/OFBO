@@ -1,0 +1,8 @@
+ID,IUPACName,SMILES,CoreSMILES,State,InChIKey,Potential(VvsNHE),Calc_RP(Vvs14DHP),PeakSeparation(mV),D(cm2s−1),Ko(cms−1)
+1,"phenazine-1,3-diol",Oc1cc(O)c2nc3ccccc3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,RSGCOGXEEDICHO-UHFFFAOYSA-N,,-0.19,348,1.64e-05,0.00068
+2,"phenazine-1,4-diol",Oc1ccc(O)c2nc3ccccc3nc12,c1ccc2nc3ccccc3nc2c1,Oxidized,VAASABGZPGHBSZ-UHFFFAOYSA-N,-0.66,0.0,484,5.2e-06,0.00108
+3,"phenazine-1,6-diol",Oc1cccc2nc3c(O)cccc3nc12,c1ccc2nc3ccccc3nc2c1,Oxidized,JOXNFMAXWAPITK-UHFFFAOYSA-N,-0.84,-0.03,673,2.1e-05,0.00633
+4,"phenazine-1,8-diol",Oc1ccc2nc3cccc(O)c3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,YYGYKQIAGNVTNM-UHFFFAOYSA-N,-0.95,-0.14,526,1.2e-05,0.00102
+5,"phenazine-1,9-diol",Oc1cccc2nc3cccc(O)c3nc12,c1ccc2nc3ccccc3nc2c1,Oxidized,FSNHVRFXRAUXFJ-UHFFFAOYSA-N,-0.74,-0.07,530,1.2e-06,0.00036
+6,"phenazine-2,3-diol",Oc1cc2nc3ccccc3nc2cc1O,c1ccc2nc3ccccc3nc2c1,Oxidized,UVPLITJCYDVORW-UHFFFAOYSA-N,-1.0,-0.57,66,1.66e-05,0.00386
+7,"phenazine-2,7-diol",Oc1ccc2nc3cc(O)ccc3nc2c1,c1ccc2nc3ccccc3nc2c1,Oxidized,GDKLWFNUGWTYRJ-UHFFFAOYSA-N,-0.9,-0.24,561,1.36e-05,0.00048

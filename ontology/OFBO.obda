@@ -1,0 +1,252 @@
+[PrefixDeclaration]
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+obda:		https://w3id.org/obda/vocabulary#
+ofbo:		https://w3id.org/ofbo#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+skos:		http://www.w3.org/2004/02/skos/core#
+terms:		http://purl.org/dc/terms/
+
+[MappingDeclaration] @collection [[
+mappingId	10_1002adfm_202312608
+target		ofbo:202312608_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasProperty ofbo:S_202312608_{ID} ; ofbo:hasReaction ofbo:RXN_202312608_{ID}_EXP . ofbo:RXN_202312608_{ID}_EXP a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:202312608_{ID} ; ofbo:hasProperty ofbo:E0_202312608_{ID}_EXP , ofbo:DeltaEp_202312608_{ID}_EXP , ofbo:IpaIpc_202312608_{ID}_EXP , ofbo:k0_202312608_{ID}_EXP , ofbo:D_202312608_{ID} . ofbo:E0_202312608_{ID}_EXP a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_202312608_{ID}_EXP ; ofbo:hasValue {redox}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1002/adfm.202312608"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_202312608_{ID}_H2SO4 ; ofbo:hasMethod ofbo:CV_202312608_Experimental . ofbo:DeltaEp_202312608_{ID}_EXP a ofbo:PeakPotentialGap ; ofbo:isPropertyOf ofbo:RXN_202312608_{ID}_EXP ; ofbo:hasValue {delta_ep_mv}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1002/adfm.202312608"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_202312608_{ID}_H2SO4 ; ofbo:hasMethod ofbo:CV_202312608_Experimental . ofbo:IpaIpc_202312608_{ID}_EXP a ofbo:PeakCurrentRatio ; ofbo:isPropertyOf ofbo:RXN_202312608_{ID}_EXP ; ofbo:hasValue {ipa_ipc}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1002/adfm.202312608"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_202312608_{ID}_H2SO4 ; ofbo:hasMethod ofbo:CV_202312608_Experimental . ofbo:k0_202312608_{ID}_EXP a ofbo:HeterogeneousRateConstant ; ofbo:isPropertyOf ofbo:RXN_202312608_{ID}_EXP ; ofbo:hasValue {k0}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1002/adfm.202312608"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_202312608_{ID}_H2SO4 ; ofbo:hasMethod ofbo:LSV_202312608_Experimental . ofbo:D_202312608_{ID} a ofbo:DiffusionCoefficient ; ofbo:isPropertyOf ofbo:RXN_202312608_{ID}_EXP ; ofbo:hasValue {diffusion}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1002/adfm.202312608"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_202312608_{ID}_H2SO4 ; ofbo:hasMethod ofbo:LSV_202312608_Experimental . ofbo:S_202312608_{ID} a ofbo:Solubility ; ofbo:isPropertyOf ofbo:202312608_{ID} ; ofbo:hasValue {solubility}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1002/adfm.202312608"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_202312608_{ID}_H2SO4 ; ofbo:hasMethod ofbo:METH_SOL_202312608 . ofbo:Solv_202312608_{ID}_H2SO4 ofbo:hasPH "0"^^xsd:decimal ; ofbo:hasComposition "3M H2SO4"^^xsd:string . ofbo:CV_202312608_Experimental a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:LSV_202312608_Experimental a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000028> . ofbo:METH_SOL_202312608 a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0001253> . 
+source		SELECT
+			ID,
+			IUPACName, SMILES, CoreSMILES, InChIKey,
+			"Redox_Potential(VvsSHE)" AS redox,
+			"ΔEp[mV]" AS delta_ep_mv,
+			"Ipa/Ipc" AS ipa_ipc,
+			"D(10−6cm2s−1)" AS diffusion,
+			"k0(10−3cms−1)" AS k0,
+			"Solubility[molL−1]" AS solubility
+			FROM OFBO."10_1002adfm_202312608"
+
+mappingId	j_bbabio_2022_148558
+target		ofbo:jbbabio_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_jbbabio_{ID}_QQ , ofbo:RXN_jbbabio_{ID}_QQEQ . ofbo:Solv_jbbabio_{ID}_Aprotic ofbo:hasComposition "N,N-Dimethylformamide (DMF)"^^xsd:string . ofbo:METH_jbbabio_Experimental a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:RXN_jbbabio_{ID}_QQ a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:jbbabio_{ID} ; ofbo:hasNumberOfElectrons "1"^^xsd:integer ; ofbo:hasProperty ofbo:E0_jbbabio_{ID}_QQ . ofbo:RXN_jbbabio_{ID}_QQEQ a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:jbbabio_{ID} ; ofbo:hasNumberOfElectrons "2"^^xsd:integer ; ofbo:hasProperty ofbo:E0_jbbabio_{ID}_QQEQ . ofbo:E0_jbbabio_{ID}_QQ a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_jbbabio_{ID}_QQ ; ofbo:hasValue {QQ_VvsNHE}^^xsd:decimal ; ofbo:hasSolvent ofbo:Solv_jbbabio_{ID}_Aprotic ; ofbo:hasReference "https://doi.org/10.1016/j.bbabio.2022.148558"^^xsd:string ; ofbo:hasMethod ofbo:METH_jbbabio_Experimental . ofbo:E0_jbbabio_{ID}_QQEQ a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_jbbabio_{ID}_QQEQ ; ofbo:hasValue {QQeq_VvsNHE}^^xsd:decimal ; ofbo:hasSolvent ofbo:Solv_jbbabio_{ID}_Aprotic ; ofbo:hasReference "https://doi.org/10.1016/j.bbabio.2022.148558"^^xsd:string ; ofbo:hasMethod ofbo:METH_jbbabio_Experimental . 
+source		SELECT
+			ID,
+			IUPACName,
+			SMILES,
+			CoreSMILES,
+			InChIKey,
+			"QQ.(VvsNHE)" AS QQ_VvsNHE,
+			"Q.Q=(VvsNHE)" AS QQeq_VvsNHE
+			FROM OFBO."j_bbabio_2022_148558"
+
+mappingId	10_1039D1TA03655F
+target		ofbo:1039D1TA03655F_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_1039D1TA03655F_{ID}_EXP , ofbo:RXN_1039D1TA03655F_{ID}_DFT_B3LYP . ofbo:RXN_1039D1TA03655F_{ID}_EXP a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:1039D1TA03655F_{ID} ; ofbo:hasProperty ofbo:E0_1039D1TA03655F_{ID}_EXP , ofbo:DeltaEp_1039D1TA03655F_{ID}_EXP , ofbo:k0_1039D1TA03655F_{ID}_EXP , ofbo:D_1039D1TA03655F_{ID} . ofbo:E0_1039D1TA03655F_{ID}_EXP a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_1039D1TA03655F_{ID}_EXP ; ofbo:hasValue {potential_nhe}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1039/D1TA03655F"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_1039D1TA03655F_{ID}_PH14 ; ofbo:hasMethod ofbo:METH_6b07558_Experimental . ofbo:DeltaEp_1039D1TA03655F_{ID}_EXP a ofbo:PeakPotentialGap ; ofbo:isPropertyOf ofbo:RXN_1039D1TA03655F_{ID}_EXP ; ofbo:hasValue {peak_sep_mv}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1039/D1TA03655F"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_1039D1TA03655F_{ID}_PH14 ; ofbo:hasMethod ofbo:METH_1039D1TA03655F_Experimental . ofbo:k0_1039D1TA03655F_{ID}_EXP a ofbo:HeterogeneousRateConstant ; ofbo:isPropertyOf ofbo:RXN_1039D1TA03655F_{ID}_EXP ; ofbo:hasValue {k0}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1039/D1TA03655F"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_1039D1TA03655F_{ID}_PH14 ; ofbo:hasMethod ofbo:METH_1039D1TA03655F_Experimental . ofbo:D_1039D1TA03655F_{ID} a ofbo:DiffusionCoefficient ; ofbo:isPropertyOf ofbo:RXN_1039D1TA03655F_{ID}_EXP ; ofbo:hasValue {diffusion}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1039/D1TA03655F"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_1039D1TA03655F_{ID}_PH14 ; ofbo:hasMethod ofbo:METH_1039D1TA03655F_Experimental . ofbo:RXN_1039D1TA03655F_{ID}_DFT_B3LYP a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:1039D1TA03655F_{ID} ; ofbo:hasProperty ofbo:E0_1039D1TA03655F_{ID}_DFT_B3LYP . ofbo:E0_1039D1TA03655F_{ID}_DFT_B3LYP a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_1039D1TA03655F_{ID}_DFT_B3LYP ; ofbo:hasValue {calc_rp_14dhp}^^xsd:decimal ; ofbo:hasAdditionalInformation "vs 1,4-DHP"^^xsd:string ; ofbo:hasSolvent ofbo:Solv_1039D1TA03655F_{ID}_PH14 ; ofbo:hasMethod ofbo:METH_1039D1TA03655F_DFT_B3LYP . ofbo:Solv_1039D1TA03655F_{ID}_PH14 ofbo:hasComposition "1M NaOH"^^xsd:string ; ofbo:hasPH "14"^^xsd:decimal . ofbo:METH_1039D1TA03655F_Experimental a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:METH_1039D1TA03655F_DFT_B3LYP a ofbo:ComputationalMethod ; ofbo:hasMethod <https://w3id.org/mdo/calculation/DensityFunctionalTheoryMethod> , <https://w3id.org/mdo/calculation/HybridMetaGeneralizedGradientApproximation> ; ofbo:hasLevelOfTheory "B3LYP"^^xsd:string ; ofbo:hasInteraction ofbo:ImplicitSolvation . 
+source		SELECT
+			ID,
+			IUPACName,
+			SMILES,
+			CoreSMILES, InChIKey,
+			"Potential(VvsNHE)"   AS potential_nhe,
+			"Calc_RP(Vvs14DHP)"   AS calc_rp_14dhp,
+			"PeakSeparation(mV)"  AS peak_sep_mv,
+			"D(cm2s−1)"           AS diffusion,
+			"Ko(cms−1)"           AS k0
+			FROM OFBO."10_1039D1TA03655F"
+
+mappingId	10_1039C4SC03030C
+target		ofbo:6b07558_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_6b07558_{ID}_DFT_PBE ; ofbo:hasProperty ofbo:Gsolv_6b07558_{ID} . ofbo:RXN_6b07558_{ID}_DFT_PBE a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:6b07558_{ID} ; ofbo:hasProperty ofbo:E0_6b07558_{ID}_DFT_PBE . ofbo:E0_6b07558_{ID}_DFT_PBE a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_6b07558_{ID}_DFT_PBE ; ofbo:hasValue {e0_she}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_6b07558_PBE ; ofbo:hasReference "https://doi.org/10.1039/C4SC03030C"^^xsd:string . ofbo:Gsolv_6b07558_{ID} a ofbo:GibbsFreeEnergy ; ofbo:isPropertyOf ofbo:6b07558_{ID} ; ofbo:hasValue {g_solv}^^xsd:decimal ; ofbo:hasInteraction ofbo:INT_6b07558_{ID}_Implicit ; ofbo:hasMethod ofbo:METH_6b07558_PBE ; ofbo:hasReference "https://doi.org/10.1039/C4SC03030C"^^xsd:string . ofbo:INT_6b07558_{ID}_Implicit a ofbo:ImplicitSolvation ; ofbo:hasComposition "H2O"^^xsd:string . ofbo:METH_6b07558_PBE a ofbo:ComputationalMethod ; ofbo:hasMethod <https://w3id.org/mdo/calculation/GeneralizedGradientApproximation> , <https://w3id.org/mdo/calculation/DensityFunctionalTheoryMethod> ; ofbo:hasLevelOfTheory "PBE"^^xsd:string . 
+source		SELECT
+			ID,
+			IUPACName,
+			SMILES,
+			CoreSMILES,
+			State,
+			InChIKey,
+			"E0(VvsSHE)" AS e0_she,
+			G_solv AS G_solv
+			FROM OFBO."10_1039C4SC03030C"
+
+mappingId	10_1021acs_jpcc_6b07558
+target		ofbo:6b07558_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_6b07558_{ID}_EXP . ofbo:RXN_6b07558_{ID}_EXP a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:6b07558_{ID} ; ofbo:hasProperty ofbo:E0_6b07558_{ID}_EXP , ofbo:E0_6b07558_{ID}_DFT_PCM , ofbo:E0_6b07558_{ID}_DFT_SM8 , ofbo:E0_6b07558_{ID}_QMMM . ofbo:E0_6b07558_{ID}_EXP a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_6b07558_{ID}_EXP ; ofbo:hasValue {Expt}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O ; ofbo:hasMethod ofbo:METH_6b07558_Experimental ; ofbo:hasReference "https://doi.org/10.1021/acs.jpcc.6b07558"^^xsd:string . ofbo:E0_6b07558_{ID}_DFT_PCM a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_6b07558_{ID}_EXP ; ofbo:hasValue {DFT_PCM}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O ; ofbo:hasMethod ofbo:METH_6b07558_PCM ; ofbo:hasReference "https://doi.org/10.1021/acs.jpcc.6b07558"^^xsd:string . ofbo:E0_6b07558_{ID}_DFT_SM8 a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_6b07558_{ID}_EXP ; ofbo:hasValue {DFT_SM8}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O ; ofbo:hasMethod ofbo:METH_6b07558_SM8 ; ofbo:hasReference "https://doi.org/10.1021/acs.jpcc.6b07558"^^xsd:string . ofbo:E0_6b07558_{ID}_QMMM a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_6b07558_{ID}_EXP ; ofbo:hasValue {QMMM}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O ; ofbo:hasMethod ofbo:METH_6b07558_QMMM ; ofbo:hasReference "https://doi.org/10.1021/acs.jpcc.6b07558"^^xsd:string . ofbo:SOLV_H2O ofbo:hasComposition "Water"^^xsd:string . ofbo:METH_6b07558_Experimental a ofbo:ExperimentalMethod . ofbo:METH_6b07558_PCM a ofbo:ComputationalMethod ; ofbo:hasMethod <https://w3id.org/mdo/calculation/DensityFunctionalTheoryMethod> , <https://w3id.org/mdo/calculation/HybridMetaGeneralizedGradientApproximation> ; ofbo:hasLevelOfTheory "DFT (PCM)"^^xsd:string . ofbo:METH_6b07558_SM8 a ofbo:ComputationalMethod ; ofbo:hasMethod <https://w3id.org/mdo/calculation/DensityFunctionalTheoryMethod> , <https://w3id.org/mdo/calculation/HybridMetaGeneralizedGradientApproximation> ; ofbo:hasLevelOfTheory "DFT (SM8)"^^xsd:string . ofbo:METH_6b07558_QMMM a ofbo:ComputationalMethod ; ofbo:hasMethod <https://w3id.org/mdo/calculation/QuantumMechanicsMolecularMechanicsMethod> ; ofbo:hasLevelOfTheory "QM/MM"^^xsd:string . 
+source		SELECT
+			ID,
+			IUPACName,
+			SMILES,
+			CoreSMILES,
+			InChIKey,
+			"DFT(PCM)" AS DFT_PCM,
+			"DFT(SM8)" AS DFT_SM8,
+			"QM/MM"    AS QMMM,
+			Expt
+			FROM OFBO."10_1021acs_jpcc_6b07558"
+
+mappingId	10_1021acs_chemmater_7b04220
+target		ofbo:7b04220_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_7b04220_{ID}_EXP , ofbo:RXN_7b04220_{ID}_DFT_PROT , ofbo:RXN_7b04220_{ID}_DFT_NEUT , ofbo:RXN_7b04220_{ID}_DFT_DEPROT . ofbo:7b04220_{ID}_DFT_PROT_R a ofbo:Molecule ; ofbo:hasSMILES {SMILES_prot_ox}^^xsd:string . ofbo:7b04220_{ID}_DFT_PROT_P a ofbo:Molecule ; ofbo:hasSMILES {SMILES_prot_red}^^xsd:string . ofbo:7b04220_{ID}_DFT_NEUT_R a ofbo:Molecule ; ofbo:hasSMILES {SMILES_ox}^^xsd:string . ofbo:7b04220_{ID}_DFT_NEUT_P a ofbo:Molecule ; ofbo:hasSMILES {SMILES_red}^^xsd:string . ofbo:7b04220_{ID}_DFT_DEPROT_R a ofbo:Molecule ; ofbo:hasSMILES {SMILES_deprot_ox}^^xsd:string . ofbo:7b04220_{ID}_DFT_DEPROT_P a ofbo:Molecule ; ofbo:hasSMILES {SMILES_deprot_red}^^xsd:string . ofbo:RXN_7b04220_{ID}_EXP a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:7b04220_{ID} ; ofbo:hasProperty ofbo:E0_7b04220_{ID}_pH0_EXP , ofbo:E0_7b04220_{ID}_pH14_EXP , ofbo:DIF_7b04220_{ID}_pH0 , ofbo:K0_7b04220_{ID}_pH0_EXP . ofbo:DIF_7b04220_{ID}_pH0 a ofbo:DiffusionCoefficient ; ofbo:isPropertyOf ofbo:RXN_7b04220_{ID}_EXP ; ofbo:hasValue {D_cm2_s}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_pH0_7b04220 ; ofbo:hasMethod ofbo:METH_7b04220_Experimental ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.7b04220"^^xsd:string . ofbo:E0_7b04220_{ID}_pH0_EXP a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_7b04220_{ID}_EXP ; ofbo:hasValue {E0_pH0_exp}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_pH0_7b04220 ; ofbo:hasMethod ofbo:METH_7b04220_Experimental ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.7b04220"^^xsd:string . ofbo:E0_7b04220_{ID}_pH14_EXP a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_7b04220_{ID}_EXP ; ofbo:hasValue {E0_pH14_exp}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_pH0_7b04220 ; ofbo:hasMethod ofbo:METH_7b04220_Experimental ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.7b04220"^^xsd:string . ofbo:K0_7b04220_{ID}_pH0_EXP a ofbo:HeterogeneousRateConstant ; ofbo:isPropertyOf ofbo:RXN_7b04220_{ID}_EXP ; ofbo:hasValue {k0_cm_s}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_pH0_7b04220 ; ofbo:hasMethod ofbo:METH_7b04220_Experimental ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.7b04220"^^xsd:string . ofbo:RXN_7b04220_{ID}_DFT_PROT a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:7b04220_{ID} ; ofbo:hasReactant ofbo:7b04220_{ID}_DFT_PROT_R ; ofbo:hasProduct ofbo:7b04220_{ID}_DFT_PROT_P ; ofbo:hasProperty ofbo:E0_7b04220_{ID}_DFT_PROT . ofbo:E0_7b04220_{ID}_DFT_PROT a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_7b04220_{ID}_DFT_PROT ; ofbo:hasValue {E0_prot_dft}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_7b04220 ; ofbo:hasMethod ofbo:METH_7b04220_BP86_D3 ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.7b04220"^^xsd:string . ofbo:RXN_7b04220_{ID}_DFT_NEUT a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:7b04220_{ID} ; ofbo:hasReactant ofbo:7b04220_{ID}_DFT_NEUT_R ; ofbo:hasProduct ofbo:7b04220_{ID}_DFT_NEUT_P ; ofbo:hasProperty ofbo:E0_7b04220_{ID}_DFT_NEUT . ofbo:E0_7b04220_{ID}_DFT_NEUT a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_7b04220_{ID}_DFT_NEUT ; ofbo:hasValue {E0_dft}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_7b04220 ; ofbo:hasMethod ofbo:METH_7b04220_BP86_D3 ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.7b04220"^^xsd:string . ofbo:RXN_7b04220_{ID}_DFT_DEPROT a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:7b04220_{ID} ; ofbo:hasReactant ofbo:7b04220_{ID}_DFT_DEPROT_R ; ofbo:hasProduct ofbo:7b04220_{ID}_DFT_DEPROT_P ; ofbo:hasProperty ofbo:E0_7b04220_{ID}_DFT_DEPROT . ofbo:E0_7b04220_{ID}_DFT_DEPROT a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_7b04220_{ID}_DFT_DEPROT ; ofbo:hasValue {E0_deprot_dft}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_7b04220 ; ofbo:hasMethod ofbo:METH_7b04220_BP86_D3 ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.7b04220"^^xsd:string . ofbo:SOLV_H2O_7b04220 ofbo:hasComposition "water"^^xsd:string . ofbo:SOLV_pH14_7b04220 ofbo:hasPH "14"^^xsd:decimal ; ofbo:hasComposition "1 M KOH"^^xsd:string . ofbo:SOLV_pH0_7b04220 ofbo:hasPH "0"^^xsd:decimal ; ofbo:hasComposition "2 M H2SO4"^^xsd:string . ofbo:METH_7b04220_Experimental a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:METH_7b04220_BP86_D3 a ofbo:ComputationalMethod ; ofbo:hasMethod <https://w3id.org/mdo/calculation/GeneralizedGradientApproximation> , <https://w3id.org/mdo/calculation/DensityFunctionalTheoryMethod> ; ofbo:hasLevelOfTheory "BP86+D3"^^xsd:string . 
+source		SELECT
+			ID,
+			IUPACName,
+			SMILES,
+			CoreSMILES,
+			State,
+			InChIKey,
+			"D_[cm2/s]" AS D_cm2_s,
+			"k0_[cm/s]" AS k0_cm_s,
+			"E1/2_(pH=0)[VvsSHE]exprimental" AS E0_pH0_exp,
+			"E1/2(pH=14)[VvsSHE]experimental" AS E0_pH14_exp,
+			SMILES_prot_ox,
+			SMILES_prot_red,
+			E0_prot_dft,
+			SMILES_ox,
+			SMILES_red,
+			E0_dft,
+			SMILES_deprot_ox,
+			SMILES_deprot_red,
+			E0_deprot_dft
+			FROM OFBO."10_1021acs_chemmater_7b04220"
+
+mappingId	10_1039D0SE00687D
+target		ofbo:1039D0SE00687D_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_1039D0SE00687D_{ID}_DFT_B3LYP . ofbo:RXN_1039D0SE00687D_{ID}_DFT_B3LYP a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:1039D0SE00687D_{ID} ; ofbo:hasProperty ofbo:E0_1039D0SE00687D_{ID}_DFT_B3LYP . ofbo:E0_1039D0SE00687D_{ID}_DFT_B3LYP a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_1039D0SE00687D_{ID}_DFT_B3LYP ; ofbo:hasValue {redoxvalue}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_DME_1039D0SE00687D ; ofbo:hasMethod ofbo:METH_1039D0SE00687D_DFT_B3LYP ; ofbo:hasReference "https://doi.org/10.1039/D0SE00687D"^^xsd:string . ofbo:SOLV_DME_1039D0SE00687D ofbo:hasComposition "DME"^^xsd:string . ofbo:METH_1039D0SE00687D_DFT_B3LYP ofbo:hasMethod <https://w3id.org/mdo/calculation/DensityFunctionalTheoryMethod> , <https://w3id.org/mdo/calculation/HybridMetaGeneralizedGradientApproximation> ; ofbo:hasLevelOfTheory "B3LYP"^^xsd:string . 
+source		SELECT
+			ID,
+			IUPACName,
+			SMILES,
+			CoreSMILES,
+			InChIKey,
+			"VALUE" AS redoxvalue
+			FROM OFBO."10_1039D0SE00687D"
+
+mappingId	10_1038srep39101
+target		ofbo:1038srep39101_{ID} a ofbo:Molecule ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasProperty ofbo:MW_1038srep39101_{ID} , ofbo:SOL_1038srep39101_{ID}_pH0 , ofbo:SOL_1038srep39101_{ID}_pH7 , ofbo:SOL_1038srep39101_{ID}_pH13 ; ofbo:hasReaction ofbo:RXN_1038srep39101_{ID} . ofbo:MW_1038srep39101_{ID} a ofbo:MolasMass ; ofbo:isPropertyOf ofbo:1038srep39101_{ID} ; ofbo:hasValue {Molarity}^^xsd:decimal . ofbo:SOL_1038srep39101_{ID}_pH0 a ofbo:Solubility ; ofbo:isPropertyOf ofbo:1038srep39101_{ID} ; ofbo:hasValue {Solubility_1MH2SO4}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_1MH2SO4_1038srep39101 ; ofbo:hasMethod ofbo:METH_1038srep39101_SOL ; ofbo:hasReference "https://doi.org/10.1038/srep39101"^^xsd:string . ofbo:SOL_1038srep39101_{ID}_pH7 a ofbo:Solubility ; ofbo:isPropertyOf ofbo:1038srep39101_{ID} ; ofbo:hasValue {Solubility_1MKCl}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_1MKCl_1038srep39101 ; ofbo:hasMethod ofbo:METH_1038srep39101_SOL ; ofbo:hasReference "https://doi.org/10.1038/srep39101"^^xsd:string . ofbo:SOL_1038srep39101_{ID}_pH13 a ofbo:Solubility ; ofbo:isPropertyOf ofbo:1038srep39101_{ID} ; ofbo:hasValue {Solubility_1MKOH}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_1MKOH_1038srep39101 ; ofbo:hasMethod ofbo:METH_1038srep39101_SOL ; ofbo:hasReference "https://doi.org/10.1038/srep39101"^^xsd:string . ofbo:SOLV_1MH2SO4_1038srep39101 ofbo:hasPH "0"^^xsd:decimal ; ofbo:hasComposition "1M H2SO4"^^xsd:string . ofbo:SOLV_1MKCl_1038srep39101 ofbo:hasPH "7"^^xsd:decimal ; ofbo:hasComposition "1M KCl"^^xsd:string . ofbo:SOLV_1MKOH_1038srep39101 ofbo:hasPH "13"^^xsd:decimal ; ofbo:hasComposition "1M KOH"^^xsd:string . ofbo:RXN_1038srep39101_{ID} a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:1038srep39101_{ID} ; ofbo:hasProperty ofbo:E0_1038srep39101_{ID}_pH0 , ofbo:E0_1038srep39101_{ID}_pH7 , ofbo:E0_1038srep39101_{ID}_pH13 , ofbo:PCR_1038srep39101_{ID}_pH0 , ofbo:PCR_1038srep39101_{ID}_pH7 , ofbo:PCR_1038srep39101_{ID}_pH13 . ofbo:E0_1038srep39101_{ID}_pH0 a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_1038srep39101_{ID} ; ofbo:hasValue {E0_pH0}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_1MH2SO4_1038srep39101 ; ofbo:hasMethod ofbo:METH_1038srep39101 ; ofbo:hasReference "https://doi.org/10.1038/srep39101"^^xsd:string . ofbo:E0_1038srep39101_{ID}_pH7 a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_1038srep39101_{ID} ; ofbo:hasValue {E0_pH7}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_1MKCl_1038srep39101 ; ofbo:hasMethod ofbo:METH_1038srep39101 ; ofbo:hasReference "https://doi.org/10.1038/srep39101"^^xsd:string . ofbo:E0_1038srep39101_{ID}_pH13 a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_1038srep39101_{ID} ; ofbo:hasValue {E0_pH13}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_1MKOH_1038srep39101 ; ofbo:hasMethod ofbo:METH_1038srep39101 ; ofbo:hasReference "https://doi.org/10.1038/srep39101"^^xsd:string . ofbo:PCR_1038srep39101_{ID}_pH0 a ofbo:PeakCurrentRatio ; ofbo:isPropertyOf ofbo:RXN_1038srep39101_{ID} ; ofbo:hasValue {Peak_current_ratio_pH0}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_1MH2SO4_1038srep39101 ; ofbo:hasMethod ofbo:METH_1038srep39101 ; ofbo:hasAdditionalInformation {Reversebility_pH0}^^xsd:string ; ofbo:hasReference "https://doi.org/10.1038/srep39101"^^xsd:string . ofbo:PCR_1038srep39101_{ID}_pH7 a ofbo:PeakCurrentRatio ; ofbo:isPropertyOf ofbo:RXN_1038srep39101_{ID} ; ofbo:hasValue {Peak_current_ratio_pH7}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_1MKCl_1038srep39101 ; ofbo:hasMethod ofbo:METH_1038srep39101 ; ofbo:hasAdditionalInformation {Reversebility_pH7}^^xsd:string ; ofbo:hasReference "https://doi.org/10.1038/srep39101"^^xsd:string . ofbo:PCR_1038srep39101_{ID}_pH13 a ofbo:PeakCurrentRatio ; ofbo:isPropertyOf ofbo:RXN_1038srep39101_{ID} ; ofbo:hasValue {Peak_current_ratio_pH13}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_1MKOH_1038srep39101 ; ofbo:hasMethod ofbo:METH_1038srep39101 ; ofbo:hasAdditionalInformation {Reversebility_pH13}^^xsd:string ; ofbo:hasReference "https://doi.org/10.1038/srep39101"^^xsd:string . ofbo:METH_1038srep39101 a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:METH_1038srep39101_SOL a ofbo:ExperimentalMethod . 
+source		SELECT
+			ID,
+			IUPACName,
+			SMILES,
+			CoreSMILES,
+			InChIKey,
+			Molarity,
+			Solubility_1MH2SO4,
+			Solubility_1MKCl,
+			Solubility_1MKOH,
+			E0_pH0,
+			E0_pH7,
+			E0_pH13,
+			Peak_current_ratio_pH0,
+			Peak_current_ratio_pH7,
+			Peak_current_ratio_pH13,
+			Reversebility_pH0,
+			Reversebility_pH7,
+			Reversebility_pH13
+			FROM OFBO."10_1038srep39101"
+
+mappingId	10_1021jacs_6b05797
+target		ofbo:jacs6b05797_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasProperty ofbo:jacs6b05797_{ID}_pka_calc , ofbo:jacs6b05797_{ID}_pka_exp ; ofbo:hasReaction ofbo:RXN_jacs6b05797_{ID}_1e , ofbo:RXN_jacs6b05797_{ID}_2e . ofbo:jacs6b05797_{ID}_pka_calc a ofbo:pKa ; ofbo:isPropertyOf ofbo:jacs6b05797_{ID} ; ofbo:hasValue {Calc_pKa}^^xsd:decimal ; ofbo:hasMethod ofbo:Method_pKA_calc ; ofbo:hasReference "https://doi.org/10.1021/jacs.6b05797"^^xsd:string . ofbo:jacs6b05797_{ID}_pka_exp a ofbo:pKa ; ofbo:isPropertyOf ofbo:jacs6b05797_{ID} ; ofbo:hasValue {Expt_pKa}^^xsd:decimal ; ofbo:hasMethod ofbo:Method_pka ; ofbo:hasReference "https://doi.org/10.1021/jacs.6b05797"^^xsd:string . ofbo:Method_pka a ofbo:ExperimentalMethod . ofbo:Method_pKA_calc a ofbo:ComputationalMethod . ofbo:SOLV_jacs6b05797_{ID}_Aprotic ofbo:hasComposition "0.1 M (Bu4N)PF6 in MeCN (acetonitrile)"^^xsd:string . ofbo:SOLV_jacs6b05797_{ID}_AcidicAqueous ofbo:hasPH "0"^^xsd:decimal ; ofbo:hasComposition "1 M p-TsOH (aq)"^^xsd:string . ofbo:METH_jacs6b05797_Experimental a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:RXN_jacs6b05797_{ID}_1e a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:jacs6b05797_{ID} ; ofbo:hasProperty ofbo:E0_jacs6b05797_{ID}_1e . ofbo:E0_jacs6b05797_{ID}_1e a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_jacs6b05797_{ID}_1e ; ofbo:hasValue {OneE_VvsNHE}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_jacs6b05797_{ID}_Aprotic ; ofbo:hasMethod ofbo:METH_jacs6b05797_Experimental ; ofbo:hasNumberOfElectrons "1"^^xsd:integer ; ofbo:hasReference "https://doi.org/10.1021/jacs.6b05797"^^xsd:string . ofbo:RXN_jacs6b05797_{ID}_2e a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:jacs6b05797_{ID} ; ofbo:hasProperty ofbo:E0_jacs6b05797_{ID}_2e . ofbo:E0_jacs6b05797_{ID}_2e a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_jacs6b05797_{ID}_2e ; ofbo:hasValue {TwoE_VvsNHE}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_jacs6b05797_{ID}_AcidicAqueous ; ofbo:hasMethod ofbo:METH_jacs6b05797_Experimental ; ofbo:hasNumberOfElectrons "2"^^xsd:integer ; ofbo:hasReference "https://doi.org/10.1021/jacs.6b05797"^^xsd:string . 
+source		SELECT
+			ID,
+			SMILES,
+			IUPACName,
+			CoreSMILES,
+			InChIKey,
+			Expt_pKa,
+			Calc_pKa,
+			"1e-E0(Vvs.NHE)" AS OneE_VvsNHE,
+			"2e-/2H+E(VvsNHE)" AS TwoE_VvsNHE
+			FROM OFBO."10_1021jacs_6b05797";
+
+mappingId	10_1002aenm_201601488
+target		ofbo:MOL_201601488_{ID}_ox a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_201601488_{ID}_brom_ox , ofbo:RXN_201601488_{ID}_brom_red , ofbo:RXN_201601488_{ID}_redox . ofbo:MOL_201601488_{ID}_red a ofbo:Molecule ; ofbo:hasSMILES {SMILES_red_red}^^xsd:string . ofbo:MOL_201601488_{ID}_ox_br a ofbo:Molecule ; ofbo:hasSMILES {SMILES_ox_brominated}^^xsd:string . ofbo:MOL_201601488_{ID}_red_br a ofbo:Molecule ; ofbo:hasSMILES {SMILES_br_red}^^xsd:string . ofbo:METH_201601488_DFT_B3LYP a ofbo:ComputationalMethod ; ofbo:hasLevelOfTheory "B3LYP/6-31G*"^^xsd:string ; ofbo:hasMethod <https://w3id.org/mdo/calculation/DensityFunctionalTheoryMethod> , <https://w3id.org/mdo/calculation/HybridGeneralizedGradientApproximation> . ofbo:METH_201601488_Experimental a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:SOLV_201601488_AcidicAqueous ofbo:hasPH "0"^^xsd:decimal ; ofbo:hasComposition "3 M HBr (aq)"^^xsd:string . ofbo:RXN_201601488_{ID}_brom_ox a ofbo:Bromination ; ofbo:isReactionOf ofbo:MOL_201601488_{ID}_ox ; ofbo:hasReactant ofbo:MOL_201601488_{ID}_ox ; ofbo:hasProduct ofbo:MOL_201601488_{ID}_ox_br ; ofbo:hasProperty ofbo:DE_R_201601488_{ID}_ox , ofbo:DE_int_201601488_{ID}_ox ; ofbo:hasAdditionalInformation {Stability_against_bromination}^^xsd:string . ofbo:DE_R_201601488_{ID}_ox a ofbo:ElectronicEnergy ; ofbo:isPropertyOf ofbo:RXN_201601488_{ID}_brom_ox ; ofbo:hasValue {DE_R_Ox}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1002/aenm.201601488"^^xsd:string ; ofbo:hasMethod ofbo:METH_201601488_DFT_B3LYP . ofbo:DE_int_201601488_{ID}_ox a ofbo:ElectronicEnergy ; ofbo:isPropertyOf ofbo:RXN_201601488_{ID}_brom_ox ; ofbo:hasValue {DE_int_Ox}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_201601488_DFT_B3LYP ; ofbo:hasReference "https://doi.org/10.1002/aenm.201601488"^^xsd:string ; ofbo:hasAdditionalInformation "Transition state energy"^^xsd:string . ofbo:RXN_201601488_{ID}_brom_red a ofbo:Bromination ; ofbo:isReactionOf ofbo:MOL_201601488_{ID}_ox ; ofbo:hasReactant ofbo:MOL_201601488_{ID}_red ; ofbo:hasProduct ofbo:MOL_201601488_{ID}_red_br ; ofbo:hasProperty ofbo:DE_R_201601488_{ID}_red , ofbo:DE_int_201601488_{ID}_red ; ofbo:hasAdditionalInformation {Stability_upon_reduction}^^xsd:string . ofbo:DE_R_201601488_{ID}_red a ofbo:ElectronicEnergy ; ofbo:isPropertyOf ofbo:RXN_201601488_{ID}_brom_red ; ofbo:hasValue {DE_R_Red}^^xsd:decimal ; ofbo:hasReference "https://doi.org/10.1002/aenm.201601488"^^xsd:string ; ofbo:hasMethod ofbo:METH_201601488_DFT_B3LYP . ofbo:DE_int_201601488_{ID}_red a ofbo:ElectronicEnergy ; ofbo:isPropertyOf ofbo:RXN_201601488_{ID}_brom_red ; ofbo:hasValue {DE_int_Red}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_201601488_DFT_B3LYP ; ofbo:hasReference "https://doi.org/10.1002/aenm.201601488"^^xsd:string ; ofbo:hasAdditionalInformation "Transition state energy"^^xsd:string . ofbo:RXN_201601488_{ID}_redox a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:MOL_201601488_{ID}_ox ; ofbo:hasReactant ofbo:MOL_201601488_{ID}_ox ; ofbo:hasProduct ofbo:MOL_201601488_{ID}_red ; ofbo:hasProperty ofbo:E0_201601488_{ID} . ofbo:E0_201601488_{ID} a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_201601488_{ID}_redox ; ofbo:hasValue {E0_VvsSHE}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_201601488_AcidicAqueous ; ofbo:hasMethod ofbo:METH_201601488_Experimental ; ofbo:hasReference "https://doi.org/10.1002/aenm.201601488"^^xsd:string . 
+source		SELECT
+			ID,
+			SMILES,
+			IUPACName,
+			CoreSMILES,
+			InChIKey,
+			"B3LYP/6-31G*ΔE_R[kJmol-1]Ox" AS DE_R_Ox,
+			"B3LYP/6-31G*ΔE_int[kJmol-1]Ox" AS DE_int_Ox,
+			"B3LYP/6-31G*ΔE_R[kJmol-1]Red"  AS DE_R_Red,
+			"B3LYP/6-31G*ΔE_int[kJmol-1]Red" AS DE_int_Red,
+			"Standard_reduction_potential[VvsSHE]" AS E0_VvsSHE,
+			Stability_against_bromination,
+			Stability_upon_reduction,
+			SMILES_ox_brominated,
+			SMILES_red_red,
+			SMILES_br_red
+			FROM OFBO."10_1002aenm_201601488"
+
+mappingId	10_3389fceng_2022_1086412
+target		ofbo:MOL_1086412_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasProperty ofbo:HL_1086412_{ID}_HF , ofbo:SFE_1086412_{ID}_HF , ofbo:HL_1086412_{ID}_ML , ofbo:SFE_1086412_{ID}_ML . ofbo:METH_1086412_HF a ofbo:ComputationalMethod ; ofbo:hasLevelOfTheory "HF-3c"^^xsd:string ; ofbo:hasMethod <https://w3id.org/mdo/calculation/HartreeFockMethod> . ofbo:METH_1086412_ML a ofbo:MachineLearningMethod ; ofbo:hasLevelOfTheory "HF-3c"^^xsd:string ; ofbo:hasAlgorithm "XGBoost"^^xsd:string . ofbo:HL_1086412_{ID}_HF a ofbo:HOMOLUMOGap ; ofbo:isPropertyOf ofbo:MOL_1086412_{ID} ; ofbo:hasValue {HOMOLUMO}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_1086412_HF ; ofbo:hasReference "https://doi.org/10.3389/fceng.2022.1086412"^^xsd:string . ofbo:SFE_1086412_{ID}_HF a ofbo:GibbsFreeEnergy ; ofbo:isPropertyOf ofbo:MOL_1086412_{ID} ; ofbo:hasInteraction ofbo:ImplicitSolvation ; ofbo:hasValue {SFE}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_1086412_HF ; ofbo:hasReference "https://doi.org/10.3389/fceng.2022.1086412"^^xsd:string . ofbo:HL_1086412_{ID}_ML a ofbo:HOMOLUMOGap ; ofbo:isPropertyOf ofbo:MOL_1086412_{ID} ; ofbo:hasValue {pred_hl}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_1086412_ML ; ofbo:hasReference "https://doi.org/10.3389/fceng.2022.1086412"^^xsd:string . ofbo:SFE_1086412_{ID}_ML a ofbo:GibbsFreeEnergy ; ofbo:isPropertyOf ofbo:MOL_1086412_{ID} ; ofbo:hasInteraction ofbo:ImplicitSolvation ; ofbo:hasValue {pred_sfe}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_1086412_ML ; ofbo:hasReference "https://doi.org/10.3389/fceng.2022.1086412"^^xsd:string . 
+source		SELECT
+			ID,
+			SMILES,
+			IUPACName,
+			CoreSMILES,
+			InchIKey,
+			HOMOLUMO,
+			SFE,
+			pred_hl,
+			pred_sfe
+			FROM OFBO."10_3389fceng_2022_1086412";
+
+mappingId	10_1039C9TA03219C
+target		ofbo:MOL_C9TA03219C_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_C9TA03219C_{ID}_redox . ofbo:METH_C9TA03219C_Experimental a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:Solv_C9TA03219C_{ID}_H2SO4 ofbo:hasPH "0"^^xsd:decimal ; ofbo:hasComposition "1M H2SO4"^^xsd:string . ofbo:RXN_C9TA03219C_{ID}_redox a ofbo:Oxidation ; ofbo:isReactionOf ofbo:MOL_C9TA03219C_{ID} ; ofbo:hasReactant ofbo:MOL_C9TA03219C_{ID} ; ofbo:hasProperty ofbo:E0_C9TA03219C_{ID} . ofbo:E0_C9TA03219C_{ID} a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_C9TA03219C_{ID}_redox ; ofbo:hasValue {E0_VvsSHE_pH0}^^xsd:decimal ; ofbo:hasSolvent ofbo:Solv_C9TA03219C_{ID}_H2SO4 ; ofbo:hasMethod ofbo:METH_C9TA03219C_Experimental ; ofbo:hasReference "https://doi.org/10.1039/C9TA03219C"^^xsd:string . 
+source		SELECT
+			ID,
+			SMILES,
+			IUPACName,
+			CoreSMILES,
+			InChIKey,
+			"E0expvs.SHE(V)pH=0" AS E0_VvsSHE_pH0
+			FROM OFBO."10_1039C9TA03219C";
+
+mappingId	10_1038s41560_018_0167_3
+target		ofbo:MOL_s41560_018_0167_3_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_s41560_018_0167_3_{ID}_redox_exp ; ofbo:hasProperty ofbo:SFE_s41560_018_0167_3_{ID}_DFT . ofbo:METH_s41560_018_0167_3_Experimental a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:METH_s41560_018_0167_3_DFT a ofbo:ComputationalMethod ; ofbo:hasMethod <https://w3id.org/mdo/calculation/DensityFunctionalTheoryMethod> , <https://w3id.org/mdo/calculation/HybridMetaGeneralizedGradientApproximation> ; ofbo:hasLevelOfTheory "B3LYP-D3"^^xsd:string . ofbo:SOLV_s41560_018_0167_3_{ID}_BasicAqueous ofbo:hasComposition "1 M NaOH"^^xsd:string ; ofbo:hasPH "14"^^xsd:decimal . ofbo:RXN_s41560_018_0167_3_{ID}_redox_exp a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:MOL_s41560_018_0167_3_{ID} ; ofbo:hasReactant ofbo:MOL_s41560_018_0167_3_{ID} ; ofbo:hasProperty ofbo:E0_s41560_018_0167_3_{ID}_exp , ofbo:E0_s41560_018_0167_3_{ID}_calc . ofbo:E0_s41560_018_0167_3_{ID}_exp a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_s41560_018_0167_3_{ID}_redox_exp ; ofbo:hasValue {E0_exp_VvsSHE}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_s41560_018_0167_3_{ID}_BasicAqueous ; ofbo:hasMethod ofbo:METH_s41560_018_0167_3_Experimental ; ofbo:hasReference "https://doi.org/10.1038/s41560-018-0167-3"^^xsd:string . ofbo:E0_s41560_018_0167_3_{ID}_calc a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:MOL_s41560_018_0167_3_{ID} ; ofbo:hasValue {E0_calc_VvsSHE}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_s41560_018_0167_3_DFT ; ofbo:hasReference "https://doi.org/10.1038/s41560-018-0167-3"^^xsd:string . ofbo:SFE_s41560_018_0167_3_{ID}_DFT a ofbo:GibbsFreeEnergy ; ofbo:isPropertyOf ofbo:MOL_s41560_018_0167_3_{ID} ; ofbo:hasInteraction ofbo:ImplicitSolvation ; ofbo:hasValue {SFE_calc_kJmol}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_s41560_018_0167_3_DFT ; ofbo:hasReference "https://doi.org/10.1038/s41560-018-0167-3"^^xsd:string . 
+source		SELECT
+			ID,
+			SMILES,
+			IUPACNAME      AS IUPACName,
+			CORESMILES     AS CoreSMILES,
+			INCHIKEY       AS InChIKey,
+			"MeasuredRedoxPotential(vsSHE)"       AS E0_exp_VvsSHE,
+			"CalculatedRedoxPotential(vsSHE)"     AS E0_calc_VvsSHE,
+			"CalculatedSolvationEnergy(kj/mol)"   AS SFE_calc_kJmol
+			FROM OFBO."10_1038s41560-018-0167-3";
+
+mappingId	10_1002cssc_202201984
+target		ofbo:MOL_cssc_202201984_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_cssc_202201984_{ID}_redox_calc . ofbo:METH_cssc_202201984_DFT_B3LYP a ofbo:ComputationalMethod ; ofbo:hasMethod <https://w3id.org/mdo/calculation/DensityFunctionalTheoryMethod> , <https://w3id.org/mdo/calculation/HybridMetaGeneralizedGradientApproximation> ; ofbo:hasLevelOfTheory "B3LYP"^^xsd:string . ofbo:RXN_cssc_202201984_{ID}_redox_calc a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:MOL_cssc_202201984_{ID} ; ofbo:hasProperty ofbo:E0_cssc_202201984_{ID}_calc . ofbo:E0_cssc_202201984_{ID}_calc a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_cssc_202201984_{ID}_redox_calc ; ofbo:hasValue {E0_calc_VvsSHE}^^xsd:decimal ; ofbo:hasMethod ofbo:METH_cssc_202201984_DFT_B3LYP . 
+source		SELECT
+			ID,
+			SMILES,
+			IUPACName,
+			CoreSMILES,
+			InChIKey,
+			Computed AS E0_calc_VvsSHE
+			FROM OFBO."10_1002cssc_202201984";
+
+mappingId	10_1021acsenergylett_1c02504
+target		ofbo:MOL_acsenergylett_1c02504_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_acsenergylett_1c02504_{ID} ; ofbo:hasProperty ofbo:SOL_acsenergylett_1c02504_{ID}_pH0 , ofbo:SOL_acsenergylett_1c02504_{ID}_pH7 , ofbo:SOL_acsenergylett_1c02504_{ID}_pH12 , ofbo:E0_acsenergylett_1c02504_{ID}_pH14 , ofbo:D_CV_acsenergylett_1c02504_{ID} , ofbo:D_RDE_acsenergylett_1c02504_{ID} , ofbo:k0_CV_acsenergylett_1c02504_{ID} , ofbo:k0_RDE_acsenergylett_1c02504_{ID} , ofbo:PEAKSEP_CV_acsenergylett_1c02504_{ID} . ofbo:RXN_acsenergylett_1c02504_{ID} a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:MOL_acsenergylett_1c02504_{ID} ; ofbo:hasProperty ofbo:E0_acsenergylett_1c02504_{ID}_pH14 , ofbo:D_CV_acsenergylett_1c02504_{ID} , ofbo:D_RDE_acsenergylett_1c02504_{ID} , ofbo:k0_CV_acsenergylett_1c02504_{ID} , ofbo:k0_RDE_acsenergylett_1c02504_{ID} , ofbo:PEAKSEP_CV_acsenergylett_1c02504_{ID} . ofbo:SOLV_H2O_acsenergylett_1c02504_pH0 ofbo:hasPH "0"^^xsd:decimal ; ofbo:hasComposition "H2SO4"^^xsd:string . ofbo:SOLV_H2O_acsenergylett_1c02504_pH7 ofbo:hasPH "7"^^xsd:decimal ; ofbo:hasComposition "Water"^^xsd:string . ofbo:SOLV_H2O_acsenergylett_1c02504_pH12 ofbo:hasPH "12"^^xsd:decimal ; ofbo:hasComposition "KOH"^^xsd:string . ofbo:SOLV_H2O_acsenergylett_1c02504_pH14 ofbo:hasPH "14"^^xsd:decimal ; ofbo:hasComposition "KOH"^^xsd:string . ofbo:E0_acsenergylett_1c02504_{ID}_pH14 a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_acsenergylett_1c02504_{ID} ; ofbo:hasValue {E0_pH14}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acsenergylett_1c02504_pH14 ; ofbo:hasMethod ofbo:METH_acsenergylett_1c02504_CV ; ofbo:hasReference "https://doi.org/10.1021/acsenergylett.1c02504"^^xsd:string . ofbo:D_CV_acsenergylett_1c02504_{ID} a ofbo:DiffusionCoefficient ; ofbo:isPropertyOf ofbo:RXN_acsenergylett_1c02504_{ID} ; ofbo:hasValue {D_CV}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acsenergylett_1c02504_pH14 ; ofbo:hasMethod ofbo:METH_acsenergylett_1c02504_CV ; ofbo:hasReference "https://doi.org/10.1021/acsenergylett.1c02504"^^xsd:string . ofbo:D_RDE_acsenergylett_1c02504_{ID} a ofbo:DiffusionCoefficient ; ofbo:isPropertyOf ofbo:RXN_acsenergylett_1c02504_{ID} ; ofbo:hasValue {D_RDE}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acsenergylett_1c02504_pH14 ; ofbo:hasMethod ofbo:METH_acsenergylett_1c02504_RDE ; ofbo:hasReference "https://doi.org/10.1021/acsenergylett.1c02504"^^xsd:string . ofbo:k0_CV_acsenergylett_1c02504_{ID} a ofbo:HeterogeneousRateConstant ; ofbo:isPropertyOf ofbo:RXN_acsenergylett_1c02504_{ID} ; ofbo:hasValue {k0_CV}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acsenergylett_1c02504_pH14 ; ofbo:hasMethod ofbo:METH_acsenergylett_1c02504_CV ; ofbo:hasReference "https://doi.org/10.1021/acsenergylett.1c02504"^^xsd:string . ofbo:k0_RDE_acsenergylett_1c02504_{ID} a ofbo:HeterogeneousRateConstant ; ofbo:isPropertyOf ofbo:RXN_acsenergylett_1c02504_{ID} ; ofbo:hasValue {k0_RDE}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acsenergylett_1c02504_pH14 ; ofbo:hasMethod ofbo:METH_acsenergylett_1c02504_RDE ; ofbo:hasReference "https://doi.org/10.1021/acsenergylett.1c02504"^^xsd:string . ofbo:PEAKSEP_CV_acsenergylett_1c02504_{ID} a ofbo:PeakPotentialGap ; ofbo:isPropertyOf ofbo:RXN_acsenergylett_1c02504_{ID} ; ofbo:hasValue {PeakSep_mV}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acsenergylett_1c02504_pH14 ; ofbo:hasMethod ofbo:METH_acsenergylett_1c02504_CV ; ofbo:hasReference "https://doi.org/10.1021/acsenergylett.1c02504"^^xsd:string . ofbo:SOL_acsenergylett_1c02504_{ID}_pH0 a ofbo:Solubility ; ofbo:isPropertyOf ofbo:MOL_acsenergylett_1c02504_{ID} ; ofbo:hasValue {Sol_pH0}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acsenergylett_1c02504_pH0 ; ofbo:hasComposition ""^^xsd:string ; ofbo:hasMethod ofbo:METH_acsenergylett_1c02504_Exp ; ofbo:hasReference "https://doi.org/10.1021/acsenergylett.1c02504"^^xsd:string . ofbo:SOL_acsenergylett_1c02504_{ID}_pH7 a ofbo:Solubility ; ofbo:isPropertyOf ofbo:MOL_acsenergylett_1c02504_{ID} ; ofbo:hasValue {Sol_pH7}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acsenergylett_1c02504_pH7 ; ofbo:hasComposition ""^^xsd:string ; ofbo:hasMethod ofbo:METH_acsenergylett_1c02504_Exp ; ofbo:hasReference "https://doi.org/10.1021/acsenergylett.1c02504"^^xsd:string . ofbo:SOL_acsenergylett_1c02504_{ID}_pH12 a ofbo:Solubility ; ofbo:isPropertyOf ofbo:MOL_acsenergylett_1c02504_{ID} ; ofbo:hasValue {Sol_pH12}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acsenergylett_1c02504_pH12 ; ofbo:hasComposition ""^^xsd:string ; ofbo:hasMethod ofbo:METH_acsenergylett_1c02504_Exp ; ofbo:hasReference "https://doi.org/10.1021/acsenergylett.1c02504"^^xsd:string . ofbo:METH_acsenergylett_1c02504_Exp a ofbo:ExperimentalMethod . ofbo:METH_acsenergylett_1c02504_CV a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . ofbo:METH_acsenergylett_1c02504_RDE a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0002631> . 
+source		SELECT
+			ID,
+			SMILES,
+			IUPACName,
+			CoreSMILES,
+			InChIKey,
+			Diffusion_coefficient_CV  AS D_CV,
+			Diffusion_coefficient_RDE AS D_RDE,
+			k0_CV,
+			k0_RDE,
+			Redox_potential_pH14 AS E0_pH14,
+			Peak_separation_mV        AS PeakSep_mV,
+			Solubility_pH0            AS Sol_pH0,
+			Solubility_pH7            AS Sol_pH7,
+			Solubility_pH12           AS Sol_pH12
+			FROM OFBO."10_1021acsenergylett_1c02504";
+
+mappingId	10_1021acs_chemmater_9b05077
+target		ofbo:MOL_acs_chemmater_9b05077_{ID} a ofbo:Molecule ; ofbo:hasIUPACName {IUPACName}^^xsd:string ; ofbo:hasSMILES {SMILES}^^xsd:string ; ofbo:hasCoreSMILES {CoreSMILES}^^xsd:string ; ofbo:hasInChIKey {InChIKey}^^xsd:string ; ofbo:hasReaction ofbo:RXN_acs_chemmater_9b05077_{ID}_EC . ofbo:SOLV_H2O_acs_chemmater_9b05077 ofbo:hasPH "0"^^xsd:decimal ; ofbo:hasComposition "1 M H2SO4"^^xsd:string . ofbo:RXN_acs_chemmater_9b05077_{ID}_EC a ofbo:ElectrochemicalReaction ; ofbo:isReactionOf ofbo:MOL_acs_chemmater_9b05077_{ID} ; ofbo:hasReactant ofbo:MOL_acs_chemmater_9b05077_{ID} ; ofbo:hasProperty ofbo:E12_acs_chemmater_9b05077_{ID} , ofbo:D_acs_chemmater_9b05077_{ID} , ofbo:k0_acs_chemmater_9b05077_{ID} . ofbo:E12_acs_chemmater_9b05077_{ID} a ofbo:RedoxPotential ; ofbo:isPropertyOf ofbo:RXN_acs_chemmater_9b05077_{ID}_EC ; ofbo:hasValue {E1_2_VvsSHE}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acs_chemmater_9b05077 ; ofbo:hasMethod ofbo:METH_acs_chemmater_9b05077_CV ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.9b05077"^^xsd:string ; ofbo:hasAdditionalInformation "E1/2 (half-wave potential) vs SHE"^^xsd:string . ofbo:D_acs_chemmater_9b05077_{ID} a ofbo:DiffusionCoefficient ; ofbo:isPropertyOf ofbo:RXN_acs_chemmater_9b05077_{ID}_EC ; ofbo:hasValue {D_cm2_per_s}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acs_chemmater_9b05077 ; ofbo:hasMethod ofbo:METH_acs_chemmater_9b05077_CV ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.9b05077"^^xsd:string . ofbo:k0_acs_chemmater_9b05077_{ID} a ofbo:HeterogeneousRateConstant ; ofbo:isPropertyOf ofbo:RXN_acs_chemmater_9b05077_{ID}_EC ; ofbo:hasValue {k0_cm_per_s}^^xsd:decimal ; ofbo:hasSolvent ofbo:SOLV_H2O_acs_chemmater_9b05077 ; ofbo:hasMethod ofbo:METH_acs_chemmater_9b05077_CV ; ofbo:hasReference "https://doi.org/10.1021/acs.chemmater.9b05077"^^xsd:string . ofbo:METH_acs_chemmater_9b05077_CV a ofbo:ExperimentalMethod ; ofbo:hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> . 
+source		SELECT
+			ID,
+			SMILES,
+			IUPACName,
+			CoreSMILES,
+			InChIKey,
+			"D[cm2s–1]"   AS D_cm2_per_s,
+			"k0[cms–1]"   AS k0_cm_per_s,
+			"E1/2vsSHE[V]" AS E1_2_VvsSHE
+			FROM OFBO."10_1021acs_chemmater_9b05077"
+]]
+
