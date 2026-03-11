@@ -1,8 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/dwillimetz/ontologies/2026/0/untitled-ontology-41/"
-     xml:base="http://www.semanticweb.org/dwillimetz/ontologies/2026/0/untitled-ontology-41/"
-     xmlns:g="http://www.semanticweb.org/dwillimetz/ontologies/2026/0/kid/"
-     xmlns:kid="http://www.semanticweb.org/dwillimetz/ontologies/2026/0/kid#"
+<rdf:RDF 
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -11,12 +8,10 @@
      xmlns:ofbo="https://w3id.org/ofbo#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:untitled-ontology-41="http://www.semanticweb.org/dwillimetz/ontologies/2026/0/untitled-ontology-41#">
+     xmlns:terms="http://purl.org/dc/terms/">
+
     <owl:Ontology rdf:about="https://w3id.org/ofbo">
-        <owl:versionIRI rdf:resource="https://w3id.org/ofbo/1.0.0"/>
     </owl:Ontology>
-    
 
 
     <!-- 
