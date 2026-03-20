@@ -6,6 +6,7 @@ xml:		http://www.w3.org/XML/1998/namespace
 xsd:		http://www.w3.org/2001/XMLSchema#
 obda:		https://w3id.org/obda/vocabulary#
 ofbo:		https://w3id.org/ofbo#
+prov:		http://www.w3.org/ns/prov#
 rdfs:		http://www.w3.org/2000/01/rdf-schema#
 skos:		http://www.w3.org/2004/02/skos/core#
 terms:		http://purl.org/dc/terms/
@@ -249,5 +250,19 @@ source		SELECT
 			"k0[cms–1]"   AS k0_cm_per_s,
 			"E1/2vsSHE[V]" AS E1_2_VvsSHE
 			FROM OFBO."10_1021acs_chemmater_9b05077"
+
+mappingId	ALIZARIN_CV
+target		:Mol_{NAME} a :Molecule ; :hasIUPACName {"IUPAC_Name"}^^xsd:string ; :hasSMILES {SMILES}^^xsd:string ; :hasInChIKey {INCHIKEY}^^xsd:string ; :hasSolvent :Solv_{NAME} ; :hasReaction :Rxn_{NAME} . :Rxn_{NAME} a :ElectrochemicalReaction ; :hasProperty :Redox_{NAME} , :PeakGap_{NAME} , :PeakRatio_{NAME} . :Solv_{NAME} a :ProticSolvent ; :hasComposition "1 M H2SO4"^^xsd:string . :Redox_{NAME} a :RedoxPotential ; :hasValue {"Redox potential"}^^xsd:decimal ; :hasUnit <http://qudt.org/vocab/unit/V> ; :hasMethod :CV_{NAME} . :PeakGap_{NAME} a :PeakPotentialGap ; :hasValue {"Peak potential gap"}^^xsd:decimal ; :hasUnit <http://qudt.org/vocab/unit/MilliV> . :PeakRatio_{NAME} a :PeakCurrentRatio ; :hasValue {"Peak current ratio"}^^xsd:decimal ; :hasUnit <http://qudt.org/vocab/unit/UNITLESS> . :CV_{NAME} a prov:Activity ; :hasMethod <http://purl.obolibrary.org/obo/CHMO_0000025> ; prov:wasAssociatedWith :agent_CV ; prov:qualifiedUsage :usage_scanrate , :usage_cycles , :usage_voltagewindow , :usage_electrode , :usage_electrolyte , :usage_cell , :usage_potentiostat . :agent_CV a prov:Agent ; rdfs:label "Name of who performed CV"^^xsd:string . :usage_scanrate a prov:Usage ; prov:entity <https://w3id.org/nfdi4cat/voc4cat_0007213> ; :hasValue {SCAN_RATE}^^xsd:decimal ; :hasUnit <http://qudt.org/vocab/unit/V-PER-SEC> . :usage_cycles a prov:Usage ; prov:entity <https://w3id.org/nfdi4cat/voc4cat_0007228> ; :hasValue "1"^^xsd:integer . :usage_voltagewindow a prov:Usage ; prov:entity <https://w3id.org/emmo/domain/electrochemistry#electrochemistry_c39b2498_783e_48e1_9814_6164bd99823c> . :usage_electrode a prov:Usage ; prov:entity <http://purl.allotrope.org/ontologies/equipment#AFE_0000422> . :usage_cell a prov:Usage ; prov:entity <http://purl.obolibrary.org/obo/CHMO_0002351> . :usage_potentiostat a prov:Usage ; prov:entity <http://purl.obolibrary.org/obo/CHMO_0002427> . :usage_electrolyte a prov:Usage ; prov:entity <https://w3id.org/nfdi4cat/voc4cat_0007224> ; :hasSolvent :Solv_{NAME} . 
+source		SELECT
+			"NAME",
+			"IUPAC_NAME",
+			"SMILES",
+			"INCHIKEY",
+			"REDOX_POTENTIAL" AS "Redox potential",
+			"PEAK_POTENTIAL_GAP" AS "Peak potential gap",
+			"PEAK_CURRENT_RATIO" AS "Peak current ratio",
+			"SOLVENT",
+			"SCAN_RATE"
+			FROM ALIZARIN."ALIZARIN";
 ]]
 
