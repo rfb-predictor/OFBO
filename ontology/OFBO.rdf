@@ -338,6 +338,15 @@ It provides information about the proton concentration of the medium, which can 
     
 
 
+    <!-- https://w3id.org/ofbo#hasPubChemCID -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ofbo#hasPubChemCID">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofbo#hasIdentifier"/>
+        <rdfs:isDefinedBy>PubChem CID links to an index within the PubChem database</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/ofbo#hasReference -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ofbo#hasReference">
