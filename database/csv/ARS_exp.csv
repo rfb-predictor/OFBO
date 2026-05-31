@@ -1,0 +1,2 @@
+﻿NAME,IUPAC Name,SMILES,INCHIKEY  ,Redox potential ap,Peak potential gap,Peak current ratio,SOLVENT,SCAN_RATE
+Alizarin red S,"3,4-dihydroxy-9,10-dioxo-9,10-dihydroanthracene-2-sulfonic acid",O=C1c2ccccc2C(=O)c2c1cc(S(=O)(=O)O)c(O)c2O,"JKYKXTRKURYNGW-UHFFFAOYSA-N	",0.066,112,0.65,1 M H2SO4,0.025
