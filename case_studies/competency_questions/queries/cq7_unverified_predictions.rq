@@ -1,0 +1,23 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+
+SELECT DISTINCT
+    ?smiles
+    ?predictedValue
+    ?unit
+WHERE {
+    ?molecule schema:smiles ?smiles ;
+              <http://semanticscience.org/resource/SIO_000223> ?prediction .
+
+    ?prediction qudt:numericValue ?predictedValue ;
+                qudt:unit ?unit ;
+                prov:wasGeneratedBy ?mlProcess .
+
+    FILTER NOT EXISTS {
+        ?prediction prov:wasGeneratedBy ?experimentalProcess .
+        ?experimentalProcess a ofbo:OFBO_0008500 .
+    }
+}
+LIMIT 10

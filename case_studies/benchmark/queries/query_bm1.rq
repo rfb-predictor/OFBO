@@ -1,0 +1,17 @@
+PREFIX ofbo: <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+
+SELECT ?molecule ?name ?redoxPotential
+WHERE {
+    ?molecule a ofbo:OFBO_0000012 ;
+              schema:iupacName ?name ;
+              ofbo:OFBO_0009206 ?reaction .
+
+    ?reaction sio:SIO_000223 ?redoxProperty .
+
+    ?redoxProperty a ofbo:OFBO_0001104 ;
+                   qudt:numericValue ?redoxPotential .
+}
+LIMIT 5

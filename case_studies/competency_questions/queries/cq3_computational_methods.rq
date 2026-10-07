@@ -1,0 +1,27 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+
+SELECT DISTINCT
+    ?smiles
+    ?redoxPotential
+    ?reference
+    ?method
+WHERE {
+    ?molecule a ofbo:OFBO_0000012 ;
+              schema:smiles ?smiles ;
+              ofbo:OFBO_0009206 ?reaction .
+
+    ?potential a ofbo:OFBO_0001104 ;
+               sio:SIO_000011 ?reaction ;
+               qudt:numericValue ?redoxPotential ;
+               ofbo:OFBO_0009202 ?reference ;
+               prov:wasGeneratedBy ?calculation .
+
+    ?calculation a ofbo:OFBO_0008000 ;
+                 ofbo:OFBO_0009102 ?method .
+}
+ORDER BY ?smiles ?method
+LIMIT 10

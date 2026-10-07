@@ -1,0 +1,52 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+
+SELECT DISTINCT
+    ?molecule
+    ?smiles
+    ?solventSystem
+    ?pH
+    ?redoxPotential
+    ?solubility
+    ?solubilityUnit
+    ?reference
+WHERE {
+    # Core SMILES is used to avoid duplicate values inferred through
+    # ofbo:OFBO_0009101 rdfs:subPropertyOf schema:smiles.
+    ?molecule a ofbo:OFBO_0000012 ;
+              ofbo:OFBO_0009101 ?smiles ;
+              ofbo:OFBO_0009206 ?reaction ;
+              sio:SIO_000223 ?solubilityProperty .
+
+    # Experimentally measured solubility
+    ?solubilityProperty a ofbo:OFBO_0002008 ;
+                         qudt:numericValue ?solubility ;
+                         qudt:unit ?solubilityUnit ;
+                         prov:wasGeneratedBy ?solubilityMeasurement .
+
+    ?solubilityMeasurement a ofbo:OFBO_0008500 ;
+                           prov:used ?system .
+
+    # Experimental redox potential measured in the same system
+    ?redoxProperty a ofbo:OFBO_0001104 ;
+                   sio:SIO_000011 ?reaction ;
+                   qudt:numericValue ?redoxPotential ;
+                   ofbo:OFBO_0009202 ?reference ;
+                   prov:wasGeneratedBy ?redoxMeasurement .
+
+    ?redoxMeasurement a ofbo:OFBO_0008500 ;
+                      prov:used ?system .
+
+    # Chemical-system information
+    ?system schema:chemicalComposition ?solventSystem .
+
+    OPTIONAL {
+        ?system sio:SIO_000223 ?pHProperty .
+        ?pHProperty a ofbo:OFBO_0001016 ;
+                    qudt:numericValue ?pH .
+    }
+}
+ORDER BY DESC(?solubility) DESC(?redoxPotential)

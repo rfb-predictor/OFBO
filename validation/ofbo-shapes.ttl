@@ -1,0 +1,216 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ofbo: <https://w3id.org/ofbo#> .
+@prefix schema: <http://schema.org/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# 1. Molecular identity / representation
+#################################################################
+
+ofbo:MoleculeRepresentationShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0000012 ;
+    sh:or (
+        [
+            sh:property [
+                sh:path schema:smiles ;
+                sh:minCount 1 ;
+                sh:datatype xsd:string ;
+                sh:minLength 1
+            ]
+        ]
+        [
+            sh:property [
+                sh:path schema:inChIKey ;
+                sh:minCount 1 ;
+                sh:datatype xsd:string ;
+                sh:pattern "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"
+            ]
+        ]
+        [
+            sh:property [
+                sh:path schema:iupacName ;
+                sh:minCount 1 ;
+                sh:datatype xsd:string ;
+                sh:minLength 1
+            ]
+        ]
+    ) ;
+    sh:message "A molecule must have at least one non-empty representation: SMILES, InChIKey, or IUPAC name."@en .
+
+#################################################################
+# 2. Generic numeric quantity rule
+#################################################################
+
+ofbo:NumericValueUnitShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf qudt:numericValue ;
+
+    sh:property [
+        sh:path qudt:numericValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "A quantitative record must have exactly one decimal numeric value."@en
+    ] ;
+
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "A quantitative record must have exactly one unit IRI."@en
+    ] .
+
+#################################################################
+# 3. Redox-potential result
+#################################################################
+
+ofbo:RedoxPotentialShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001104 ;
+
+    sh:property [
+        sh:path sio:SIO_000011 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class ofbo:OFBO_0007120 ;
+        sh:message "A redox-potential result must be attributed to exactly one electrochemical reaction."@en
+    ] ;
+
+    sh:property [
+        sh:path qudt:numericValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "A redox-potential result must have exactly one decimal value."@en
+    ] ;
+
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:V ;
+        sh:message "A redox-potential result must be reported in volts (qudt:unit unit:V)."@en
+    ] ;
+
+    sh:property [
+        sh:path ofbo:OFBO_0009202 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "SHE" "NHE" "Ag/AgCl" "SCE" "Fc/Fc+" ) ;
+        sh:message "A redox-potential result must state one supported potential reference."@en
+    ] ;
+
+    sh:property [
+        sh:path prov:wasGeneratedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class prov:Activity ;
+        sh:nodeKind sh:IRI ;
+        sh:message "A redox-potential result must identify exactly one generating activity."@en
+    ] .
+
+#################################################################
+# 4. pH values
+#################################################################
+
+ofbo:PHShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001016 ;
+
+    sh:property [
+        sh:path qudt:numericValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 14 ;
+        sh:message "pH must be a decimal value between 0 and 14 for the currently supported aqueous dataset."@en
+    ] ;
+
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:PH ;
+        sh:message "A pH value must use qudt:unit unit:PH."@en
+    ] .
+
+#################################################################
+# 5. Diffusion coefficients
+#################################################################
+
+ofbo:DiffusionCoefficientShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001501 ;
+
+    sh:property [
+        sh:path qudt:numericValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minExclusive 0 ;
+        sh:message "A diffusion coefficient must be a positive decimal."@en
+    ] ;
+
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( unit:M2-PER-SEC unit:CentiM2-PER-SEC ) ;
+        sh:message "A diffusion coefficient must use m²/s or cm²/s."@en
+    ] .
+
+#################################################################
+# 6. Provenance of generated measurements
+#################################################################
+
+ofbo:GeneratingProcessShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf prov:wasGeneratedBy ;
+    sh:class prov:Activity ;
+    sh:nodeKind sh:IRI ;
+    sh:message "An entity generating a result must be represented as a PROV activity."@en .
+
+#################################################################
+# 7. Every generated result must have provenance.
+#
+# Literature-derived results require a primary source.
+# Newly generated results require an associated responsible agent
+# on the activity that generated the result.
+#################################################################
+
+ofbo:ResultProvenanceShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf prov:wasGeneratedBy ;
+
+    sh:or (
+        [
+            sh:property [
+                sh:path prov:hadPrimarySource ;
+                sh:minCount 1 ;
+                sh:nodeKind sh:IRI ;
+                sh:message "A literature-derived result must identify its primary source using an IRI."@en
+            ]
+        ]
+        [
+            sh:property [
+                sh:path (
+                    prov:wasGeneratedBy
+                    prov:wasAssociatedWith
+                ) ;
+                sh:minCount 1 ;
+                sh:nodeKind sh:IRI ;
+                sh:class prov:Agent ;
+                sh:message "A newly generated result must be linked, through its generating activity, to a responsible PROV agent."@en
+            ]
+        ]
+    ) ;
+
+    sh:message "A generated result must have either a primary source or a generating activity associated with a responsible agent."@en .

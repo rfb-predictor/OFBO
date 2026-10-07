@@ -1,0 +1,23 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX rxno:   <http://purl.obolibrary.org/obo/RXNO_>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+    ?smiles
+    ?brominatedProduct
+    ?stabilityAssessment
+WHERE {
+    ?brominationReaction a ofbo:OFBO_0007202 ;
+                          ofbo:OFBO_0009207 ?molecule ;
+                          rdfs:comment ?stabilityAssessment .
+
+    ?molecule schema:smiles ?smiles .
+
+    OPTIONAL {
+        ?brominationReaction rxno:0000423 ?product .
+        ?product schema:smiles ?brominatedProduct .
+    }
+}
+ORDER BY ?smiles
+LIMIT 10

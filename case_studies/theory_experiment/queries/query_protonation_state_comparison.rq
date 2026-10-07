@@ -1,0 +1,94 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+PREFIX rxno:   <http://purl.obolibrary.org/obo/RXNO_>
+
+SELECT
+    ?inchiKey
+    ?iupacName
+    ?reactionForm
+    ?potential
+    ?reference
+    ?reactantSmiles
+    ?productSmiles
+WHERE {
+    {
+        # Experimental potential measured at pH 14.
+        ?molecule schema:inChIKey ?inchiKey ;
+                  schema:iupacName ?iupacName ;
+                  ofbo:OFBO_0009206 ?reaction .
+
+        ?potentialProperty a ofbo:OFBO_0001104 ;
+                           sio:SIO_000011 ?reaction ;
+                           qudt:numericValue ?potential ;
+                           ofbo:OFBO_0009202 ?reference ;
+                           prov:wasGeneratedBy ?experiment ;
+                           prov:hadPrimarySource
+                               <https://doi.org/10.1021/acs.chemmater.7b04220> .
+
+        ?experiment a ofbo:OFBO_0008500 ;
+                    prov:used ?system .
+
+        ?system sio:SIO_000223 ?pHProperty .
+
+        ?pHProperty a ofbo:OFBO_0001016 ;
+                    qudt:numericValue 14 .
+
+        BIND("Experimental, pH 14" AS ?reactionForm)
+    }
+
+    UNION
+
+    {
+        # Calculated protonated, neutral, and deprotonated reaction forms.
+        ?molecule schema:inChIKey ?inchiKey ;
+                  schema:iupacName ?iupacName ;
+                  ofbo:OFBO_0009206 ?reaction .
+
+        ?potentialProperty a ofbo:OFBO_0001104 ;
+                           sio:SIO_000011 ?reaction ;
+                           qudt:numericValue ?potential ;
+                           ofbo:OFBO_0009202 ?reference ;
+                           prov:wasGeneratedBy ?calculation ;
+                           prov:hadPrimarySource
+                               <https://doi.org/10.1021/acs.chemmater.7b04220> .
+
+        ?calculation a ofbo:OFBO_0008001 .
+
+        OPTIONAL {
+            ?reaction rxno:0000424 ?reactant .
+            ?reactant schema:smiles ?reactantSmiles .
+        }
+
+        OPTIONAL {
+            ?reaction rxno:0000423 ?product .
+            ?product schema:smiles ?productSmiles .
+        }
+
+        BIND(
+            IF(
+                CONTAINS(STR(?reaction), "_DFT_PROT"),
+                "Calculated, protonated",
+                IF(
+                    CONTAINS(STR(?reaction), "_DFT_NEUT"),
+                    "Calculated, neutral",
+                    IF(
+                        CONTAINS(STR(?reaction), "_DFT_DEPROT"),
+                        "Calculated, deprotonated",
+                        "Other calculated form"
+                    )
+                )
+            )
+            AS ?reactionForm
+        )
+
+        FILTER(
+            CONTAINS(STR(?reaction), "_DFT_PROT")
+            || CONTAINS(STR(?reaction), "_DFT_NEUT")
+            || CONTAINS(STR(?reaction), "_DFT_DEPROT")
+        )
+    }
+}
+ORDER BY ?inchiKey ?reactionForm

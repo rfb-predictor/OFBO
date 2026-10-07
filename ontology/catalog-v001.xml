@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1780165602270" name="https://w3id.org/ofbo" uri="OFBO.rdf"/>
-    </group>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ofbo/imports/qudt-subset" uri="imports/qudt-subset.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ofbo/imports/prov-o-subset" uri="imports/prov-o-subset.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ofbo/imports/mdo-subset" uri="imports/mdo-subset.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ofbo/imports/chmo-subset" uri="imports/chmo-subset.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ofbo/imports/mdo-subset" uri="mdo-subset.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ofbo/imports/chmo-subset" uri="chmo-subset.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ofbo/imports/qudt-subset" uri="qudt-subset.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/ofbo/imports/prov-o-subset" uri="prov-o-subset.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
 </catalog>

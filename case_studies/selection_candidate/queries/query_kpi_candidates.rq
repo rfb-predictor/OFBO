@@ -1,0 +1,40 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+
+SELECT DISTINCT
+    ?inchiKey
+    ?smiles
+    ?propertyType
+    ?value
+    ?unit
+    ?source
+WHERE {
+    ?molecule a ofbo:OFBO_0000012 ;
+              schema:inChIKey ?inchiKey ;
+              ofbo:OFBO_0009101 ?smiles ;
+              ofbo:OFBO_0009206 ?reaction .
+
+    ?reaction sio:SIO_000223 ?property .
+
+    ?property a ?propertyType ;
+              qudt:numericValue ?value ;
+              qudt:unit ?unit ;
+              prov:wasGeneratedBy ?experiment ;
+              prov:hadPrimarySource ?source .
+
+    ?experiment a ofbo:OFBO_0008500 .
+
+    VALUES ?propertyType {
+        ofbo:OFBO_0001104
+        ofbo:OFBO_0001103
+        ofbo:OFBO_0001402
+        ofbo:OFBO_0001501
+    }
+
+    # Hydroxyphenazine dataset used for the automated-selection case study.
+    FILTER(?source = <https://doi.org/10.1039/D1TA03655F>)
+}
+ORDER BY ?inchiKey ?propertyType

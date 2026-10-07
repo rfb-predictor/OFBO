@@ -1,0 +1,32 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+
+SELECT DISTINCT
+    ?solventSystem
+    ?pH
+    ?solubility
+    ?unit
+WHERE {
+    ?molecule schema:smiles "CC(C)=CCC1=C(O)c2ccccc2C(=O)C1=O" ;
+              sio:SIO_000223 ?solubilityProperty .
+
+    ?solubilityProperty a ofbo:OFBO_0002008 ;
+                         qudt:numericValue ?solubility ;
+                         qudt:unit ?unit ;
+                         prov:wasGeneratedBy ?measurement .
+
+    ?measurement prov:used ?system .
+
+    ?system schema:chemicalComposition ?solventSystem .
+
+    OPTIONAL {
+        ?system sio:SIO_000223 ?pHProperty .
+
+        ?pHProperty a ofbo:OFBO_0001016 ;
+                    qudt:numericValue ?pH .
+    }
+}
+ORDER BY ?pH ?solventSystem

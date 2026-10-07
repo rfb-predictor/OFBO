@@ -1,0 +1,1100 @@
+@prefix ofbo: <https://w3id.org/ofbo#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_6_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_19_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_69_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_296_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_28_pH13 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_265_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_4_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_161_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_77_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_52_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_104_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_305_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_12_pH13 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_14_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_85_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_340_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_215_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_268_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_343_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_67_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_341_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_31_pH7 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_9_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_25_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_181_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_20_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_28_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_28_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_2_pH13 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_8_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_7_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_150_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_177_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_3_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_5_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_12_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_17_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_25_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_251_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_1_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_13_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_6_pH13 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_228_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_32_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1039D1TA03655F_1_EXP ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_s41560_018_0167_3_8_exp ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_32_pH13 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_2_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_6_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_12_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_30_pH13 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_19_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_105_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_110_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_103_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_261_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_48_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_8_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_s41560_018_0167_3_7_exp ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_68_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_10_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_266_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_28_pH13 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_124_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_18_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_197_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_14_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_60_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_s41560_018_0167_3_3_exp ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_24_pH13 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_183_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_206_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_10_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_259_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_169_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_345_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_26_pH13 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_15_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_230_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_19_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_278_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_63_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_344_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_11_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_30_pH7 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_15_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_84_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_71_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_180_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_224_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_185_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_31_pH13 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_263_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_199_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_188_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_217_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_78_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_216_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:S_202312608_1 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "<0.001"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_15_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_18_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_18_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_17_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_258_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_17_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_123_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_309_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_311_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_14_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_113_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_26_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_106_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_10_pH13 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_10_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_27_pH13 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_53_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_226_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_329_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_260_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_269_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_s41560_018_0167_3_5_exp ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_92_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_32_pH7 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_149_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_31_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_10_pH7 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_5_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_102_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_66_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_16_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_16_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_184_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_16_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_11_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_342_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_64_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_20_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_27_pH0 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_8_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_55_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_164_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_339_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_6b07558_9_QMMM ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_9_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_198_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:SOL_1038srep39101_13_pH7 ;
+            sh:resultMessage "A numeric result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb10 ;
+            sh:value "< 0.01"^^xsd:decimal ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_jbbabio_54_QQEQ ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode ofbo:E0_1038srep39101_10_pH0 ;
+            sh:resultMessage "A redox-potential result must have exactly one decimal numeric value."@en ;
+            sh:resultPath qudt:numericValue ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n63a85eff75dd4946937dea501a0a782eb13 ] .
+
+_:n63a85eff75dd4946937dea501a0a782eb10 sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:message "A numeric result must have exactly one decimal numeric value."@en ;
+    sh:minCount 1 ;
+    sh:path qudt:numericValue .
+
+_:n63a85eff75dd4946937dea501a0a782eb13 sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    sh:message "A redox-potential result must have exactly one decimal numeric value."@en ;
+    sh:minCount 1 ;
+    sh:path qudt:numericValue .
+

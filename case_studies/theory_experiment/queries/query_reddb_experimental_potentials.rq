@@ -1,0 +1,38 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+
+SELECT DISTINCT
+    ?inchiKey
+    ?experimentalPotential
+    ?reference
+    ?pH
+    ?source
+WHERE {
+    ?molecule a ofbo:OFBO_0000012 ;
+              ofbo:OFBO_0009101 "c1ccc2nc3ccccc3nc2c1" ;
+              schema:inChIKey ?inchiKey ;
+              ofbo:OFBO_0009206 ?reaction .
+
+    ?potential a ofbo:OFBO_0001104 ;
+               sio:SIO_000011 ?reaction ;
+               qudt:numericValue ?experimentalPotential ;
+               ofbo:OFBO_0009202 ?reference ;
+               prov:wasGeneratedBy ?experiment ;
+               prov:hadPrimarySource ?source .
+
+    # Keep experimentally generated, rather than calculated, potentials.
+    ?experiment a ofbo:OFBO_0008500 .
+
+    # pH is absent for some experimental datasets, so retain it when available.
+    OPTIONAL {
+        ?experiment prov:used ?system .
+        ?system sio:SIO_000223 ?pHProperty .
+
+        ?pHProperty a ofbo:OFBO_0001016 ;
+                    qudt:numericValue ?pH .
+    }
+}
+ORDER BY ?inchiKey ?source ?pH

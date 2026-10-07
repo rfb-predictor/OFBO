@@ -1,0 +1,38 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+
+SELECT DISTINCT
+    ?molecule
+    ?name
+    ?pH
+    ?electrolyte
+    ?redoxPotential
+    ?reference
+WHERE {
+    # Molecule and its associated electrochemical reaction
+    ?molecule a ofbo:OFBO_0000012 ;
+              ofbo:OFBO_0009206 ?reaction ;
+              schema:iupacName ?name .
+
+    # Redox potential associated with that reaction
+    ?potential a ofbo:OFBO_0001104 ;
+               sio:SIO_000011 ?reaction ;
+               qudt:numericValue ?redoxPotential ;
+               ofbo:OFBO_0009202 ?reference ;
+               prov:wasGeneratedBy ?experiment ;
+               prov:hadPrimarySource <https://doi.org/10.1038/srep39101> .
+
+    # Experimental system used in the measurement
+    ?experiment prov:used ?system .
+
+    ?system schema:chemicalComposition ?electrolyte ;
+            sio:SIO_000223 ?pHProperty .
+
+    ?pHProperty a ofbo:OFBO_0001016 ;
+                qudt:numericValue ?pH .
+}
+ORDER BY ?name ?pH
+LIMIT 15

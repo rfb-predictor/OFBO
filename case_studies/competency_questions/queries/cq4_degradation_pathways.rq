@@ -1,0 +1,36 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+PREFIX rxno:   <http://purl.obolibrary.org/obo/RXNO_>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+    ?smiles
+    ?brominatedProduct
+    ?stabilityComment
+    ?reactionEnergy
+    ?method
+WHERE {
+    ?degradationReaction a ofbo:OFBO_0007202 ;
+                          ofbo:OFBO_0009207 ?molecule ;
+                          rxno:0000423 ?product ;
+                          sio:SIO_000223 ?energy .
+
+    ?molecule schema:smiles ?smiles .
+
+    ?product schema:smiles ?brominatedProduct .
+
+    ?energy a ofbo:OFBO_0001230 ;
+            qudt:numericValue ?reactionEnergy ;
+            prov:wasGeneratedBy ?calculation .
+
+    ?calculation ofbo:OFBO_0009102 ?method .
+
+    OPTIONAL {
+        ?degradationReaction rdfs:comment ?stabilityComment .
+    }
+}
+ORDER BY ?smiles ?reactionEnergy
+LIMIT 10

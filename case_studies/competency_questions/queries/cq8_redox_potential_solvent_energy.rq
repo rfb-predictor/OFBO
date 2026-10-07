@@ -1,0 +1,41 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+
+SELECT DISTINCT
+    ?molecule
+    ?smiles
+    ?experimentalRedoxPotential
+    ?solvationFreeEnergy
+    ?method
+WHERE {
+    ?molecule ofbo:OFBO_0009101 ?coreSmiles ;
+              ofbo:OFBO_0009206 ?reaction ;
+              sio:SIO_000223 ?solvationEnergy .
+
+    # Prefer a full SMILES that differs from the Core SMILES.
+    OPTIONAL {
+        ?molecule schema:smiles ?fullSmiles .
+        FILTER(?fullSmiles != ?coreSmiles)
+    }
+
+    # Where no separate full SMILES exists, use the Core SMILES.
+    BIND(COALESCE(?fullSmiles, ?coreSmiles) AS ?smiles)
+
+    ?redoxPotential a ofbo:OFBO_0001104 ;
+                    sio:SIO_000011 ?reaction ;
+                    qudt:numericValue ?experimentalRedoxPotential ;
+                    prov:wasGeneratedBy ?experiment .
+
+    ?experiment a ofbo:OFBO_0008500 .
+
+    ?solvationEnergy a ofbo:OFBO_0002005 ;
+                     qudt:numericValue ?solvationFreeEnergy ;
+                     prov:wasGeneratedBy ?calculation .
+
+    ?calculation ofbo:OFBO_0009102 ?method .
+}
+ORDER BY ?molecule
+LIMIT 100

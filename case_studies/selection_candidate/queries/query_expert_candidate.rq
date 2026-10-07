@@ -1,0 +1,72 @@
+PREFIX ofbo:   <https://w3id.org/ofbo#>
+PREFIX schema: <http://schema.org/>
+PREFIX sio:    <http://semanticscience.org/resource/>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX qudt:   <http://qudt.org/schema/qudt/>
+
+SELECT DISTINCT
+    ?propertyKind
+    ?value
+    ?unit
+    ?reference
+    ?system
+    ?composition
+    ?pH
+    ?source
+WHERE {
+    {
+        # Experimental redox-potential observations
+        ?molecule schema:inChIKey "JKYKXTRKURYNGW-UHFFFAOYSA-N" ;
+                  ofbo:OFBO_0009206 ?reaction .
+
+        ?property a ofbo:OFBO_0001104 ;
+                  sio:SIO_000011 ?reaction ;
+                  qudt:numericValue ?value ;
+                  qudt:unit ?unit ;
+                  ofbo:OFBO_0009202 ?reference ;
+                  prov:wasGeneratedBy ?process ;
+                  prov:hadPrimarySource ?source .
+
+        ?process a ofbo:OFBO_0008500 ;
+                 prov:used ?system .
+
+        ?system schema:chemicalComposition ?composition .
+
+        OPTIONAL {
+            ?system sio:SIO_000223 ?pHProperty .
+            ?pHProperty a ofbo:OFBO_0001016 ;
+                        qudt:numericValue ?pH .
+        }
+
+        BIND("Redox potential" AS ?propertyKind)
+    }
+
+    UNION
+
+    {
+        # Experimental solubility observations
+        ?molecule schema:inChIKey "JKYKXTRKURYNGW-UHFFFAOYSA-N" .
+
+        ?property a ofbo:OFBO_0002008 ;
+                  sio:SIO_000011 ?molecule ;
+                  qudt:numericValue ?value ;
+                  qudt:unit ?unit ;
+                  prov:wasGeneratedBy ?process ;
+                  prov:hadPrimarySource ?source .
+
+        ?process a ofbo:OFBO_0008500 ;
+                 prov:used ?system .
+
+        ?system schema:chemicalComposition ?composition .
+
+        OPTIONAL {
+            ?system sio:SIO_000223 ?pHProperty .
+            ?pHProperty a ofbo:OFBO_0001016 ;
+                        qudt:numericValue ?pH .
+        }
+
+        BIND("" AS ?reference)
+        BIND("Solubility" AS ?propertyKind)
+    }
+}
+ORDER BY ?propertyKind ?value
