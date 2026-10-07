@@ -88,14 +88,13 @@ The queries demonstrate retrieval of information including molecular scaffolds, 
 
 ## Validation
 
-OFBO was assessed using reasoning and SHACL validation. Relevant resources include:
+OFBO was assessed using reasoning and SHACL validation. Relevant resources are available in:
 
-- `shacl/ofbo-shapes.ttl`
-- `shacl/shacl-report.ttl`
-- `shacl/validate_shacl.py`
 - `validation/validation.ipynb`
+- `validation/ofbo-shapes.ttl`
 - `validation/reports/robot-report.tsv`
 - `validation/reports/OFBO-reasoned.ttl`
+- `validation/reports/shacl-report.ttl`
 
 ## Data provenance
 
