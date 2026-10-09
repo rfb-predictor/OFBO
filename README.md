@@ -16,8 +16,7 @@ OFBO supports ontology-based data access (OBDA): curated relational data are exp
   - pH-dependent redox-potential analysis;
   - expert-guided and KPI-based candidate selection; and
   - theoretical–experimental comparisons.
-- `shacl/` — SHACL shapes, validation report, and validation script.
-- `validation/` — Reasoning and validation outputs.
+- `validation/` — Reasoning and validation outputs from SHACL and ROBOT.
 
 ## Main resources
 
@@ -30,7 +29,7 @@ OFBO supports ontology-based data access (OBDA): curated relational data are exp
 | `database/h2/h2.jar` | H2 database engine. |
 | `database/triples/OFBO-materialized.ttl` | Materialized RDF representation of the mapped graph. |
 | `case_studies/competency_questions/` | Competency-question notebook and executable SPARQL queries. |
-| `shacl/ofbo-shapes.ttl` | SHACL validation shapes. |
+| `validation/ofbo-shapes.ttl` | SHACL validation shapes. |
 
 ## Ontology identifiers
 

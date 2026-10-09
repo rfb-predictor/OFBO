@@ -5,6 +5,7 @@
 @prefix cob: <http://purl.obolibrary.org/obo/COB_> .
 @prefix iao: <http://purl.obolibrary.org/obo/IAO_> .
 @prefix mco: <http://purl.obolibrary.org/obo/MCO_> .
+@prefix mod: <https://w3id.org/mod#> .
 @prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -25,6 +26,7 @@
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix chebi: <http://purl.obolibrary.org/obo/CHEBI_> .
+@prefix prov1: <http://www.w3.org/ns/prov/> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix emmoec: <https://w3id.org/emmo/domain/electrochemistry#> .
 @prefix schema: <http://schema.org/> .
@@ -38,16 +40,22 @@
 
 <https://w3id.org/ofbo> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/ofbo/1.2.0> ;
+                         dcterms:contributor <https://orcid.org/0000-0001-5399-043X> ,
+                                             <https://orcid.org/0000-0003-2260-8271> ,
+                                             <https://orcid.org/0009-0008-7608-2192> ;
                          dcterms:created "2026-09-30"^^xsd:date ;
                          dcterms:creator <https://orcid.org/0000-0001-9923-9676> ;
                          dcterms:description "An ontology for representing molecular, electrochemical, thermodynamic, computational, and provenance information relevant to organic flow-battery electrolyte research."@en ;
                          dcterms:issued "2026-09-30"^^xsd:date ;
                          dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                         dcterms:publisher <https://www.scai.fraunhofer.de/> ;
+                         dcterms:source <https://github.com/rfb-predictor/OFBO> ;
                          dcterms:title "Organic Flow Battery Ontology"@en ;
                          vann:preferredNamespacePrefix "ofbo" ;
                          vann:preferredNamespaceUri "https://w3id.org/ofbo#" ;
                          schema1:funding <https://www.rfb-predictor.eu/> ;
-                         owl:versionInfo "1.2.0" .
+                         owl:versionInfo "1.2.0" ;
+                         mod:status "active"@en .
 
 #################################################################
 #    Annotation properties
@@ -164,6 +172,10 @@ dc:member rdf:type owl:AnnotationProperty .
 dc:source rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/created
 dcterms:created rdf:type owl:AnnotationProperty .
 
@@ -182,6 +194,14 @@ dcterms:issued rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -306,6 +326,17 @@ foaf:mbox rdf:type owl:AnnotationProperty .
 
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#status
+mod:status rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ofbo#canonicalUnit
+ofbo:canonicalUnit rdf:type owl:AnnotationProperty ;
+                   rdfs:label "canonical unit"@en ;
+                   skos:definition "Relates an OFBO property class to the QUDT unit used as the canonical unit for numerical comparison and cross-study querying."@en ;
+                   rdfs:range qudt:Unit .
 
 
 ###  https://w3id.org/ofbo#relevance
@@ -2167,20 +2198,43 @@ obo:REX_0000001 rdf:type owl:Class ;
 
 
 ###  http://qudt.org/schema/qudt/CountingUnit
-qudt:CountingUnit rdfs:subClassOf qudt:Unit .
+qudt:CountingUnit rdf:type owl:Class ;
+                  rdfs:subClassOf qudt:Unit .
 
 
 ###  http://qudt.org/schema/qudt/DerivedUnit
-qudt:DerivedUnit rdfs:subClassOf qudt:Unit .
+qudt:DerivedUnit rdf:type owl:Class ;
+                 rdfs:subClassOf qudt:Unit .
 
 
 ###  http://qudt.org/schema/qudt/DimensionlessUnit
-qudt:DimensionlessUnit rdfs:subClassOf qudt:Unit .
+qudt:DimensionlessUnit rdf:type owl:Class ;
+                       rdfs:subClassOf qudt:Unit .
+
+
+###  http://qudt.org/schema/qudt/Unit
+qudt:Unit rdf:type owl:Class .
 
 
 ###  http://schema.org/Organization
 schema1:Organization rdf:type owl:Class ;
                      rdfs:subClassOf prov:Organization .
+
+
+###  http://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Person
+prov:Person rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov/Organization
+prov1:Organization rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
@@ -2392,6 +2446,7 @@ For example, water has a gas-phase basicity of about 660 kJ mol⁻¹, while amin
 B (g) + H⁺ (g) → BH⁺ (g)
 
 It quantifies the intrinsic tendency of a molecule to accept a proton in the absence of solvent effects."""@en ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Gas-phase basicity provides an intrinsic measure of proton affinity that is independent of solvent effects. In organic redox flow batteries, lower gas-phase basicity can correlate with reduced susceptibility to protonation reactions that may trigger decomposition or alter redox activity in electrolyte environments." .
 
 
@@ -2425,6 +2480,7 @@ many amines ≈ 900–1000 kJ mol⁻¹""" ;
 B (g) + H⁺ (g) → BH⁺ (g)
 
 It quantifies the intrinsic tendency of a molecule to bind a proton in the absence of solvent effects."""@en ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Proton affinity provides an intrinsic measure of a molecule's ability to bind protons without solvent effects. For organic redox flow battery molecules, this property is useful for understanding protonation tendencies and the stability of protonated intermediates. Proton affinity can therefore help rationalize proton-coupled electron transfer reactions and complement solution-phase descriptors such as pKa when evaluating redox-active molecules." ;
                   ofbo:rfbLiterature "https://doi.org/10.1038/srep39101" .
 
@@ -2452,6 +2508,7 @@ water ≈ 54""" ;
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "acceptor number"@en ;
                   skos:definition "The acceptor number (AN) is an empirical measure of the Lewis acidity of a solvent. It is defined from the shift in the 31P NMR chemical shift of a standard probe molecule, typically triethylphosphine oxide (TEPO), when dissolved in the solvent."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "The acceptor number describes how strongly a solvent can interact with electron-rich species. In organic redox flow batteries, this property influences the stabilization of reduced redox-active molecules, anions, and intermediate species formed during electrochemical reactions. As a result, the acceptor number can affect electrolyte stability, reaction mechanisms, and the electrochemical behavior of organic redox couples." ;
                   ofbo:rfbLiterature "https://doi.org/10.1016/j.joule.2018.05.014" .
 
@@ -2475,6 +2532,7 @@ dimethyl sulfoxide (DMSO) ≈ 30""" ;
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "donor number"@en ;
                   skos:definition "The donor number (DN) is a quantitative measure of the Lewis basicity of a solvent. It is defined as the negative enthalpy of formation of the adduct between the solvent and a standard Lewis acid, typically antimony pentachloride (SbCl5), measured in a non-coordinating solvent."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "In organic redox flow battery electrolytes, the donor number influences the ability of solvent molecules to coordinate to cations such as supporting electrolyte ions or charged redox-active species. Solvents with higher donor numbers tend to stabilize cations more strongly, affecting ion pairing, solvation structure, and the redox potentials of dissolved organic molecules." ;
                   ofbo:rfbLiterature "https://doi.org/10.1016/j.joule.2018.05.014" .
 
@@ -2509,6 +2567,7 @@ HA ⇌ A⁻ + H⁺
 
 It quantifies the tendency of a molecule to donate a proton in a given solvent, typically water."""@en ;
                   skos:exactMatch <http://www.bioassayontology.org/bao#BAO_0002131> ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "pKa values determine the protonation state of redox-active molecules in electrolyte solutions and therefore influence their redox chemistry. In systems where electron transfer is coupled to proton transfer (proton-coupled electron transfer, PCET), pKa values of the oxidized and reduced species control the pH dependence of the redox potential. This relationship allows estimation of redox potentials at different pH values using thermodynamic cycles and the Nernst equation. Consequently, pKa is an important descriptor for predicting electrochemical stability, redox potential shifts, and reaction pathways in organic redox flow battery electrolytes." ;
                   ofbo:rfbLiterature "https://doi.org/10.1038/srep39101" .
 
@@ -2526,6 +2585,7 @@ Lower pH values correspond to more acidic conditions, whereas higher pH values c
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "pH"@en ;
                   skos:definition "pH is the negative base-10 logarithm of the activity of hydrogen ions in a solution. It is a measure of the acidity or basicity of an electrolyte system under specified conditions."@en ;
+                  ofbo:canonicalUnit unit:PH ;
                   ofbo:relevance "pH affects the protonation state, solubility, redox potential, chemical stability, and degradation pathways of organic redox-active molecules. It is particularly important for proton-coupled electron-transfer reactions, in which redox potentials can vary with pH according to the Nernst equation."@en .
 
 
@@ -2555,6 +2615,7 @@ A wider electrochemical window allows higher cell voltages and more energetic st
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "electrochemical window"@en ;
                   skos:definition "The electrochemical window of a solvent or electrolyte is the potential range over which it is electrochemically stable, meaning no significant oxidation or reduction of the solvent occurs. It defines the limits within which redox-active species can operate without solvent decomposition."@en ;
+                  ofbo:canonicalUnit unit:V ;
                   ofbo:relevance "In organic redox flow batteries, the electrochemical window determines the maximum and minimum voltages that can be safely applied. It constrains the choice of redox-active molecules and solvents and affects energy density, stability, and cycle life. Molecules with redox potentials outside the electrochemical window of the solvent may undergo unwanted side reactions, leading to electrolyte decomposition and reduced battery performance." ;
                   ofbo:rfbLiterature "https://doi.org/10.1039/D5RA00296F" .
 
@@ -2573,6 +2634,7 @@ For a reversible, one-electron redox reaction, the peak current ratio is ideally
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "peak current ratio"@en ;
                   skos:definition "The peak current ratio is the ratio of the anodic peak current (Ip,a) to the cathodic peak current (Ip,c) observed in a voltammetric experiment, typically cyclic voltammetry. It is a measure of the symmetry of oxidation and reduction processes for a redox-active species."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "In organic redox flow batteries, the peak current ratio is used to assess the reversibility of redox-active molecules. Molecules with peak current ratios near unity indicate fast electron transfer and reversible redox cycling, which are desirable for high-efficiency battery operation. Deviations may signal slow kinetics, chemical instability, or side reactions in the electrolyte." ;
                   ofbo:rfbLiterature "https://doi.org/10.1038/srep39101" .
 
@@ -2590,6 +2652,7 @@ For a reversible, one-electron redox process, ΔEp is ideally 59 mV at 25°C. La
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "peak potential gap"@en ;
                   skos:definition "The peak potential gap, ΔEp, is the difference between the anodic peak potential (Ep,a) and the cathodic peak potential (Ep,c) in a voltammetric experiment, typically cyclic voltammetry. It reflects the separation between oxidation and reduction peaks of a redox-active species."@en ;
+                  ofbo:canonicalUnit unit:MilliV ;
                   ofbo:relevance "In organic redox flow batteries, the peak potential gap provides insight into the kinetic reversibility of redox-active molecules. Small ΔEp values indicate fast, reversible electron transfer, which is desirable for efficient cycling. Large ΔEp may suggest slow electron transfer or chemical instability, which can reduce battery efficiency and cycle life." ;
                   ofbo:rfbLiterature "https://doi.org/10.1002/adfm.202312608" .
 
@@ -2630,6 +2693,7 @@ Redox potentials are influenced by solvent, pH, supporting electrolytes, and mol
 Oxidized ⇌ Reduced + e⁻
 
 It quantifies the intrinsic tendency of a molecule to gain or lose electrons under standard conditions (typically 25°C, 1 M concentrations, pH 0 or reference pH)."""@en ;
+                  ofbo:canonicalUnit unit:V ;
                   ofbo:relevance "In organic redox flow batteries, the redox potential determines the voltage at which a molecule can be oxidized or reduced. Proper alignment of redox potentials for the oxidized/reduced species ensures high energy density, electrochemical reversibility, and stable cycling. Accurate redox potentials are essential for selecting compatible redox-active molecules and predicting their performance under varying pH and electrolyte conditions." ;
                   ofbo:rfbLiterature "https://doi.org/10.1038/srep39101" .
 
@@ -2666,6 +2730,7 @@ Delocalization indices can be reported globally (whole molecule) or locally (spe
                   rdfs:label "charge delocalization index"@en ;
                   skos:closeMatch sio:CHEMINF_000094 ;
                   skos:definition "The charge delocalization index is a quantitative measure of the extent to which electronic charge is spread over a molecule or a part of a molecule, rather than localized on a single atom or bond. It reflects the distribution of electron density in the oxidized or reduced state of a molecule."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "In organic redox flow batteries, charge delocalization strongly influences the stability of oxidized and reduced species. Molecules with high charge delocalization are less prone to decomposition and side reactions because the charge is spread over multiple atoms, reducing local reactivity. This also typically leads to lower reorganization energies and faster electron-transfer kinetics, improving battery efficiency and cycle life." .
 
 
@@ -2687,6 +2752,7 @@ These charges can be positive or negative, depending on whether the atom is elec
                   rdfs:label "partial atomic charges"@en ;
                   skos:closeMatch sio:CHEMINF_000119 ;
                   skos:definition "Partial atomic charges describe the distribution of electronic charge over individual atoms in a molecule, representing deviations from the neutral atom's nominal charge due to bonding and polarization. They are a measure of how electron density is partitioned within the molecule."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance """In organic redox flow batteries, partial atomic charges are important for understanding:
 
 Solvent and ion interactions (coordination and solvation)
@@ -2717,6 +2783,7 @@ Examples: water ~1.85 D, acetonitrile ~3.9 D""" ;
                   rdfs:label "dipole moment"@en ;
                   skos:closeMatch <http://www.ontology-of-units-of-measure.org/resource/om-2/ElectricDipoleMoment> ;
                   skos:definition "The dipole moment of a molecule is a vector quantity that measures the separation of positive and negative charge centers within the molecule. It reflects the overall polarity of the molecule and its tendency to interact with electric fields or polar solvents."@en ;
+                  ofbo:canonicalUnit unit:Debye ;
                   ofbo:relevance "Determines polarity and solvation behavior in electrolytes, affecting solubility, ion interactions, and dielectric properties." ;
                   ofbo:rfbLiterature "https://doi.org/10.1038/s41597-022-01814-4" .
 
@@ -2734,6 +2801,7 @@ Benzene: relatively uniform ESP over π-system""" ;
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "electrostatic potential"@en ;
                   skos:definition "The electric potential generated by the molecular charge distribution at a point in space. Calculated from electron density or atomic partial charges."@en ;
+                  ofbo:canonicalUnit unit:V ;
                   ofbo:relevance "Identifies reactive sites for electrophilic and nucleophilic attack; predicts ion interactions, solvation patterns, and hydrogen bonding; used in electrostatic potential mapping to visualize polar regions of molecules or ions." .
 
 
@@ -2747,6 +2815,7 @@ Examples: water ~1.5 Å³, benzene ~10 Å³""" ;
                   rdfs:label "polarizability"@en ;
                   skos:definition "Polarizability is a tensor that measures the ease with which the electron cloud of a molecule can be distorted by an external electric field. It reflects the molecule's ability to respond to electric fields and participate in induced dipole interactions."@en ;
                   skos:exactMatch sio:CHEMINF_000089 ;
+                  ofbo:canonicalUnit unit:ANGSTROM3 ;
                   ofbo:relevance "Influences dielectric behavior and intermolecular interactions in electrolytes, affecting solvation and ion mobility." .
 
 
@@ -2758,6 +2827,7 @@ Example: for ethylene carbonate, E ~ −382.5 Hartree; for dimethoxyethane, E ~ 
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "electronic energy"@en ;
                   skos:definition "Electronic energy is the sum of the energies of all electrons in a molecule obtained from a quantum chemical calculation. It reflects the overall electronic stability of the molecule."@en ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Serves as a fundamental quantity in computational chemistry. It serves as a foundation for relative energies for stability or calculating the redox potential." .
 
 
@@ -2780,6 +2850,7 @@ Examples: water (strong electrophile) has high ω; alkanes (weak electrophiles) 
                   rdfs:label "global electrophilicity index"@en ;
                   skos:definition """The global electrophilicity index (ω) quantifies the ability of a molecule to accept electrons, based on its ionization potential (IP) and electron affinity (EA).
 It reflects the overall electrophilic character of a molecule, with higher values indicating stronger electron-acceptor behavior."""@en ;
+                  ofbo:canonicalUnit unit:EV ;
                   ofbo:relevance "Indicates how strongly a molecule will accept electrons, affecting reactivity and stability in redox-active electrolytes." .
 
 
@@ -2793,6 +2864,7 @@ Examples: in H2O, oxygen has higher local electrophilicity than hydrogens; in ca
                   rdfs:label "local electrophilicity"@en ;
                   skos:definition """Local electrophilicity quantifies the site-specific electron-accepting ability of a molecule.
 It is derived by weighting the global electrophilicity index (ω) with the electrophilic Fukui function, indicating which atoms are more likely to undergo nucleophilic attack."""@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "Identifies reactive sites within a molecule, helping predict degradation or reactivity in electrolytes." .
 
 
@@ -2816,6 +2888,7 @@ Examples: ethylene carbonate ~−9 eV, dimethoxyethane ~−6 eV""" ;
                   skos:definition """HOMO energy is the energy of the highest occupied molecular orbital of a molecule.
 It represents the energetic level of the most weakly bound electrons and characterizes the molecule's ability to donate electrons. Has been observed to correlate with redox potential."""@en ;
                   skos:exactMatch sio:CHEMINF_000291 ;
+                  ofbo:canonicalUnit unit:EV ;
                   ofbo:relevance "Indicates electron-donating ability and oxidative stability of electrolyte components, helping predict their susceptibility to oxidation in electrochemical environments." ;
                   ofbo:rfbLiterature "https://doi.org/10.1002/anie.202515639" .
 
@@ -2829,6 +2902,7 @@ Examples: ethylene carbonate ~8 eV, dimethoxyethane ~7 eV""" ;
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "HOMO–LUMO gap"@en ;
                   skos:definition "The HOMO–LUMO gap is the energy difference between the lowest unoccupied molecular orbital (LUMO) and the highest occupied molecular orbital (HOMO) of a molecule. It reflects the electronic stability of a molecule and the energy required to promote an electron from the HOMO to the LUMO."@en ;
+                  ofbo:canonicalUnit unit:EV ;
                   ofbo:relevance "Provides a measure of chemical stability and reactivity; a larger gap indicates lower reactivity and higher oxidative/reductive stability, while a smaller gap suggests higher reactivity and easier electron transfer. Can also approximate the redox potential." ;
                   ofbo:rfbLiterature "https://doi.org/10.1002/anie.202515639" .
 
@@ -2843,6 +2917,7 @@ Examples: ethylene carbonate ~1 eV, dimethoxyethane ~3 eV""" ;
                   rdfs:label "LUMO energy"@en ;
                   skos:definition "LUMO energy is the energy of the lowest unoccupied molecular orbital of a molecule, representing the lowest-energy orbital available to accept electrons during chemical reactions."@en ;
                   skos:exactMatch sio:CHEMINF_000292 ;
+                  ofbo:canonicalUnit unit:EV ;
                   ofbo:relevance "Indicates electron-accepting ability and reduction susceptibility of electrolyte components, helping predict which species are more likely to undergo reduction in electrochemical systems." ;
                   ofbo:rfbLiterature "https://doi.org/10.1002/anie.202515639" .
 
@@ -2866,6 +2941,7 @@ Examples: in H2O, oxygen has a negative dual descriptor (more electrophilic), wh
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "condensed dual descriptor"@en ;
                   skos:definition "The condensed dual descriptor combines the electrophilic and nucleophilic Fukui functions to indicate whether a specific atom in a molecule is more prone to electrophilic or nucleophilic attack. Positive values suggest preference for nucleophilic attack, while negative values indicate preference for electrophilic attack."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "Directly identifies which atoms in a molecule are more likely to undergo electrophilic or nucleophilic attack. In electrolytes, this helps predict reactive sites for degradation, coordination with cations or anions, and other chemical transformations." .
 
 
@@ -2878,6 +2954,7 @@ Examples: in H2O, oxygen has a higher electrophilic Fukui function than hydrogen
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "electrophilic fukui function"@en ;
                   skos:definition "The electrophilic Fukui function quantifies the susceptibility of specific atoms in a molecule to undergo nucleophilic attack. It indicates which sites are more likely to accept electrons based on changes in electron density upon adding an electron."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "Helps identify reactive sites in molecules, supporting predictions of nucleophilic attack and chemical reactivity in electrolyte systems." .
 
 
@@ -2890,6 +2967,7 @@ Examples: in H2O, hydrogens have higher nucleophilic Fukui function than oxygen;
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "nucleophilic fukui function"@en ;
                   skos:definition "The nucleophilic Fukui function quantifies the susceptibility of specific atoms in a molecule to undergo electrophilic attack. It indicates which sites are more likely to donate electrons based on changes in electron density upon removing an electron."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "Helps identify reactive sites in molecules, supporting predictions of electrophilic attack and chemical reactivity in electrolyte systems." .
 
 
@@ -2912,6 +2990,7 @@ Examples: ethylene carbonate ~4 eV, dimethoxyethane ~3 eV""" ;
                   rdfs:label "chemical hardness"@en ;
                   skos:definition "Chemical hardness measures the resistance of a molecule to change its electron density, reflecting its stability against deformation of the electron cloud or transfer of electrons."@en ;
                   skos:exactMatch <http://purl.enanomapper.org/onto/ENM_8000099> ;
+                  ofbo:canonicalUnit unit:EV ;
                   ofbo:relevance "Indicates molecular stability and resistance to electron transfer; harder molecules are less reactive, while softer molecules are more prone to chemical reactions in electrolytes." .
 
 
@@ -2924,6 +3003,7 @@ Examples: ethylene carbonate ~1.2 eV, dimethoxyethane ~0.5 eV""" ;
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "electron affinity"@en ;
                   skos:definition "Electron affinity is the energy change associated with adding an electron to a neutral molecule, representing the molecule's tendency to accept electrons."@en ;
+                  ofbo:canonicalUnit unit:EV ;
                   ofbo:relevance "Indicates the molecule's ability to accept electrons, helping predict reduction behavior and stability of electrolyte components under electrochemical conditions." .
 
 
@@ -2937,6 +3017,7 @@ Examples: ethylene carbonate ~10 eV, dimethoxyethane ~8 eV""" ;
                   rdfs:label "ionization potential"@en ;
                   skos:closeMatch sio:CHEMINF_000191 ;
                   skos:definition "Ionization potential is the energy required to remove an electron from a neutral molecule, representing the molecule's tendency to lose electrons."@en ;
+                  ofbo:canonicalUnit unit:EV ;
                   ofbo:relevance "Indicates the molecule's susceptibility to oxidation, helping predict oxidative stability of electrolyte components in electrochemical systems." .
 
 
@@ -2960,6 +3041,7 @@ Examples: methane ~28 Å³, ethanol ~48 Å³, benzene ~88 Å³, quinone derivati
                   rdfs:label "entity volume"@en ;
                   skos:closeMatch sio:CHEMINF_000222 ;
                   skos:definition "The three-dimensional space occupied by a chemical entity, such as a molecule, ion, or radical, derived from its atomic coordinates. Entity volume depends on the van der Waals radii of atoms and the overall geometry of the species. It is a calculated structural property, not a fixed molecular constant, and can change with conformation or solvation environment."@en ;
+                  ofbo:canonicalUnit unit:ANGSTROM3 ;
                   ofbo:relevance "Measures the effective size of molecules or ions, influencing solubility, ion transport, packing, and stability in organic electrolytes." .
 
 
@@ -2970,6 +3052,7 @@ ofbo:OFBO_0001302 rdf:type owl:Class ;
                   rdfs:label "entity mass"@en ;
                   skos:closeMatch sio:CHEMINF_000083 ;
                   skos:definition "The molar mass of a chemical entity is the mass of one mole of that entity, calculated as the sum of the atomic masses of its constituent atoms, typically expressed in grams per mole (g/mol)."@en ;
+                  ofbo:canonicalUnit unit:GM-PER-MOL ;
                   ofbo:relevance "Affects diffusion rates, solubility, and energy density calculations for redox-active molecules used in organic redox flow batteries." .
 
 
@@ -2983,6 +3066,7 @@ Examples: Methane: S ~50 Å², Quinone derivative: S ~100 Å²""" ;
                   rdfs:label "surface area"@en ;
                   skos:closeMatch sio:CHEMINF_000247 ;
                   skos:definition "The total area of a chemical entity's surface calculated from its three-dimensional geometry. This is a calculated structural property, not a fixed molecular constant."@en ;
+                  ofbo:canonicalUnit unit:NanoM2 ;
                   ofbo:relevance "Determines solvent interactions and molecular packing; influences diffusion, solubility, and electrochemical accessibility in organic electrolytes." ;
                   ofbo:rfbLiterature "https://doi.org/10.1038/s41597-022-01814-4" .
 
@@ -3035,6 +3119,7 @@ The magnitude of k₀ reflects the speed of electron transfer between the redox 
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "heterogeneous rate constant"@en ;
                   skos:definition "The heterogeneous rate constant is the rate constant for an electron transfer reaction occurring at an electrode interface. It quantifies the intrinsic electron-transfer kinetics of a redox couple under reversible or quasi-reversible conditions."@en ;
+                  ofbo:canonicalUnit unit:CentiM-PER-SEC ;
                   ofbo:relevance "In organic redox flow batteries, the heterogeneous rate constant is critical for determining charge/discharge kinetics at the electrodes. High k₀ values ensure efficient electron transfer, minimize overpotentials, and reduce energy losses. Low k₀ can lead to quasi-reversible or irreversible electrochemistry, reducing battery power density and efficiency." ;
                   ofbo:rfbLiterature "https://doi.org/10.1002/adfm.202312608" .
 
@@ -3057,6 +3142,7 @@ Examples: Li⁺ in ethylene carbonate ~1 × 10⁻⁹ m²/s; dimethoxyethane ~2 �
                   rdfs:label "diffusion coefficient"@en ;
                   skos:closeMatch <http://biomodels.net/SBO/SBO_0000491> ;
                   skos:definition "The diffusion coefficient quantifies the rate at which particles (molecules, ions) move through a medium due to random thermal motion. It reflects how quickly species can migrate in a solvent or electrolyte."@en ;
+                  ofbo:canonicalUnit unit:CentiM2-PER-SEC ;
                   ofbo:relevance "Determines ion and solvent mobility, affecting transport properties, conductivity, and overall performance of electrolyte systems." ;
                   ofbo:rfbLiterature "https://doi.org/10.1039/D1TA03655F" .
 
@@ -3070,6 +3156,7 @@ Examples: 1 M LiPF6 in ethylene carbonate/dimethyl carbonate mixture ~1 × 10⁻
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "ionic conductivity"@en ;
                   skos:definition "Ionic conductivity is a measure of an electrolyte's ability to conduct electric current via the movement of ions. It reflects the mobility and concentration of charge carriers in the solution."@en ;
+                  ofbo:canonicalUnit unit:S-PER-M ;
                   ofbo:relevance "Indicates the efficiency of ion transport in electrolytes, directly affecting battery performance, charge/discharge rates, and electrochemical device efficiency." .
 
 
@@ -3082,6 +3169,7 @@ Examples: Li⁺ in 1 M LiPF6 ethylene carbonate/dimethyl carbonate mixture ~0.35
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "transference number"@en ;
                   skos:definition "The transference number (t⁺ or t⁻) is the fraction of the total ionic current carried by a specific ion (cation or anion) in an electrolyte. It reflects the relative mobility of ions under an applied electric field."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "Indicates which ion dominates charge transport in an electrolyte, affecting polarization, battery efficiency, and performance in electrochemical systems." .
 
 
@@ -3122,6 +3210,7 @@ Examples: C–H bond in dimethoxyethane ~410 kJ/mol; C=O bond in ethylene carbon
                   rdfs:label "bond dissociation energy"@en ;
                   skos:closeMatch sio:CHEMINF_000210 ;
                   skos:definition "Bond dissociation energy (BDE) is the energy required to homolytically break a specific chemical bond in a molecule, forming two radicals. It reflects the strength of the bond and the molecule's resistance to bond cleavage."@en ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Indicates the strength of chemical bonds and susceptibility to homolytic cleavage, helping predict degradation pathways, radical formation, and chemical stability in electrolytes." .
 
 
@@ -3135,6 +3224,7 @@ Examples: ΔH of ethylene carbonate ring-opening ~−50 kJ/mol; ΔH of dimethoxy
                   rdfs:label "enthalpy"@en ;
                   skos:definition "Enthalpy (H) is the total heat content of a system at constant pressure, representing the sum of its internal energy and the energy associated with pressure–volume work. In molecular systems, it is often used to evaluate reaction energetics and thermodynamic stability."@en ;
                   skos:exactMatch <https://w3id.org/pmd/co/PMD_0080052> ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Helps evaluate thermodynamic favorability of reactions, stability of molecules, and heat changes during degradation or interaction processes in electrolyte systems." .
 
 
@@ -3148,6 +3238,7 @@ Examples: ethylene carbonate ΔH_f ~−350 kJ/mol; dimethoxyethane ΔH_f ~−250
                   rdfs:label "heat of formation"@en ;
                   skos:closeMatch sio:CHEMINF_000241 ;
                   skos:definition "Heat of formation (ΔH_f) is the change in enthalpy when one mole of a compound is formed from its constituent elements in their standard states. It reflects the thermodynamic stability of the compound relative to its elements."@en ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Indicates the inherent thermodynamic stability of molecules, helping predict reactivity, decomposition tendencies, and suitability of compounds as electrolyte components." .
 
 
@@ -3161,6 +3252,7 @@ Examples: ethylene carbonate ~200 J/mol·K; dimethoxyethane ~250 J/mol·K""" ;
                   rdfs:label "entropy"@en ;
                   skos:definition "Entropy (S) is a measure of the disorder or randomness in a system. In molecular systems, it reflects the number of accessible microstates and the flexibility or freedom of motion of the molecules."@en ;
                   skos:exactMatch <https://w3id.org/pmd/co/PMD_0080050> ;
+                  ofbo:canonicalUnit unit:J-PER-MOL-K ;
                   ofbo:relevance "Helps evaluate thermodynamic contributions to reactions and stability, including the balance between enthalpic and entropic effects in degradation, solvation, and other processes in electrolytes." .
 
 
@@ -3174,6 +3266,7 @@ Examples: ΔG of ethylene carbonate ring-opening ~−20 kJ/mol; ΔG of dimethoxy
                   rdfs:label "gibbs free energy"@en ;
                   skos:definition "Gibbs free energy (G) is a thermodynamic quantity that combines enthalpy and entropy to determine the spontaneity of a process at constant temperature and pressure. It reflects the maximum reversible work a system can perform."@en ;
                   skos:exactMatch <https://w3id.org/pmd/co/PMD_0020361> ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Indicates thermodynamic favorability of reactions and processes, helping predict stability, degradation, and reaction pathways of electrolyte components." .
 
 
@@ -3186,6 +3279,7 @@ Examples: ethylene carbonate decomposition via ring-opening ~120 kJ/mol; dimetho
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "gibbs free energy of activation"@en ;
                   skos:definition "The gibbs free energy of activation is the minimum free energy required for a molecule to undergo a chemical transformation via a given reaction pathway. It represents the kinetic stability of the molecule under given conditions."@en ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Indicates the kinetic stability of reactant components, helping predict degradation rates, shelf-life, and performance under electrochemical conditions." .
 
 
@@ -3198,6 +3292,7 @@ Examples: ethylene carbonate ring-opening degradation ~−20 kJ/mol; dimethoxyet
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "gibbs free energy of reaction"@en ;
                   skos:definition "The gibbs free energy of reaction is the change in Gibbs free energy associated with the chemical reaction of a molecule. It reflects the thermodynamic favorability of the reaction process."@en ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Provides insight into whether chemical reactions are thermodynamically favorable." .
 
 
@@ -3210,6 +3305,7 @@ Examples: LiPF6 in ethylene carbonate ~0.5; NaCl in dimethoxyethane ~−1""" ;
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "solubility"@en ;
                   skos:definition "Solubility is the maximum concentration of a solute that can dissolve in a solvent at a given temperature and pressure. It reflects the thermodynamic favorability of solute–solvent interactions."@en ;
+                  ofbo:canonicalUnit unit:MOL-PER-L ;
                   ofbo:relevance "Determines how much electrolyte or salt can dissolve in a solvent, influencing ionic strength, conductivity, and overall electrolyte performance." ;
                   ofbo:rfbLiterature "https://doi.org/10.1021/acs.chemrev.5c00332" .
 
@@ -3223,6 +3319,7 @@ Examples: ethylene carbonate ~200 kJ/mol; dimethoxyethane ~150 kJ/mol""" ;
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "zero point energy"@en ;
                   skos:definition "Zero-point energy (ZPE) is the lowest possible vibrational energy that a molecule possesses, even at absolute zero temperature. It reflects the quantum mechanical motion of atoms in their equilibrium positions."@en ;
+                  ofbo:canonicalUnit unit:KiloJ-PER-MOL ;
                   ofbo:relevance "Contributes to the total electronic and thermodynamic energy of molecules, affecting reaction energies, stability, and accurate modeling of degradation or solvation processes in electrolytes." .
 
 
@@ -3253,6 +3350,7 @@ Examples: ethylene carbonate absorbs mainly in the UV around 180–200 nm; conju
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "UV–Vis spectrum"@en ;
                   skos:definition "The UV–Vis spectrum represents the absorption of ultraviolet and visible light by a molecule as a function of wavelength or energy. It reflects electronic transitions from occupied to unoccupied molecular orbitals, primarily π→π* and n→π* transitions in organic molecules."@en ;
+                  ofbo:canonicalUnit unit:NanoM ;
                   ofbo:relevance "Provides information on electronic structure and conjugation, helping predict optical properties, photostability, and potential photo-induced reactions of molecules in electrolytes and other systems." .
 
 
@@ -3273,6 +3371,7 @@ Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching i
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "IR spectrum"@en ;
                   skos:definition "The IR spectrum represents the absorption of infrared light by a molecule as a function of frequency or wavenumber. It reflects vibrational transitions within the molecule, providing information about bond strengths, functional groups, and molecular structure."@en ;
+                  ofbo:canonicalUnit unit:PER-CentiM ;
                   ofbo:relevance "Helps experimentally identify functional groups, bonding patterns, and molecular interactions, supporting structural characterization and analysis of electrolytes and organic molecules." .
 
 
@@ -3284,6 +3383,7 @@ Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching i
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "raman spectrum"@en ;
                   skos:definition "The Raman spectrum represents inelastic scattering of light by a molecule, where incident photons exchange energy with molecular vibrations. It provides complementary vibrational information to IR spectroscopy, particularly for vibrations involving changes in polarizability."@en ;
+                  ofbo:canonicalUnit unit:PER-CentiM ;
                   ofbo:relevance "Provides information on vibrational modes, molecular structure, and interactions. In electrolytes, Raman spectra help probe solvation structures, ion–solvent interactions, and conformational changes." .
 
 
@@ -3313,6 +3413,7 @@ Examples: methyl radical ^1H A ~2 mT; oxygen-centered radical in carbonate solve
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "hyperfine tensor"@en ;
                   skos:definition "The hyperfine tensor describes the interaction between an unpaired electron's magnetic moment and nearby nuclear spins in electron paramagnetic resonance (EPR) spectroscopy. It reflects the distribution of spin density over the molecule and the coupling with specific nuclei."@en ;
+                  ofbo:canonicalUnit unit:MilliT ;
                   ofbo:relevance "Provides detailed information on spin distribution and electron–nucleus interactions, helping identify radical localization, bonding environment, and reactivity in electrolyte and redox-active systems." .
 
 
@@ -3324,6 +3425,7 @@ Examples: methyl radical g ~2.003, oxygen-centered radical in carbonate solvents
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "g tensor"@en ;
                   skos:definition "The g tensor describes the interaction between the electronic spin and an external magnetic field in electron paramagnetic resonance (EPR) spectroscopy. It reflects deviations from the free-electron g value due to the molecular electronic environment and spin–orbit coupling."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "Provides insight into the electronic environment of unpaired electrons, spin delocalization, and molecular structure in radicals or paramagnetic species relevant to electrolytes and redox-active molecules." .
 
 
@@ -3346,6 +3448,7 @@ Examples: ^1H in water ~4.8 ppm, ^1H in ethylene carbonate ~4.3 ppm; ^13C in car
                   rdfs:label "chemical shift"@en ;
                   skos:definition "Chemical shift is the resonant frequency of a nucleus relative to a reference in nuclear magnetic resonance (NMR) spectroscopy. It reflects the local electronic environment around the nucleus and how it shields or deshields the applied magnetic field."@en ;
                   skos:exactMatch <http://nmrML.org/nmrCV#NMR:1000223> ;
+                  ofbo:canonicalUnit unit:PPM ;
                   ofbo:relevance "Provides information on the electronic environment and bonding of nuclei, helping elucidate molecular structure, functional groups, and interactions in electrolytes and other chemical systems." .
 
 
@@ -3356,6 +3459,7 @@ ofbo:OFBO_0003026 rdf:type owl:Class ;
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "shielding tensor"@en ;
                   skos:definition "The shielding tensor describes the local magnetic shielding experienced by a nucleus due to the surrounding electron density in a molecule. It is used to compute and interpret NMR chemical shifts."@en ;
+                  ofbo:canonicalUnit unit:UNITLESS ;
                   ofbo:relevance "Provides a detailed description of the local magnetic environment, allowing prediction and interpretation of NMR chemical shifts, anisotropy, and electronic structure in molecules, including electrolytes." .
 
 
@@ -3368,6 +3472,7 @@ Examples: ethylene carbonate first singlet excitation ~6 eV, dimethoxyethane fir
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "excitation energy"@en ;
                   skos:definition "Excitation energy is the energy required to promote a molecule from its electronic ground state to an excited electronic state. It reflects the energy difference between the occupied and unoccupied molecular orbitals involved in the transition, and is commonly derived from UV–Vis absorption data or excited-state calculations."@en ;
+                  ofbo:canonicalUnit unit:EV ;
                   ofbo:relevance "Determines the wavelengths of light a molecule can absorb, influencing optical properties, photostability, and potential photo-induced reactions in electrolytes or other molecular systems." .
 
 
@@ -3380,6 +3485,7 @@ Examples: C=O stretching in ethylene carbonate ~1800 cm⁻¹; C–H stretching i
                   rdfs:isDefinedBy <https://w3id.org/ofbo> ;
                   rdfs:label "vibrational frequencies"@en ;
                   skos:definition "Vibrational frequencies are the characteristic frequencies at which atoms in a molecule oscillate around their equilibrium positions. They correspond to quantized vibrational energy levels and are the underlying quantities reported in IR and Raman spectra."@en ;
+                  ofbo:canonicalUnit unit:PER-CentiM ;
                   ofbo:relevance "Helps characterize molecular bonds, identify functional groups, and predict IR and Raman active modes, supporting structural analysis and understanding of molecular interactions in electrolyte systems." .
 
 
@@ -3393,6 +3499,7 @@ Examples: ethylene carbonate ~1.32 g/cm³; dimethoxyethane ~0.87 g/cm³""" ;
                   rdfs:label "density"@en ;
                   skos:definition "Density is the mass of a substance per unit volume. In molecular systems and liquids, it reflects how closely molecules are packed and is influenced by molecular size, interactions, and temperature."@en ;
                   skos:exactMatch sio:SIO_001406 ;
+                  ofbo:canonicalUnit unit:GM-PER-CentiM3 ;
                   ofbo:relevance "Provides insight into packing efficiency, solvent-solute interactions, and overall bulk properties of electrolytes, influencing viscosity, transport, and electrochemical performance." .
 
 
@@ -3406,6 +3513,7 @@ Examples: ethylene carbonate ~2.5 mPa·s; dimethoxyethane ~0.45 mPa·s""" ;
                   rdfs:label "viscosity"@en ;
                   skos:definition "Viscosity is a measure of a fluid's resistance to flow. In electrolyte solutions, it reflects the internal friction between molecules and ions, influencing ion mobility and transport properties."@en ;
                   skos:exactMatch <https://w3id.org/pmd/co/PMD_0080174> ;
+                  ofbo:canonicalUnit unit:MilliPA-SEC ;
                   ofbo:relevance "Determines the ease of ion transport in electrolytes, affecting diffusion, conductivity, and overall performance of electrochemical devices." .
 
 
@@ -3767,12 +3875,36 @@ ofbo:OFBO_0009020 rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  https://orcid.org/0000-0001-5399-043X
+<https://orcid.org/0000-0001-5399-043X> rdf:type owl:NamedIndividual ,
+                                                 foaf:Person ;
+                                        rdfs:label "Jan Hamaekers" ;
+                                        foaf:homepage <https://orcid.org/0000-0001-5399-043X> ;
+                                        foaf:name "Jan Hamaekers" .
+
+
 ###  https://orcid.org/0000-0001-9923-9676
 <https://orcid.org/0000-0001-9923-9676> rdf:type owl:NamedIndividual ,
                                                  foaf:Person ;
                                         rdfs:label "Daniel Willimetz" ;
                                         foaf:homepage <https://orcid.org/0000-0001-9923-9676> ;
                                         foaf:name "Daniel Willimetz" .
+
+
+###  https://orcid.org/0000-0003-2260-8271
+<https://orcid.org/0000-0003-2260-8271> rdf:type owl:NamedIndividual ,
+                                                 foaf:Person ;
+                                        rdfs:label "Abhishek Khetan" ;
+                                        foaf:homepage <https://orcid.org/0000-0003-2260-8271> ;
+                                        foaf:name "Abhishek Khetan" .
+
+
+###  https://orcid.org/0009-0008-7608-2192
+<https://orcid.org/0009-0008-7608-2192> rdf:type owl:NamedIndividual ,
+                                                 foaf:Person ;
+                                        rdfs:label "Astrid Maaß" ;
+                                        foaf:homepage <https://orcid.org/0009-0008-7608-2192> ;
+                                        foaf:name "Astrid Maaß" .
 
 
 ###  https://www.rfb-predictor.eu/
@@ -3783,6 +3915,15 @@ ofbo:OFBO_0009020 rdf:type owl:Class ;
                                 schema1:name "PREDICTOR"@en ;
                                 schema1:url <https://www.rfb-predictor.eu/> ;
                                 rdfs:label "PREDICTOR" .
+
+
+###  https://www.scai.fraunhofer.de/
+<https://www.scai.fraunhofer.de/> rdf:type owl:NamedIndividual ,
+                                           schema1:Organization ,
+                                           prov1:Organization ;
+                                  schema1:name "Fraunhofer Institute for Algorithms and Scientific Computing SCAI"@en ;
+                                  schema1:url <https://www.scai.fraunhofer.de/> ;
+                                  rdfs:label "Fraunhofer Institute for Algorithms and Scientific Computing SCAI"@en .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

@@ -163,8 +163,8 @@ ofbo:DiffusionCoefficientShape
         sh:path qudt:unit ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:in ( unit:M2-PER-SEC unit:CentiM2-PER-SEC ) ;
-        sh:message "A diffusion coefficient must use m²/s or cm²/s."@en
+        sh:hasValue unit:CentiM2-PER-SEC ;
+        sh:message "A diffusion coefficient must use unit:CentiM2-PER-SEC."@en
     ] .
 
 #################################################################
@@ -214,3 +214,627 @@ ofbo:ResultProvenanceShape
     ) ;
 
     sh:message "A generated result must have either a primary source or a generating activity associated with a responsible agent."@en .
+
+#################################################################
+# 8. Canonical-unit validation
+#################################################################
+
+ofbo:OFBO_0001010_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001010 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Basicity must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0001011_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001011 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Proton affinity must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0001013_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001013 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "Acceptor number must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001014_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001014 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "Donor number must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001015_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001015 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "pKa must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001016_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001016 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:PH ;
+        sh:message "pH must use unit:PH."@en
+    ] .
+
+ofbo:OFBO_0001101_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001101 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:V ;
+        sh:message "The electrochemical window must use unit:V."@en
+    ] .
+
+ofbo:OFBO_0001102_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001102 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "The peak current ratio must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001103_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001103 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:MilliV ;
+        sh:message "The peak potential gap must use unit:MilliV."@en
+    ] .
+
+ofbo:OFBO_0001104_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001104 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:V ;
+        sh:message "The redox potential must use unit:V."@en
+    ] .
+
+ofbo:OFBO_0001211_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001211 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "The charge delocalization index must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001212_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001212 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "Partial atomic charges must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001221_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001221 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:Debye ;
+        sh:message "The dipole moment must use unit:Debye."@en
+    ] .
+
+ofbo:OFBO_0001222_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001222 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:V ;
+        sh:message "The electrostatic potential must use unit:V."@en
+    ] .
+
+ofbo:OFBO_0001223_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001223 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:ANGSTROM3 ;
+        sh:message "Polarizability must use unit:ANGSTROM3."@en
+    ] .
+
+ofbo:OFBO_0001230_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001230 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Electronic energy must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0001241_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001241 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:EV ;
+        sh:message "The global electrophilicity index must use unit:EV."@en
+    ] .
+
+ofbo:OFBO_0001242_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001242 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "Local electrophilicity must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001251_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001251 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:EV ;
+        sh:message "HOMO energy must use unit:EV."@en
+    ] .
+
+ofbo:OFBO_0001402_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001402 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:CentiM-PER-SEC ;
+        sh:message "The heterogeneous rate constant must use unit:CentiM-PER-SEC."@en
+    ] .
+
+ofbo:OFBO_0001252_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001252 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:EV ;
+        sh:message "The HOMO-LUMO gap must use unit:EV."@en
+    ] .
+
+ofbo:OFBO_0001253_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001253 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:EV ;
+        sh:message "LUMO energy must use unit:EV."@en
+    ] .
+
+ofbo:OFBO_0001261_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001261 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "The condensed dual descriptor must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001262_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001262 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "The electrophilic Fukui function must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001263_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001263 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "The nucleophilic Fukui function must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0001271_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001271 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:EV ;
+        sh:message "Chemical hardness must use unit:EV."@en
+    ] .
+
+ofbo:OFBO_0001272_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001272 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:EV ;
+        sh:message "Electron affinity must use unit:EV."@en
+    ] .
+
+ofbo:OFBO_0001273_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001273 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:EV ;
+        sh:message "Ionization potential must use unit:EV."@en
+    ] .
+
+ofbo:OFBO_0001301_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001301 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:ANGSTROM3 ;
+        sh:message "Entity volume must use unit:ANGSTROM3."@en
+    ] .
+
+ofbo:OFBO_0001302_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001302 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:GM-PER-MOL ;
+        sh:message "Entity mass must use unit:GM-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0001303_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001303 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:NanoM2 ;
+        sh:message "Surface area must use unit:NanoM2."@en
+    ] .
+
+ofbo:OFBO_0001501_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001501 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:CentiM2-PER-SEC ;
+        sh:message "The diffusion coefficient must use unit:CentiM2-PER-SEC."@en
+    ] .
+
+ofbo:OFBO_0001502_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001502 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:S-PER-M ;
+        sh:message "Ionic conductivity must use unit:S-PER-M."@en
+    ] .
+
+ofbo:OFBO_0001503_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001503 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "The transference number must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0002001_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0002001 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Bond dissociation energy must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0002002_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0002002 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Enthalpy must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0002003_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0002003 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Heat of formation must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0002004_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0002004 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:J-PER-MOL-K ;
+        sh:message "Entropy must use unit:J-PER-MOL-K."@en
+    ] .
+
+ofbo:OFBO_0002005_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0002005 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Gibbs free energy must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0002006_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0002006 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Gibbs free energy of activation must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0002007_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0002007 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Gibbs free energy of reaction must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0002008_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0002008 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:MOL-PER-L ;
+        sh:message "Solubility must use unit:MOL-PER-L."@en
+    ] .
+
+ofbo:OFBO_0002009_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0002009 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:KiloJ-PER-MOL ;
+        sh:message "Zero-point energy must use unit:KiloJ-PER-MOL."@en
+    ] .
+
+ofbo:OFBO_0003011_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0003011 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:NanoM ;
+        sh:message "The UV-Vis spectrum must use unit:NanoM."@en
+    ] .
+
+ofbo:OFBO_0003013_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0003013 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:PER-CentiM ;
+        sh:message "The IR spectrum must use unit:PER-CentiM."@en
+    ] .
+
+ofbo:OFBO_0003014_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0003014 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:PER-CentiM ;
+        sh:message "The Raman spectrum must use unit:PER-CentiM."@en
+    ] .
+
+ofbo:OFBO_0003022_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0003022 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:MilliT ;
+        sh:message "The hyperfine tensor must use unit:MilliT."@en
+    ] .
+
+ofbo:OFBO_0003023_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0003023 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "The g tensor must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0003025_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0003025 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:PPM ;
+        sh:message "Chemical shift must use unit:PPM."@en
+    ] .
+
+ofbo:OFBO_0003026_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0003026 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "The shielding tensor must use unit:UNITLESS."@en
+    ] .
+
+ofbo:OFBO_0003030_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0003030 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:EV ;
+        sh:message "Excitation energy must use unit:EV."@en
+    ] .
+
+ofbo:OFBO_0003031_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0003031 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:PER-CentiM ;
+        sh:message "Vibrational frequencies must use unit:PER-CentiM."@en
+    ] .
+
+ofbo:OFBO_0004001_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0004001 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:GM-PER-CentiM3 ;
+        sh:message "Density must use unit:GM-PER-CentiM3."@en
+    ] .
+
+ofbo:OFBO_0004002_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0004002 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:MilliPA-SEC ;
+        sh:message "Viscosity must use unit:MilliPA-SEC."@en
+    ] .
+
+#################################################################
+# Additional measurement specifications used in OFBO.obda
+#################################################################
+
+ofbo:OFBO_0001601_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001601 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:V-PER-SEC ;
+        sh:message "Scan rate specification must use unit:V-PER-SEC."@en
+    ] .
+
+ofbo:OFBO_0001602_CanonicalUnitShape
+    a sh:NodeShape ;
+    sh:targetClass ofbo:OFBO_0001602 ;
+    sh:property [
+        sh:path qudt:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue unit:UNITLESS ;
+        sh:message "Cycle count specification must use unit:UNITLESS."@en
+    ] .
