@@ -4542,6 +4542,21 @@
     "@value" : "Daniel Willimetz"
   } ]
 }, {
+  "@id" : "https://orcid.org/0000-0002-0885-5762",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Jens Noack"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://orcid.org/0000-0002-0885-5762"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Jens Noack"
+  } ]
+}, {
   "@id" : "https://orcid.org/0000-0003-2260-8271",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -4555,6 +4570,21 @@
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Abhishek Khetan"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0009-0007-4215-324X",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Manaswitha Todupunuri"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://orcid.org/0009-0007-4215-324X"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Manaswitha Todupunuri"
   } ]
 }, {
   "@id" : "https://orcid.org/0009-0008-7608-2192",
@@ -4580,7 +4610,11 @@
   "http://purl.org/dc/terms/contributor" : [ {
     "@id" : "https://orcid.org/0000-0001-5399-043X"
   }, {
+    "@id" : "https://orcid.org/0000-0002-0885-5762"
+  }, {
     "@id" : "https://orcid.org/0000-0003-2260-8271"
+  }, {
+    "@id" : "https://orcid.org/0009-0007-4215-324X"
   }, {
     "@id" : "https://orcid.org/0009-0008-7608-2192"
   } ],

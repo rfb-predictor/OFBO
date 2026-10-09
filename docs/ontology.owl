@@ -20,7 +20,9 @@
     <owl:Ontology rdf:about="https://w3id.org/ofbo">
         <owl:versionIRI rdf:resource="https://w3id.org/ofbo/1.2.0"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-5399-043X"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-0885-5762"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-2260-8271"/>
+        <terms:contributor rdf:resource="https://orcid.org/0009-0007-4215-324X"/>
         <terms:contributor rdf:resource="https://orcid.org/0009-0008-7608-2192"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-30</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-9923-9676"/>
@@ -4891,6 +4893,18 @@ For ab initio quantum chemical methods, standardized terminology from the MDO ca
     
 
 
+    <!-- https://orcid.org/0000-0002-0885-5762 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-0885-5762">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label>Jens Noack</rdfs:label>
+        <foaf:homepage rdf:resource="https://orcid.org/0000-0002-0885-5762"/>
+        <foaf:name>Jens Noack</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://orcid.org/0000-0003-2260-8271 -->
 
 
@@ -4899,6 +4913,18 @@ For ab initio quantum chemical methods, standardized terminology from the MDO ca
         <rdfs:label>Abhishek Khetan</rdfs:label>
         <foaf:homepage rdf:resource="https://orcid.org/0000-0003-2260-8271"/>
         <foaf:name>Abhishek Khetan</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0009-0007-4215-324X -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0009-0007-4215-324X">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label>Manaswitha Todupunuri</rdfs:label>
+        <foaf:homepage rdf:resource="https://orcid.org/0009-0007-4215-324X"/>
+        <foaf:name>Manaswitha Todupunuri</foaf:name>
     </owl:NamedIndividual>
     
 

@@ -1,7 +1,9 @@
 <https://w3id.org/ofbo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/ofbo> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/ofbo/1.2.0> .
 <https://w3id.org/ofbo> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-5399-043X> .
+<https://w3id.org/ofbo> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-0885-5762> .
 <https://w3id.org/ofbo> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0003-2260-8271> .
+<https://w3id.org/ofbo> <http://purl.org/dc/terms/contributor> <https://orcid.org/0009-0007-4215-324X> .
 <https://w3id.org/ofbo> <http://purl.org/dc/terms/contributor> <https://orcid.org/0009-0008-7608-2192> .
 <https://w3id.org/ofbo> <http://purl.org/dc/terms/created> "2026-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/ofbo> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-9923-9676> .
@@ -3119,12 +3121,26 @@ _:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://orcid.org/0000-0001-9923-9676> <http://xmlns.com/foaf/0.1/homepage> <https://orcid.org/0000-0001-9923-9676> .
 <https://orcid.org/0000-0001-9923-9676> <http://xmlns.com/foaf/0.1/name> "Daniel Willimetz" .
 # 
+# https://orcid.org/0000-0002-0885-5762
+<https://orcid.org/0000-0002-0885-5762> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0000-0002-0885-5762> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0002-0885-5762> <http://www.w3.org/2000/01/rdf-schema#label> "Jens Noack" .
+<https://orcid.org/0000-0002-0885-5762> <http://xmlns.com/foaf/0.1/homepage> <https://orcid.org/0000-0002-0885-5762> .
+<https://orcid.org/0000-0002-0885-5762> <http://xmlns.com/foaf/0.1/name> "Jens Noack" .
+# 
 # https://orcid.org/0000-0003-2260-8271
 <https://orcid.org/0000-0003-2260-8271> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://orcid.org/0000-0003-2260-8271> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 <https://orcid.org/0000-0003-2260-8271> <http://www.w3.org/2000/01/rdf-schema#label> "Abhishek Khetan" .
 <https://orcid.org/0000-0003-2260-8271> <http://xmlns.com/foaf/0.1/homepage> <https://orcid.org/0000-0003-2260-8271> .
 <https://orcid.org/0000-0003-2260-8271> <http://xmlns.com/foaf/0.1/name> "Abhishek Khetan" .
+# 
+# https://orcid.org/0009-0007-4215-324X
+<https://orcid.org/0009-0007-4215-324X> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0009-0007-4215-324X> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0009-0007-4215-324X> <http://www.w3.org/2000/01/rdf-schema#label> "Manaswitha Todupunuri" .
+<https://orcid.org/0009-0007-4215-324X> <http://xmlns.com/foaf/0.1/homepage> <https://orcid.org/0009-0007-4215-324X> .
+<https://orcid.org/0009-0007-4215-324X> <http://xmlns.com/foaf/0.1/name> "Manaswitha Todupunuri" .
 # 
 # https://orcid.org/0009-0008-7608-2192
 <https://orcid.org/0009-0008-7608-2192> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

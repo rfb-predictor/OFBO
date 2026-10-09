@@ -9,7 +9,9 @@
 <https://w3id.org/ofbo> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/ofbo/1.2.0> ;
                          <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-5399-043X> ,
+                                                                <https://orcid.org/0000-0002-0885-5762> ,
                                                                 <https://orcid.org/0000-0003-2260-8271> ,
+                                                                <https://orcid.org/0009-0007-4215-324X> ,
                                                                 <https://orcid.org/0009-0008-7608-2192> ;
                          <http://purl.org/dc/terms/created> "2026-09-30"^^xsd:date ;
                          <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-9923-9676> ;
@@ -3859,12 +3861,28 @@ For ab initio quantum chemical methods, standardized terminology from the MDO ca
                                         <http://xmlns.com/foaf/0.1/name> "Daniel Willimetz" .
 
 
+###  https://orcid.org/0000-0002-0885-5762
+<https://orcid.org/0000-0002-0885-5762> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        rdfs:label "Jens Noack" ;
+                                        <http://xmlns.com/foaf/0.1/homepage> <https://orcid.org/0000-0002-0885-5762> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Jens Noack" .
+
+
 ###  https://orcid.org/0000-0003-2260-8271
 <https://orcid.org/0000-0003-2260-8271> rdf:type owl:NamedIndividual ,
                                                  <http://xmlns.com/foaf/0.1/Person> ;
                                         rdfs:label "Abhishek Khetan" ;
                                         <http://xmlns.com/foaf/0.1/homepage> <https://orcid.org/0000-0003-2260-8271> ;
                                         <http://xmlns.com/foaf/0.1/name> "Abhishek Khetan" .
+
+
+###  https://orcid.org/0009-0007-4215-324X
+<https://orcid.org/0009-0007-4215-324X> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        rdfs:label "Manaswitha Todupunuri" ;
+                                        <http://xmlns.com/foaf/0.1/homepage> <https://orcid.org/0009-0007-4215-324X> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Manaswitha Todupunuri" .
 
 
 ###  https://orcid.org/0009-0008-7608-2192
