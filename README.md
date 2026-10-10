@@ -65,7 +65,7 @@ Before running the notebooks or benchmark, ensure the following dependencies are
 
 | Component | Version | Notes |
 |---|---:|---|
-| Python | 3.x | Required for the Jupyter notebooks and benchmark scripts |
+| Python | 3.13 | Required for the Jupyter notebooks and benchmark scripts |
 | [Ontop](https://github.com/ontop/ontop/releases) | 5.5.0 | Provides the virtual SPARQL endpoint |
 | [Apache Jena Fuseki](https://jena.apache.org/download/index.cgi) | 6.2.0 | Provides the materialized RDF SPARQL endpoint |
 | H2 database | Included | Bundled as `database/h2/h2.jar` |
@@ -73,6 +73,8 @@ Before running the notebooks or benchmark, ensure the following dependencies are
 ### Python dependencies
 
 Install the packages required by the Jupyter notebooks:
+
+    pip install jupyter pandas numpy requests matplotlib scipy rdflib networkx psutil pyshacl
 
 ## Running the H2 database
 
