@@ -19,6 +19,10 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/ofbo">
         <owl:versionIRI rdf:resource="https://w3id.org/ofbo/1.2.0"/>
+        <owl:imports rdf:resource="https://w3id.org/ofbo/qudt-subset"/>
+        <owl:imports rdf:resource="https://w3id.org/ofbo/imports/chmo-subset"/>
+        <owl:imports rdf:resource="https://w3id.org/ofbo/imports/mdo-subset"/>
+        <owl:imports rdf:resource="https://w3id.org/ofbo/imports/prov-o-subset"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-5399-043X"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-0885-5762"/>
         <terms:contributor rdf:resource="https://orcid.org/0000-0003-2260-8271"/>
@@ -2604,33 +2608,6 @@ It is used to document sources where the property, descriptor, or method is disc
         <owl:annotatedTarget>A phenomenon by which change takes place in a system. In physiological systems, a process may be chemical, physical or both.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>http://goldbook.iupac.org/P04858.html</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/CountingUnit -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/CountingUnit">
-        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/DerivedUnit -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/DerivedUnit">
-        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/DimensionlessUnit -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/DimensionlessUnit">
-        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-    </owl:Class>
     
 
 

@@ -4,9 +4,18 @@ The **Organic Flow Battery Ontology (OFBO)** is an OWL ontology for representing
 
 OFBO supports ontology-based data access (OBDA): curated relational data are exposed as a virtual RDF knowledge graph using Ontop, H2, and the OFBO mappings.
 
+## Documentation
+
+Human-readable documentation for OFBO, including ontology metadata, classes, object properties, datatype properties, annotation properties, and downloadable serializations, is available at:
+
+<https://w3id.org/ofbo/docs>
+
+The documentation is generated with [WIDOCO](https://w3id.org/widoco/) from the ontology source and is maintained in the `docs/` directory.
+
 ## Contents
 
 - `ontology/` — OFBO ontology, Ontop mappings, configuration, and imported ontology modules.
+- `docs/` — Generated human-readable ontology documentation, published at <https://w3id.org/ofbo/docs>.
 - `database/csv/` — Curated source-data tables.
 - `database/h2/` — H2 database and H2 JAR file.
 - `database/triples/` — Materialized RDF graph.
@@ -25,6 +34,7 @@ OFBO supports ontology-based data access (OBDA): curated relational data are exp
 | `ontology/OFBO.ttl` | OFBO ontology in Turtle syntax. |
 | `ontology/OFBO.obda` | Ontop OBDA mappings. |
 | `ontology/OFBO.properties` | H2 database connection configuration for Ontop. |
+| `docs/` | Generated WIDOCO documentation for OFBO. Available online at <https://w3id.org/ofbo/docs>. |
 | `database/h2/ofbo_db.mv.db` | H2 database containing the curated data. |
 | `database/h2/h2.jar` | H2 database engine. |
 | `database/triples/OFBO-materialized.ttl` | Materialized RDF representation of the mapped graph. |

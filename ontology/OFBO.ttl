@@ -40,9 +40,9 @@
 
 <https://w3id.org/ofbo> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/ofbo/1.2.0> ;
-                         owl:imports <https://w3id.org/ofbo/imports/chmo-subset> ,
+                         owl:imports <https://w3id.org/ofbo/qudt-subset> ,
+                                     <https://w3id.org/ofbo/imports/chmo-subset> ,
                                      <https://w3id.org/ofbo/imports/mdo-subset> ,
-                                     <https://w3id.org/ofbo/imports/qudt-subset> ,
                                      <https://w3id.org/ofbo/imports/prov-o-subset> ;
                          dcterms:contributor <https://orcid.org/0000-0001-5399-043X> ,
                                              <https://orcid.org/0000-0002-0885-5762> ,

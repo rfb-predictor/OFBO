@@ -4223,24 +4223,6 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://qudt.org/schema/qudt/CountingUnit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://qudt.org/schema/qudt/Unit"
-  } ]
-}, {
-  "@id" : "http://qudt.org/schema/qudt/DerivedUnit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://qudt.org/schema/qudt/Unit"
-  } ]
-}, {
-  "@id" : "http://qudt.org/schema/qudt/DimensionlessUnit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://qudt.org/schema/qudt/Unit"
-  } ]
-}, {
   "@id" : "http://qudt.org/schema/qudt/Unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -4654,6 +4636,15 @@
   } ],
   "http://schema.org/funding" : [ {
     "@id" : "https://www.rfb-predictor.eu/"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/ofbo/qudt-subset"
+  }, {
+    "@id" : "https://w3id.org/ofbo/imports/chmo-subset"
+  }, {
+    "@id" : "https://w3id.org/ofbo/imports/mdo-subset"
+  }, {
+    "@id" : "https://w3id.org/ofbo/imports/prov-o-subset"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://w3id.org/ofbo/1.2.0"

@@ -1,5 +1,9 @@
 <https://w3id.org/ofbo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/ofbo> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/ofbo/1.2.0> .
+<https://w3id.org/ofbo> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/ofbo/qudt-subset> .
+<https://w3id.org/ofbo> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/ofbo/imports/chmo-subset> .
+<https://w3id.org/ofbo> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/ofbo/imports/mdo-subset> .
+<https://w3id.org/ofbo> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/ofbo/imports/prov-o-subset> .
 <https://w3id.org/ofbo> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-5399-043X> .
 <https://w3id.org/ofbo> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-0885-5762> .
 <https://w3id.org/ofbo> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0003-2260-8271> .
@@ -1822,18 +1826,6 @@ _:genid133 <http://www.w3.org/2002/07/owl#annotatedSource> <http://purl.obolibra
 _:genid133 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.obolibrary.org/obo/IAO_0000115> .
 _:genid133 <http://www.w3.org/2002/07/owl#annotatedTarget> "A phenomenon by which change takes place in a system. In physiological systems, a process may be chemical, physical or both." .
 _:genid133 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://goldbook.iupac.org/P04858.html" .
-# 
-# http://qudt.org/schema/qudt/CountingUnit
-<http://qudt.org/schema/qudt/CountingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://qudt.org/schema/qudt/CountingUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Unit> .
-# 
-# http://qudt.org/schema/qudt/DerivedUnit
-<http://qudt.org/schema/qudt/DerivedUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://qudt.org/schema/qudt/DerivedUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Unit> .
-# 
-# http://qudt.org/schema/qudt/DimensionlessUnit
-<http://qudt.org/schema/qudt/DimensionlessUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://qudt.org/schema/qudt/DimensionlessUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Unit> .
 # 
 # http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
