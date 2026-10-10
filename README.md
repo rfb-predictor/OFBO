@@ -34,7 +34,7 @@ The documentation is generated with [WIDOCO](https://w3id.org/widoco/) from the 
 | `ontology/OFBO.ttl` | OFBO ontology in Turtle syntax. |
 | `ontology/OFBO.obda` | Ontop OBDA mappings. |
 | `ontology/OFBO.properties` | H2 database connection configuration for Ontop. |
-| `docs/` | Generated WIDOCO documentation for OFBO. Available online at <https://w3id.org/ofbo/docs>. |
+| `docs/` | Generated WIDOCO documentation for OFBO. Available online at <https://w3id.org/ofbo/>. |
 | `database/h2/ofbo_db.mv.db` | H2 database containing the curated data. |
 | `database/h2/h2.jar` | H2 database engine. |
 | `database/triples/OFBO-materialized.ttl` | Materialized RDF representation of the mapped graph. |
