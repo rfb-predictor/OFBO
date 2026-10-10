@@ -2208,7 +2208,7 @@ xsd:date rdf:type rdfs:Datatype .
                                :OFBO_0000040 ;
               rdfs:isDefinedBy <https://w3id.org/ofbo> ;
               rdfs:label "chemical entity"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> "A chemical entity is any distinct chemical species or material unit that can be described in terms of its identity, properties, state, and participation in chemical systems. It encompasses molecules, ions, radicals, functional groups, or more complex substances, and serves as the fundamental unit for assigning properties, states, and roles within chemical systems."@en .
+              <http://www.w3.org/2004/02/skos/core#definition> "A chemical entity is a physical entity of interest in chemistry, including molecular entities, parts of molecular entities, and chemical substances. For example, an anthraquinone molecule used as a redox-active species, a quinone functional group, and an electrolyte chemical substance are chemical entities."@en .
 
 
 ###  https://w3id.org/ofbo#OFBO_0000011
@@ -2261,7 +2261,7 @@ xsd:date rdf:type rdfs:Datatype .
                                :OFBO_0000040 ;
               rdfs:isDefinedBy <https://w3id.org/ofbo> ;
               rdfs:label "property"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> "A property is a measurable or computable characteristic of a chemical entity or physico-chemical process. It may describe structure, composition, reactivity, interactions, spectroscopic behavior, stability, transport behavior, bulk-phase behavior, or a characteristic of a reaction or transformation."@en .
+              <http://www.w3.org/2004/02/skos/core#definition> "A property is a collection class for entities that are either qualities, which represent states, or realizable entities, which represent behaviours. For example, the viscosity of a redox flow battery electrolyte is a quality, whereas the role of a molecule as an active material is a realizable entity."@en .
 
 
 ###  https://w3id.org/ofbo#OFBO_0000021
@@ -2307,7 +2307,7 @@ xsd:date rdf:type rdfs:Datatype .
               owl:disjointWith :OFBO_0000040 ;
               rdfs:isDefinedBy <https://w3id.org/ofbo> ;
               rdfs:label "process"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> "A process is an occurrence that unfolds over time, involving changes in the properties, composition, or configuration of one or more chemical entities."@en .
+              <http://www.w3.org/2004/02/skos/core#definition> "A process is an occurrent with temporal proper parts that, at some time during its course, specifically depends on a material entity. For example, charging a redox flow battery is a process because it unfolds over time and depends on material entities such as electrolyte species, electrodes, and the cell."@en .
 
 
 ###  https://w3id.org/ofbo#OFBO_0000031
@@ -2356,7 +2356,7 @@ xsd:date rdf:type rdfs:Datatype .
 :OFBO_0000040 rdf:type owl:Class ;
               rdfs:isDefinedBy <https://w3id.org/ofbo> ;
               rdfs:label "role"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> "A role is a function or part played by a chemical entity within a specific context, such as a device, reaction, or system, that is not an intrinsic feature of the entity but depends on how it is used."@en .
+              <http://www.w3.org/2004/02/skos/core#definition> "A role is a particular behaviour that a material entity may exhibit in a given context. For example, an organic molecule exhibits an active-material role when it participates in reversible charge storage in a redox flow battery."@en .
 
 
 ###  https://w3id.org/ofbo#OFBO_0000041

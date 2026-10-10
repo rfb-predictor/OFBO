@@ -8,14 +8,14 @@ OFBO supports ontology-based data access (OBDA): curated relational data are exp
 
 Human-readable documentation for OFBO, including ontology metadata, classes, object properties, datatype properties, annotation properties, and downloadable serializations, is available at:
 
-<https://w3id.org/ofbo/docs>
+<https://w3id.org/ofbo/>
 
 The documentation is generated with [WIDOCO](https://w3id.org/widoco/) from the ontology source and is maintained in the `docs/` directory.
 
 ## Contents
 
 - `ontology/` — OFBO ontology, Ontop mappings, configuration, and imported ontology modules.
-- `docs/` — Generated human-readable ontology documentation, published at <https://w3id.org/ofbo/docs>.
+- `docs/` — Generated human-readable ontology documentation, published at <https://w3id.org/ofbo/>.
 - `database/csv/` — Curated source-data tables.
 - `database/h2/` — H2 database and H2 JAR file.
 - `database/triples/` — Materialized RDF graph.
@@ -43,49 +43,62 @@ The documentation is generated with [WIDOCO](https://w3id.org/widoco/) from the 
 
 ## Ontology identifiers
 
-- Ontology IRI: `https://w3id.org/ofbo`
-- Namespace: `https://w3id.org/ofbo#`
-- Preferred prefix: `ofbo`
-- Current version: `1.2.0`
+- **Ontology IRI:** `https://w3id.org/ofbo`  
+  The permanent identifier of the OFBO ontology.
+
+- **Namespace:** `https://w3id.org/ofbo#`  
+  The base namespace for OFBO terms, for example: `https://w3id.org/ofbo#OFBO_0001104`.
+
+- **Preferred prefix:** `ofbo`
+
+- **Current version:** `1.2.0`
+
+- **Ontology document:** `https://w3id.org/ofbo/OFBO.ttl`  
+  This is the Turtle file to use when importing or downloading the ontology.
+
+- **Documentation:** `https://w3id.org/ofbo/`  
+  This URL provides the human-readable ontology documentation.
 
 ## Requirements
 
-- Java
-- Python 3
-- Ontop 5.5.0
-- H2 database, included as `database/h2/h2.jar`
+Before running the notebooks or benchmark, ensure the following dependencies are available:
 
-To run the Jupyter notebooks, install the required Python packages:
+| Component | Version | Notes |
+|---|---:|---|
+| Python | 3.x | Required for the Jupyter notebooks and benchmark scripts |
+| [Ontop](https://github.com/ontop/ontop/releases) | 5.5.0 | Provides the virtual SPARQL endpoint |
+| [Apache Jena Fuseki](https://jena.apache.org/download/index.cgi) | 6.2.0 | Provides the materialized RDF SPARQL endpoint |
+| H2 database | Included | Bundled as `database/h2/h2.jar` |
 
-    pip install jupyter pandas numpy requests matplotlib scipy rdflib networkx psutil pyshacl
+### Python dependencies
 
-Optional molecular-structure rendering in selected notebooks requires RDKit. Installation through Conda is recommended:
-
-    conda install -c conda-forge rdkit
+Install the packages required by the Jupyter notebooks:
 
 ## Running the H2 database
-
-From the repository root, start the H2 TCP server:
-
-    java -cp database/h2/h2.jar org.h2.tools.Server -tcp -tcpAllowOthers -ifNotExists
 
 The database file is located at:
 
     database/h2/ofbo_db.mv.db
 
-## Running the Ontop endpoint
+## Running the SPARQL endpoints
 
-The notebooks expect an Ontop SPARQL endpoint at:
+From the repository root, start Ontop and Fuseki before running the benchmark.
 
-    http://localhost:8080/sparql
+### Ontop
 
-Start Ontop from the repository root using the ontology, mappings, and properties file:
+```bash
+ontop endpoint --ontology=ontology/OFBO.ttl --mapping=ontology/OFBO.obda --properties=ontology/OFBO.properties
+```
 
-    ontop endpoint --ontology=ontology/OFBO.ttl --mapping=ontology/OFBO.obda --properties=ontology/OFBO.properties
+Endpoint: `http://localhost:8080/sparql`
 
-After Ontop has started, SPARQL queries can be submitted to:
+### Fuseki
 
-    http://localhost:8080/sparql
+```bash
+fuseki-server --file=database/triples/OFBO-materialized.ttl /ofbo
+```
+
+Endpoint: `http://localhost:3030/ofbo/query`
 
 ## Competency questions
 
