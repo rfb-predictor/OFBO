@@ -51,7 +51,10 @@ The documentation is generated with [WIDOCO](https://w3id.org/widoco/) from the 
 
 - **Preferred prefix:** `ofbo`
 
-- **Current version:** `1.2.0`
+- **Current version:** `1.2.1`
+
+- **Version IRI:** `https://w3id.org/ofbo/1.2.1`  
+  The permanent identifier for ontology version 1.2.1.
 
 - **Ontology document:** `https://w3id.org/ofbo/OFBO.ttl`  
   This is the Turtle file to use when importing or downloading the ontology.
