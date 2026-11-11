@@ -53,7 +53,7 @@
                          dcterms:creator <https://orcid.org/0000-0001-9923-9676> ;
                          dcterms:description "An ontology for representing molecular, electrochemical, thermodynamic, computational, and provenance information relevant to organic flow-battery electrolyte research."@en ;
                          dcterms:issued "2026-09-30"^^xsd:date ;
-                         dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                         dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                          dcterms:publisher <https://www.scai.fraunhofer.de/> ;
                          dcterms:source <https://github.com/rfb-predictor/OFBO> ;
                          dcterms:title "Organic Flow Battery Ontology"@en ;
