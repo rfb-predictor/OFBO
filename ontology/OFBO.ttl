@@ -39,7 +39,7 @@
 @base <https://w3id.org/ofbo#> .
 
 <https://w3id.org/ofbo> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/ofbo/1.2.0> ;
+                         owl:versionIRI <https://w3id.org/ofbo/1.2.1> ;
                          owl:imports <https://w3id.org/ofbo/imports/qudt-subset.ttl> ,
                                      <https://w3id.org/ofbo/imports/chmo-subset.ttl> ,
                                      <https://w3id.org/ofbo/imports/mdo-subset.ttl> ,
@@ -60,7 +60,7 @@
                          vann:preferredNamespacePrefix "ofbo" ;
                          vann:preferredNamespaceUri "https://w3id.org/ofbo#" ;
                          schema1:funding <https://www.rfb-predictor.eu/> ;
-                         owl:versionInfo "1.2.0" ;
+                         owl:versionInfo "1.2.1" ;
                          mod:status "active"@en .
 
 #################################################################
